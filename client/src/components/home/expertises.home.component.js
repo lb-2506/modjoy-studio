@@ -35,7 +35,7 @@ export default function ExpertisesHomeComponent() {
         </h1>
 
         <img
-          src="/img/underline.png"
+          src="/img/underline-green.png"
           alt="underline"
           draggable={false}
           className="max-w-[250px] mx-auto"

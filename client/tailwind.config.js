@@ -13,15 +13,17 @@ module.exports = {
       orange: "#FF9054",
 
       // TRANSPARENT COLORS
+      transparentWhite : "#ffffff26",
       transparentTurquoise: "#B2F7E1",
       transparentPink: "#F0D2F1",
       transparentGreen: "#ACEDA7",
       transparentOrange: "#FFC79B",
     },
     screens: {
-      ultraWild: "1400px",
-      desktop: "1024px",
-      tablet: "768px",
+      mobile: "768px",
+      tablet: "1024px",
+      desktop: "1220px",
+      ultraWide: "1400px"
     },
     extend: {},
   },

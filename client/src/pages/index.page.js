@@ -9,6 +9,9 @@ import HeroHomeComponent from "@/components/home/hero.home.component";
 import NavbarComponent from "@/components/_shared/nav/nav.component";
 import TechnoHomeComponent from "@/components/home/techno.home.component";
 import ExpertisesHomeComponent from "@/components/home/expertises.home.component";
+import SkillsHomeComponent from "@/components/home/skills.home.component";
+import RealisationsHomeComponent from "@/components/home/realisations.home.component";
+import TeamHomeComponent from "@/components/home/team.home.component";
 
 export default function HomePage(props) {
   let title;
@@ -51,6 +54,9 @@ export default function HomePage(props) {
         <HeroHomeComponent/>
         <TechnoHomeComponent/>
         <ExpertisesHomeComponent/>
+        <SkillsHomeComponent/>
+        <RealisationsHomeComponent/>
+        <TeamHomeComponent/>
       </div>
     </>
   );
