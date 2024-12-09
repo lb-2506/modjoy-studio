@@ -8,7 +8,7 @@ export default function TeamHomeComponent() {
   const { t } = useTranslation("index");
 
   return (
-    <section className="max-w-[90%] mx-auto rounded-[48px] px-12 py-24 bg-green flex gap-24">
+    <section className="max-w-[90%] mx-auto rounded-[48px] mt-24 px-12 py-24 bg-green flex gap-24">
       <div className="max-w-[250px] flex flex-col gap-6">
         <h3>Tagline</h3>
 
@@ -21,7 +21,7 @@ export default function TeamHomeComponent() {
 
         <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros elementum tristique.{" "}
+          varius enim in eros elementum tristique.
         </p>
 
         <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">

@@ -1,23 +1,21 @@
 import Head from "next/head";
+import { useRouter } from "next/router";
 
 // I18N
 import { i18n } from "next-i18next";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 
 // COMPONENTS
-import HeroHomeComponent from "@/components/home/hero.home.component";
 import NavbarComponent from "@/components/_shared/nav/nav.component";
-import TechnoHomeComponent from "@/components/home/techno.home.component";
-import ExpertisesHomeComponent from "@/components/home/expertises.home.component";
-import SkillsHomeComponent from "@/components/home/skills.home.component";
-import ProjectsHomeComponent from "@/components/home/projects.home.component";
-import TeamHomeComponent from "@/components/home/team.home.component";
-import WorkHomeComponent from "@/components/home/work.home.component";
-import FaqHomeComponent from "@/components/home/faq.home.component";
 import PartnersHomeComponent from "@/components/home/partners.home.component";
 import FooterComponent from "@/components/_shared/footer/footer.component";
+import HeroProjectsComponent from "@/components/projects/hero.projects.component";
 
-export default function HomePage(props) {
+// DATA
+import { projectsData } from "@/_assets/data/projects.data";
+import ProjectsHomeComponent from "@/components/home/projects.home.component";
+
+export default function ProjectPage(props) {
   let title;
   let description;
 
@@ -30,6 +28,7 @@ export default function HomePage(props) {
       title = "Modjoy Studio";
       description = "";
   }
+
   return (
     <>
       <Head>
@@ -53,27 +52,43 @@ export default function HomePage(props) {
       </Head>
 
       <div className="relative bg-darkGreen">
-        <NavbarComponent/>
+        <NavbarComponent />
 
-        <HeroHomeComponent/>
-        <TechnoHomeComponent/>
-        <ExpertisesHomeComponent/>
-        <SkillsHomeComponent/>
+        <HeroProjectsComponent project={props.project} />
         <ProjectsHomeComponent/>
-        <TeamHomeComponent/>
-        <WorkHomeComponent/>
-        <FaqHomeComponent/>
-        <PartnersHomeComponent/>
-        <FooterComponent/>
+        <PartnersHomeComponent />
+        <FooterComponent />
       </div>
     </>
   );
 }
 
-export async function getStaticProps({ locale }) {
+export async function getStaticProps({ locale, params }) {
+  const slug = params.slug;
+
+  const project = projectsData.find((p) => p.slug === slug);
+
+  if (!project) {
+    return {
+      notFound: true,
+    };
+  }
+
   return {
     props: {
       ...(await serverSideTranslations(locale, ["common", "index"])),
+      project,
     },
   };
+}
+
+export async function getStaticPaths({ locales }) {
+  const paths = projectsData.flatMap((project) =>
+    locales.map((locale) => ({
+      params: { slug: project.slug },
+      locale,
+    }))
+  );
+
+  return { paths, fallback: false };
 }

@@ -1,13 +1,14 @@
 import { useRef, useState } from "react";
 
 // DATA
-import { realisationsData } from "@/_assets/data/realisations.data";
+import { projectsData } from "@/_assets/data/projects.data";
 
 // SVG
 import { ChevronSvg } from "../_shared/_svgs/chevron.svg";
 import { ArrowSvg } from "../_shared/_svgs/arrow.svg";
+import Link from "next/link";
 
-export default function ActualitiesHomeComponent() {
+export default function ProjectsHomeComponent() {
   const scrollContainerRef = useRef(null);
   const [isGrabbing, setIsGrabbing] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -58,7 +59,7 @@ export default function ActualitiesHomeComponent() {
   }
 
   return (
-    <section className="relative flex flex-col justify-center py-24 w-full mx-auto">
+    <section className="relative flex flex-col justify-center pt-24 w-full mx-auto">
       <div className="flex flex-col gap-4 text-center text-creamy">
         <h3>Portfolio</h3>
         <h1
@@ -98,7 +99,7 @@ export default function ActualitiesHomeComponent() {
         onMouseMove={handleMouseMove}
         onMouseEnter={handleMouseEnter}
       >
-        {realisationsData.map((data, i) => (
+        {projectsData.map((data, i) => (
           <div
             key={data.id}
             className="flex-shrink-0 select-none flex flex-col gap-4 w-[calc((100%-64px)/1)] mobile:w-[calc((100%-64px)/2)] tablet:w-[calc((100%-64px)/3)] ultraWide:w-[calc((100%-64px)/4)]"
@@ -115,10 +116,11 @@ export default function ActualitiesHomeComponent() {
               <p className="tracking-wider text-sm">{data.tag}</p>
               <h2 className="text-xl uppercase">{data.title}</h2>
               <p className="opacity-70 py-2">{data.description}</p>
-              <button className="w-fit font-extralight text-sm flex items-center gap-3">
-                Button{" "}
-                <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
-              </button>
+              <Link href={`${data.slug}`}>
+                <button className="w-fit font-extralight text-sm flex items-center gap-3">
+                  Button <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
+                </button>
+              </Link>
             </div>
           </div>
         ))}
