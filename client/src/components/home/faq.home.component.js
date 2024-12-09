@@ -1,6 +1,4 @@
-import { useState, useRef } from "react";
-
-// I18N
+import { useState, useRef, useEffect } from "react";
 import { useTranslation } from "next-i18next";
 
 // DATA
@@ -11,7 +9,29 @@ import { CrossSvg } from "../_shared/_svgs/cross.svg";
 
 export default function FaqHomeComponent() {
   const { t } = useTranslation("index");
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const paragraphRefs = useRef([]);
+
+  const [heights, setHeights] = useState([]);
+
+  const updateHeights = () => {
+    const newHeights = paragraphRefs.current.map((p) => p?.scrollHeight || 0);
+    setHeights(newHeights);
+  };
+
+  useEffect(() => {
+    updateHeights();
+
+    const handleResize = () => {
+      requestAnimationFrame(() => {
+        updateHeights();
+      });
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   function toggleFaq(index) {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
@@ -39,17 +59,20 @@ export default function FaqHomeComponent() {
       <div className="w-1/2 flex flex-col gap-4">
         {faqData.map((data, index) => {
           const isOpen = openIndex === index;
-          const contentHeight = useRef();
+          const height =
+            isOpen && heights[index] ? `${heights[index]}px` : "0px";
 
           return (
             <div
               key={index}
-              className={`bg-darkGreen bg-opacity-5 rounded-[15px] overflow-hidden transition-all duration-300`}
+              className="bg-darkGreen bg-opacity-5 rounded-[15px] overflow-hidden transition-all duration-250"
             >
               {/* Header */}
               <div
-                className={`flex justify-between h-[60px] items-center px-6 ${index === openIndex ? "" : "cursor-pointer"}`}
-                onClick={() => {index === openIndex ? null : toggleFaq(index)}}
+                className={`flex justify-between h-[60px] items-center px-6 ${!isOpen ? "cursor-pointer" : ""}`}
+                onClick={() => {
+                  if (!isOpen) toggleFaq(index);
+                }}
               >
                 <h2
                   style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
@@ -59,24 +82,25 @@ export default function FaqHomeComponent() {
                 </h2>
 
                 <CrossSvg
-                  className={`transform transition-transform duration-300 ${
-                    isOpen ? "" : "rotate-45"
-                  }`}
+                  className={`transform transition-transform duration-300 ${isOpen ? "" : "rotate-45"}`}
                 />
               </div>
 
               {/* Content */}
               <div
-                ref={contentHeight}
-                className="transition-[height] duration-500 ease-in-out px-6"
+                className="transition-height duration-250 ease-in-out px-6"
                 style={{
-                  height: isOpen
-                    ? `${contentHeight.current?.scrollHeight}px`
-                    : "0px",
-                  overflow: isOpen ? "visible" : "hidden",
+                  height: height,
+                  overflow: "hidden",
+                  transition: "height 0.25s ease",
                 }}
               >
-                <p className="py-4">{data.content}</p>
+                <p
+                  className="py-4"
+                  ref={(el) => (paragraphRefs.current[index] = el)}
+                >
+                  {data.content}
+                </p>
               </div>
             </div>
           );
