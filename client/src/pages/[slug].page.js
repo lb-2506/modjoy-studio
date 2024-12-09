@@ -14,6 +14,7 @@ import HeroProjectsComponent from "@/components/projects/hero.projects.component
 // DATA
 import { projectsData } from "@/_assets/data/projects.data";
 import ProjectsHomeComponent from "@/components/home/projects.home.component";
+import DetailsProjectsComponent from "@/components/projects/details.projects.component";
 
 export default function ProjectPage(props) {
   let title;
@@ -55,7 +56,8 @@ export default function ProjectPage(props) {
         <NavbarComponent />
 
         <HeroProjectsComponent project={props.project} />
-        <ProjectsHomeComponent/>
+        <DetailsProjectsComponent project={props.project} />
+        <ProjectsHomeComponent />
         <PartnersHomeComponent />
         <FooterComponent />
       </div>

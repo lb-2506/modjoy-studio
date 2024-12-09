@@ -1,26 +1,10 @@
-import { useState } from "react";
-
-// I18N
 import { useTranslation } from "next-i18next";
 
 // DATA
 import { featuresData } from "@/_assets/data/features.data";
 
-
 export default function ExpertisesHomeComponent() {
   const { t } = useTranslation("index");
-
-  const [activeFeature, setActiveFeature] = useState(1);
-  const [previousFeature, setPreviousFeature] = useState(null);
-
-
-
-  const handleClick = (id) => {
-    if (id !== activeFeature) {
-      setPreviousFeature(activeFeature);
-      setActiveFeature(id);
-    }
-  };
 
   return (
     <section className="bg-creamy rounded-t-[48px] pt-24 pb-36 flex flex-col items-center justify-center">
@@ -46,56 +30,49 @@ export default function ExpertisesHomeComponent() {
         </h2>
       </div>
 
-      <div className="flex mt-12 w-[90%] mx-auto h-[650px] rounded-xl overflow-hidden">
-        {featuresData?.map((feature, index) => {
-          const isActive = activeFeature === feature.id;
-          const isClosing = previousFeature === feature.id;
+      {/* L'accordéon horizontal */}
+      <ul className="mt-12 w-[90%] mx-auto h-[650px] rounded-xl overflow-hidden">
+        {featuresData.map((feature, index) => {
+          const tabId = `rad${index + 1}`;
 
           return (
-            <div
-              key={feature.id}
-              className={`flex transition-all duration-500 ${
-                isActive ? "w-full" : "w-[70px]"
-              }`}
-              onClick={() => handleClick(feature.id)}
-            >
-              {/* Bande verticale contenant numéro et titre */}
-              <div
-                className={`py-6 flex flex-col w-[70px] items-center justify-between h-full transition-colors duration-500 ${
-                  isActive ? feature.bgColor : feature.bgTransparentColor
-                } ${
-                  index === featuresData.length - 1 && !isActive
-                    ? "rounded-e-xl"
-                    : ""
-                } ${isActive ? "" : "cursor-pointer"}`}
-              >
-                <p className="text-lg font-bold">{`0${index + 1}`}</p>
-                <p className="text-lg font-semibold -rotate-90 whitespace-nowrap -translate-y-[150%]">
-                  {feature.title}
-                </p>
-              </div>
+            <li key={feature.id}>
+              <input
+                id={tabId}
+                type="radio"
+                name="rad"
+                defaultChecked={index === 0 ? true : undefined}
+                className="peer absolute w-[1px] h-[1px] overflow-hidden whitespace-nowrap hidden"
+              />
 
-              {/* Contenu de la feature */}
-              {(isActive || isClosing) && (
-                <div
-                  className={`${feature.bgTransparentColor} overflow-hidden flex flex-col justify-center px-8 transition-all ${
-                    isActive ? "w-full" : "w-0 duration-[1250ms]"
-                  } ${
-                    index === featuresData.length - 1 && isActive
-                      ? "rounded-e-xl"
-                      : ""
-                  }`}
-                >
-                  <div className="min-w-[500px]">
-                    <h1 className="text-2xl font-bold mb-4">{feature.title}</h1>
-                    <p className="text-md">{feature.content}</p>
-                  </div>
+              <label
+                className={`
+                  ${feature.bgColor} 
+                   float-left h-[650px] w-[70px] overflow-hidden text-center text-[14px]
+                  flex flex-col  justify-between py-4 hover:cursor-pointer  peer-checked:cursor-default
+                `}
+                htmlFor={tabId}
+              >
+                <span className="text-lg font-bold">0{index + 1}</span>
+
+                <span className="text-lg font-semibold whitespace-nowrap -rotate-90 -translate-y-5">
+                  {feature.title}
+                </span>
+              </label>
+
+              <div
+                className={`accslide block h-full w-0 py-9 float-left overflow-x-hidden whitespace-nowrap transition-all duration-300  ${feature.bgTransparentColor} min-h-[650px]`}
+              >
+                <div className="content pl-6">
+                  <h1 className="text-2xl font-bold mb-4">{feature.title}</h1>
+
+                  <p className="text-sm">{feature.content}</p>
                 </div>
-              )}
-            </div>
+              </div>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </section>
   );
 }

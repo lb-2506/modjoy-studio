@@ -103,9 +103,7 @@ export default function ProjectsHomeComponent() {
           <div
             key={data.id}
             className="flex-shrink-0 select-none flex flex-col gap-4 w-[calc((100%-64px)/1)] mobile:w-[calc((100%-64px)/2)] tablet:w-[calc((100%-64px)/3)] ultraWide:w-[calc((100%-64px)/4)]"
-            style={{
-              fontFamily: "'Abel', sans-serif",
-            }}
+            style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
           >
             <div
               className="h-[630px] bg-no-repeat bg-center rounded-lg bg-cover text-creamy flex flex-col justify-end gap-4 p-6"
@@ -118,7 +116,8 @@ export default function ProjectsHomeComponent() {
               <p className="opacity-70 py-2">{data.description}</p>
               <Link href={`${data.slug}`}>
                 <button className="w-fit font-extralight text-sm flex items-center gap-3">
-                  Button <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
+                  Button{" "}
+                  <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
                 </button>
               </Link>
             </div>

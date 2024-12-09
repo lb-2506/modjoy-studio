@@ -4,8 +4,18 @@ export default function HeroProjectsComponent(props) {
       <div className="flex justify-between gap-6">
         <div className="w-1/2">
           <div>
-            <h1 className="text-5xl font-bold">{props.project.title}</h1>
-            <p className="text-lg mt-6">{props.project.description}</p>
+            <h1
+              style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
+              className="text-5xl font-bold"
+            >
+              {props.project.title}
+            </h1>
+            <p
+              style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
+              className="text-lg mt-6"
+            >
+              {props.project.description}
+            </p>
           </div>
 
           <div className="flex gap-4 mt-4">
@@ -58,12 +68,11 @@ export default function HeroProjectsComponent(props) {
         </div>
       </div>
 
-      {/* Image */}
       <div
-        className="mt-12 h-[600px] bg-cover bg-center rounded-lg shadow-lg"
+        className="mt-12 h-[700px] bg-cover bg-center rounded-xl"
         style={{ backgroundImage: `url(${props.project.imgSrc})` }}
-        aria-label={props.project.title} // Pour l'accessibilité
-      ></div>
+        aria-label={props.project.title}
+      />
     </section>
   );
 }
