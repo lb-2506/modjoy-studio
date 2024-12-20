@@ -9,19 +9,6 @@ export default function BallBouncingComponent() {
     let width = (canvas.width = canvas.offsetWidth);
     let height = (canvas.height = canvas.offsetHeight);
 
-    const updateCanvasSize = () => {
-      width = canvas.offsetWidth;
-      height = canvas.offsetHeight;
-      canvas.width = width;
-      canvas.height = height;
-
-      // Prevent distortion
-      context.setTransform(1, 0, 0, 1, 0, 0);
-      context.scale(canvas.offsetWidth / canvas.width, canvas.offsetHeight / canvas.height);
-    };
-
-    updateCanvasSize();
-
     // Ball properties
     const ball = {
       x: width * 0.25,
@@ -71,7 +58,7 @@ export default function BallBouncingComponent() {
       const gradient = context.createRadialGradient(
         ball.x - ball.radius * 0.4,
         ball.y - ball.radius * 0.4,
-        ball.radius * 0.2,
+        ball.radius * 0.1,
         ball.x,
         ball.y,
         ball.radius
