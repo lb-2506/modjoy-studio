@@ -6,12 +6,19 @@ export default function BallBouncingComponent() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
- 
-
-   let width = canvas.offsetWidth;
-   let height = canvas.offsetHeight;
+   
+    const parentRect = canvas.parentElement.getBoundingClientRect();
+    const width = parentRect.width;
+    const height = parentRect.height;
+  
+    // Définir la taille interne du canvas en pixels
     canvas.width = width;
     canvas.height = height;
+  
+    // Forcer la taille d'affichage du canvas en pixels pour éviter tout redimensionnement
+    canvas.style.width = width + 'px';
+    canvas.style.height = height + 'px';
+  
 
     // Ball properties
     const ball = {
@@ -201,12 +208,16 @@ export default function BallBouncingComponent() {
     };
 
     const handleResize = () => {
-      width = canvas.offsetWidth;
-      height = canvas.offsetHeight;
+      const parentRect = canvas.parentElement.getBoundingClientRect();
+      width = parentRect.width;
+      height = parentRect.height;
       canvas.width = width;
       canvas.height = height;
+      canvas.style.width = width + 'px';
+      canvas.style.height = height + 'px';
       drawBall();
     };
+    
 
     window.addEventListener("resize", handleResize);
     canvas.addEventListener("mousedown", handleMouseDown);
@@ -226,6 +237,6 @@ export default function BallBouncingComponent() {
   }, []);
 
   return (
-    <canvas ref={canvasRef} className="absolute z-10 inset-0 w-full h-full" />
+    <canvas ref={canvasRef} className="absolute z-10 inset-0 " />
   );
 }
