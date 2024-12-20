@@ -55,7 +55,7 @@ export default function HomePage(props) {
         <NavbarComponent/>
 
         <HeroHomeComponent/>
-        {/* <ExpertisesHomeComponent/> */}
+        <ExpertisesHomeComponent/>
         <SkillsHomeComponent/>
         <ProjectsHomeComponent/>
         <TeamHomeComponent/>
