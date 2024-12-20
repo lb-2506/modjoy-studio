@@ -222,7 +222,7 @@ export default function BallBouncingComponent() {
   }, []);
 
   return (
-    <div className="absolute z-10 top-0 left-0 w-full h-full">
+    <div className="absolute z-10 inset-0">
       <canvas ref={canvasRef} className="w-full h-full" />
     </div>
   );
