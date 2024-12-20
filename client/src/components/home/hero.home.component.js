@@ -30,28 +30,26 @@ export default function HeroHomeComponent() {
   useEffect(() => {
     function updateSmileyStyle(ref, setStyle) {
       if (!ref.current) return;
-    
+
       const rect = ref.current.getBoundingClientRect();
       const smileyCenterX = rect.left + rect.width / 2;
       const smileyCenterY = rect.top + rect.height / 2;
-    
+
       const dx = mousePos.x - smileyCenterX;
       const dy = mousePos.y - smileyCenterY;
       let distance = Math.sqrt(dx * dx + dy * dy);
-    
-      // On augmente le maxOffset pour un mouvement plus prononcé
+
       const maxOffset = 30;
-    
-      // Si la distance est quasi nulle, on évite de faire le calcul pour empêcher le "sursaut"
+
       if (distance < 35) {
-        distance = 35; // On évite la division par zéro
+        distance = 35;
       }
-    
+
       if (distance < 500) {
         const factor = (500 - distance) / 500;
         const offsetX = (dx / distance) * maxOffset * factor;
         const offsetY = (dy / distance) * maxOffset * factor;
-    
+
         setStyle({
           transform: `translate(${offsetX}px, ${offsetY}px)`,
           transition: "transform 0.1s ease",
@@ -63,7 +61,6 @@ export default function HeroHomeComponent() {
         });
       }
     }
-    
 
     updateSmileyStyle(smileyRef, setSmileyStyle);
     updateSmileyStyle(smiley2Ref, setSmiley2Style);
