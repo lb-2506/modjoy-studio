@@ -1,7 +1,7 @@
 export default function TechnoHomeComponent() {
   return (
-    <section className="text-center">
-      <h1 className="pt-8 text-creamy">
+    <section className="text-center h-[20dvh]">
+      <h1 className="py-2 text-creamy">
         Used by the world's leading companies
       </h1>
 

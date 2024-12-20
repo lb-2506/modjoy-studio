@@ -52,11 +52,10 @@ export default function HomePage(props) {
         </> */}
       </Head>
 
-      <div className="relative bg-darkGreen">
+      <div className="">
         <NavbarComponent/>
 
         <HeroHomeComponent/>
-        <TechnoHomeComponent/>
         <ExpertisesHomeComponent/>
         <SkillsHomeComponent/>
         <ProjectsHomeComponent/>

@@ -1,12 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 // DATA
 import { projectsData } from "@/_assets/data/projects.data";
 
 // SVG
-import { ChevronSvg } from "../_shared/_svgs/chevron.svg";
-import { ArrowSvg } from "../_shared/_svgs/arrow.svg";
-import Link from "next/link";
+import { ChevronSvg, ArrowSvg } from "../_shared/_svgs/_index";
 
 export default function ProjectsHomeComponent() {
   const scrollContainerRef = useRef(null);
@@ -15,6 +14,17 @@ export default function ProjectsHomeComponent() {
   const [hasMoved, setHasMoved] = useState(false);
   const [cursorPos, setCursorPos] = useState({ x: 0, y: 0 });
   const [showCursor, setShowCursor] = useState(false);
+  const [halfScreenWidth, setHalfScreenWidth] = useState(0);
+  const [isDataHovered, setIsDataHovered] = useState(false);
+
+  useEffect(() => {
+    const updateHalfWidth = () => {
+      setHalfScreenWidth(window.innerWidth / 2);
+    };
+    updateHalfWidth();
+    window.addEventListener("resize", updateHalfWidth);
+    return () => window.removeEventListener("resize", updateHalfWidth);
+  }, []);
 
   function handleMouseDown(e) {
     setIsGrabbing(true);
@@ -58,8 +68,10 @@ export default function ProjectsHomeComponent() {
     setCursorPos({ x: e.clientX, y: e.clientY });
   }
 
+  const arrowRotation = cursorPos.x < halfScreenWidth ? "180deg" : "0deg";
+
   return (
-    <section className="relative flex flex-col justify-center pt-24 w-full mx-auto">
+    <section className="bg-darkGreen relative flex flex-col justify-center pt-24 w-full mx-auto">
       <div className="flex flex-col gap-4 text-center text-creamy">
         <h3>Portfolio</h3>
         <h1
@@ -81,12 +93,25 @@ export default function ProjectsHomeComponent() {
 
       {showCursor && (
         <div
-          className="hidden desktop:fixed desktop:flex items-center justify-center left-0 top-0 w-[100px] h-[100px] bg-transparentWhite border border-[#ffffff4d] backdrop-blur rounded-full z-20 pointer-events-none shadow-xl"
+          className="hidden desktop:fixed desktop:flex items-center justify-center left-0 top-0 w-[100px] h-[100px] bg-transparentWhite border border-[#ffffff4d] backdrop-blur rounded-full z-20 pointer-events-none"
           style={{
             transform: `translate(${cursorPos.x - 50}px, ${cursorPos.y - 50}px)`,
           }}
         >
-          <ArrowSvg width={25} height={25} />
+          <div>
+            {isDataHovered ? (
+              <p className="text-creamy text-xl">OPEN</p>
+            ) : (
+              <div
+                style={{
+                  transform: `rotate(${arrowRotation})`,
+                  transition: "transform 0.2s ease",
+                }}
+              >
+                <ArrowSvg width={25} height={25} />
+              </div>
+            )}
+          </div>
         </div>
       )}
 
@@ -106,19 +131,26 @@ export default function ProjectsHomeComponent() {
             style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
           >
             <div
-              className="h-[630px] bg-no-repeat bg-center rounded-lg bg-cover text-creamy flex flex-col justify-end gap-4 p-6"
+              className="h-[630px] bg-no-repeat bg-center rounded-lg bg-cover flex flex-col justify-end  text-creamy "
               style={{
                 backgroundImage: `url(${data.imgSrc})`,
               }}
             >
-              <p className="tracking-wider text-sm">{data.tag}</p>
-              <h2 className="text-xl uppercase">{data.title}</h2>
-              <p className="opacity-70 py-2">{data.description}</p>
               <Link href={`${data.slug}`}>
-                <button className="w-fit font-extralight text-sm flex items-center gap-3">
-                  Button{" "}
-                  <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
-                </button>
+                <div
+                  onMouseEnter={() => setIsDataHovered(true)}
+                  onMouseLeave={() => setIsDataHovered(false)}
+                  className="flex flex-col gap-4 p-6"
+                >
+                  <h2 className="text-xl uppercase">{data.title}</h2>
+
+                  <p className="opacity-70 py-2">{data.description}</p>
+
+                  <button className="w-fit font-extralight text-sm flex items-center gap-3">
+                    Button{" "}
+                    <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
+                  </button>
+                </div>
               </Link>
             </div>
           </div>

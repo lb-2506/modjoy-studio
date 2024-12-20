@@ -38,73 +38,75 @@ export default function FaqHomeComponent() {
   }
 
   return (
-    <section className="px-12 py-24 max-w-[90%] mx-auto flex gap-12 bg-creamy rounded-[48px]">
-      <div className="text-darkGreen flex flex-col gap-6 w-1/2">
-        <h1
-          style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
-          className="text-5xl"
-        >
-          FAQs
-        </h1>
+    <section className="bg-darkGreen">
+      <div className="px-12 py-24 max-w-[90%] mx-auto flex gap-12 bg-creamy rounded-[48px]">
+        <div className="text-darkGreen flex flex-col gap-6 w-1/2">
+          <h1
+            style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
+            className="text-5xl"
+          >
+            FAQs
+          </h1>
 
-        <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
-          Answers to common questions about Modjoy, fees, and security.
-        </p>
+          <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
+            Answers to common questions about Modjoy, fees, and security.
+          </p>
 
-        <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
-          Button
-        </button>
-      </div>
+          <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
+            Button
+          </button>
+        </div>
 
-      <div className="w-1/2 flex flex-col gap-4">
-        {faqData.map((data, index) => {
-          const isOpen = openIndex === index;
-          const height =
-            isOpen && heights[index] ? `${heights[index]}px` : "0px";
+        <div className="w-1/2 flex flex-col gap-4">
+          {faqData.map((data, index) => {
+            const isOpen = openIndex === index;
+            const height =
+              isOpen && heights[index] ? `${heights[index]}px` : "0px";
 
-          return (
-            <div
-              key={index}
-              className="bg-darkGreen bg-opacity-5 rounded-[15px] overflow-hidden transition-all duration-250"
-            >
-              {/* Header */}
+            return (
               <div
-                className={`flex justify-between h-[60px] items-center px-6 ${!isOpen ? "cursor-pointer" : ""}`}
-                onClick={() => {
-                  if (!isOpen) toggleFaq(index);
-                }}
+                key={index}
+                className="bg-darkGreen bg-opacity-5 rounded-[15px] overflow-hidden transition-all duration-250"
               >
-                <h2
-                  style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
-                  className="font-bold text-lg"
+                {/* Header */}
+                <div
+                  className={`flex justify-between h-[60px] items-center px-6 ${!isOpen ? "cursor-pointer" : ""}`}
+                  onClick={() => {
+                    if (!isOpen) toggleFaq(index);
+                  }}
                 >
-                  {data.title}
-                </h2>
+                  <h2
+                    style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
+                    className="font-bold text-lg"
+                  >
+                    {data.title}
+                  </h2>
 
-                <CrossSvg
-                  className={`transform transition-transform duration-300 ${isOpen ? "" : "rotate-45"}`}
-                />
-              </div>
+                  <CrossSvg
+                    className={`transform transition-transform duration-300 ${isOpen ? "" : "rotate-45"}`}
+                  />
+                </div>
 
-              {/* Content */}
-              <div
-                className="transition-height duration-250 ease-in-out px-6"
-                style={{
-                  height: height,
-                  overflow: "hidden",
-                  transition: "height 0.25s ease",
-                }}
-              >
-                <p
-                  className="py-4"
-                  ref={(el) => (paragraphRefs.current[index] = el)}
+                {/* Content */}
+                <div
+                  className="transition-height duration-250 ease-in-out px-6"
+                  style={{
+                    height: height,
+                    overflow: "hidden",
+                    transition: "height 0.25s ease",
+                  }}
                 >
-                  {data.content}
-                </p>
+                  <p
+                    className="py-4"
+                    ref={(el) => (paragraphRefs.current[index] = el)}
+                  >
+                    {data.content}
+                  </p>
+                </div>
               </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </section>
   );

@@ -15,7 +15,8 @@ import {
 export default function FooterComponent() {
   const { t } = useTranslation("common");
   return (
-    <footer className="py-24 max-w-[90%] mx-auto">
+    <footer className="py-24 bg-darkGreen ">
+      <div className="max-w-[90%] mx-auto">
       <div className="flex justify-between">
         <div className="w-1/3">
           <img
@@ -63,6 +64,7 @@ export default function FooterComponent() {
         <Link href="#">
           <a className="underline">Cookie Settings</a>
         </Link>
+      </div>
       </div>
     </footer>
   );
