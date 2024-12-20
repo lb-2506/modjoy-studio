@@ -4,10 +4,14 @@ import { useTranslation } from "next-i18next";
 // DATA
 import { skillsData } from "@/_assets/data/_index.data";
 
+// COMPONENTS
+import BallBouncingComponent from "../_shared/bouncing/ball.bouncing.component";
+
 export default function SkillsHomeComponent() {
   const { t } = useTranslation("index");
+
   return (
-    <section className="bg-creamy pb-48 ">
+    <section className="bg-creamy py-48 relative">
       <div className="max-w-[80%] mx-auto flex gap-24">
         <div className="max-w-[250px] flex flex-col gap-6">
           <h1
@@ -56,6 +60,8 @@ export default function SkillsHomeComponent() {
           })}
         </div>
       </div>
+
+      <BallBouncingComponent />
     </section>
   );
 }

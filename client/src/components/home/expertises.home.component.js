@@ -7,7 +7,7 @@ export default function ExpertisesHomeComponent() {
   const { t } = useTranslation("index");
 
   return (
-    <section className="bg-creamy rounded-t-[48px] pt-24 pb-36 flex flex-col items-center justify-center">
+    <section className="bg-creamy rounded-t-[48px] pt-24  flex flex-col items-center justify-center">
       <div className="flex flex-col gap-4 text-center">
         <h3>Tagline</h3>
 

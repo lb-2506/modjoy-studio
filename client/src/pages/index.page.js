@@ -7,7 +7,6 @@ import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 // COMPONENTS
 import HeroHomeComponent from "@/components/home/hero.home.component";
 import NavbarComponent from "@/components/_shared/nav/nav.component";
-import TechnoHomeComponent from "@/components/home/techno.home.component";
 import ExpertisesHomeComponent from "@/components/home/expertises.home.component";
 import SkillsHomeComponent from "@/components/home/skills.home.component";
 import ProjectsHomeComponent from "@/components/home/projects.home.component";
@@ -52,7 +51,7 @@ export default function HomePage(props) {
         </> */}
       </Head>
 
-      <div className="">
+      <div className="select-none">
         <NavbarComponent/>
 
         <HeroHomeComponent/>
