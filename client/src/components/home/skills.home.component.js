@@ -11,8 +11,8 @@ export default function SkillsHomeComponent() {
   const { t } = useTranslation("index");
 
   return (
-    <section className="bg-creamy py-48 relative">
-      <div className="max-w-[80%] mx-auto flex gap-24">
+    <section className="bg-creamy relative">
+      <div className="max-w-[80%] py-48 mx-auto flex gap-24">
         <div className="max-w-[250px] flex flex-col gap-6">
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
@@ -61,7 +61,7 @@ export default function SkillsHomeComponent() {
         </div>
       </div>
 
-      {/* <BallBouncingComponent /> */}
+      <BallBouncingComponent />
     </section>
   );
 }
