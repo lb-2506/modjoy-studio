@@ -18,12 +18,12 @@ export default function ExpertisesHomeComponent() {
           Nos expertises
         </h1>
 
-        <img
+        {/* <img
           src="/img/underline-green.png"
           alt="underline"
           draggable={false}
           className="max-w-[250px] mx-auto"
-        />
+        /> */}
 
         <h2 className="pt-6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
