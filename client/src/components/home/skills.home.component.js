@@ -61,7 +61,7 @@ export default function SkillsHomeComponent() {
         </div>
       </div>
 
-      <BallBouncingComponent />
+      {/* <BallBouncingComponent /> */}
     </section>
   );
 }
