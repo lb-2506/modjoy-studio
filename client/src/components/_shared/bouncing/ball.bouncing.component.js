@@ -6,8 +6,12 @@ export default function BallBouncingComponent() {
   useEffect(() => {
     const canvas = canvasRef.current;
     const context = canvas.getContext("2d");
-    let width = (canvas.width = canvas.offsetWidth);
-    let height = (canvas.height = canvas.offsetHeight);
+ 
+
+   let width = canvas.offsetWidth;
+   let height = canvas.offsetHeight;
+    canvas.width = width;
+    canvas.height = height;
 
     // Ball properties
     const ball = {
