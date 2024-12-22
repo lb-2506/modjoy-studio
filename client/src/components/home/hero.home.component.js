@@ -67,7 +67,7 @@ export default function HeroHomeComponent() {
   }, [mousePos]);
 
   return (
-    <div className="sticky top-0 -z-50 bg-darkGreen">
+    <div className="fixed top-0 -z-10 bg-darkGreen">
       <section
         style={{ pointerEvents: "all" }}
         className="h-[80dvh] flex justify-center items-center relative overflow-hidden"
