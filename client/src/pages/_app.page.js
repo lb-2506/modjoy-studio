@@ -39,18 +39,22 @@ function App({ Component, pageProps }) {
 
     requestAnimationFrame(raf);
 
-    // Forcer le scroll en haut après chaque changement de route
-    const handleRouteChangeComplete = () => {
-      lenis.scrollTo(0, { immediate: true, force: true });
-    };
-
-    router.events.on("routeChangeComplete", handleRouteChangeComplete);
-
     return () => {
-      lenis.destroy();
-      router.events.off("routeChangeComplete", handleRouteChangeComplete);
+      if (lenisRef.current) {
+        lenisRef.current.destroy();
+      }
     };
-  }, [router]);
+  }, []);
+
+  // À chaque changement de route, on remonte en haut de page
+  useEffect(() => {
+    if (lenisRef.current) {
+      lenisRef.current.scrollTo(0, { immediate: true });
+    } else {
+      // Au cas où Lenis n'existerait pas encore, on fait un fallback :
+      window.scrollTo(0, 0);
+    }
+  }, [router.asPath]); // on surveille le changement de route
 
   return <Component {...pageProps} />;
 }
