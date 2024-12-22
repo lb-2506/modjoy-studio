@@ -46,15 +46,13 @@ function App({ Component, pageProps }) {
     };
   }, []);
 
-  // À chaque changement de route, on remonte en haut de page
   useEffect(() => {
     if (lenisRef.current) {
-      lenisRef.current.scrollTo(0, { immediate: true });
+      lenisRef.current.scrollTo(0, { immediate: true, force: true });
     } else {
-      // Au cas où Lenis n'existerait pas encore, on fait un fallback :
       window.scrollTo(0, 0);
     }
-  }, [router.asPath]); // on surveille le changement de route
+  }, [router.asPath]);
 
   return <Component {...pageProps} />;
 }
