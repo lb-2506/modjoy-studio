@@ -32,7 +32,6 @@ function App({ Component, pageProps }) {
 
     lenisRef.current = lenis;
 
-    // Fonction pour gérer l'animation de défilement
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -40,9 +39,9 @@ function App({ Component, pageProps }) {
 
     requestAnimationFrame(raf);
 
-    // Gestion du scroll lors des changements de route
+    // Forcer le scroll en haut après chaque changement de route
     const handleRouteChangeComplete = () => {
-      lenis.scrollTo(0, { immediate: true }); // Réinitialise le scroll en haut
+      lenis.scrollTo(0, { immediate: true, force: true });
     };
 
     router.events.on("routeChangeComplete", handleRouteChangeComplete);

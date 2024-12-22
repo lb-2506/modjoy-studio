@@ -136,7 +136,7 @@ export default function ProjectsHomeComponent() {
                 backgroundImage: `url(${data.imgSrc})`,
               }}
             >
-              <Link target="_top" href={`${data.slug}`}>
+              <Link href={`${data.slug}`}>
                 <div
                   onMouseEnter={() => setIsDataHovered(true)}
                   onMouseLeave={() => setIsDataHovered(false)}
