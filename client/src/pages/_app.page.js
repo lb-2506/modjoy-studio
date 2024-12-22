@@ -1,4 +1,5 @@
 import { useEffect, useRef } from "react";
+import { useRouter } from "next/router";
 
 // STYLES
 import "@/styles/style.scss";
@@ -13,6 +14,7 @@ import Lenis from "@studio-freight/lenis";
 
 function App({ Component, pageProps }) {
   const lenisRef = useRef(null);
+  const router = useRouter();
 
   useEffect(() => {
     if (typeof window === "undefined") return;
@@ -37,12 +39,23 @@ function App({ Component, pageProps }) {
 
     requestAnimationFrame(raf);
 
+    const handleRouteChange = () => {
+      if (lenisRef.current) {
+        lenisRef.current.scrollTo(0, { immediate: true });
+      } else {
+        window.scrollTo(0, 0);
+      }
+    };
+
+    router.events.on("routeChangeComplete", handleRouteChange);
+
     return () => {
       if (lenisRef.current) {
         lenisRef.current.destroy();
       }
+      router.events.off("routeChangeComplete", handleRouteChange);
     };
-  }, []);
+  }, [router]);
 
   return <Component {...pageProps} />;
 }

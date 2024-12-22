@@ -33,19 +33,6 @@ export default function ProjectsHomeComponent() {
     setShowCursor(true);
   }
 
-  function handleMouseUp(e) {
-    setIsGrabbing(false);
-    if (hasMoved) {
-      e.preventDefault();
-    }
-  }
-
-  function handleMouseEnter(e) {
-    scrollContainerRef.current.style.cursor = "none";
-    setShowCursor(true);
-    updateCursorPos(e);
-  }
-
   function handleMouseMove(e) {
     if (isGrabbing) {
       e.preventDefault();
@@ -57,6 +44,19 @@ export default function ProjectsHomeComponent() {
       scrollContainerRef.current.scrollLeft -= walk;
       setStartX(x);
     }
+    updateCursorPos(e);
+  }
+
+  function handleMouseUp(e) {
+    setIsGrabbing(false);
+    if (hasMoved) {
+      e.preventDefault();
+    }
+  }
+
+  function handleMouseEnter(e) {
+    scrollContainerRef.current.style.cursor = "none";
+    setShowCursor(true);
     updateCursorPos(e);
   }
 
@@ -140,6 +140,11 @@ export default function ProjectsHomeComponent() {
                 <div
                   onMouseEnter={() => setIsDataHovered(true)}
                   onMouseLeave={() => setIsDataHovered(false)}
+                  onClick={(e) => {
+                    if (hasMoved) {
+                      e.preventDefault();
+                    }
+                  }}
                   className="flex flex-col gap-4 p-6"
                 >
                   <h2 className="text-xl uppercase">{data.title}</h2>
