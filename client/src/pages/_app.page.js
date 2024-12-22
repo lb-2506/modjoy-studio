@@ -40,22 +40,21 @@ function App({ Component, pageProps }) {
 
     requestAnimationFrame(raf);
 
-    // Réinitialiser le scroll lors des changements de route
-    const handleRouteChange = () => {
+    const handleRouteChangeComplete = () => {
       if (lenisRef.current) {
-        lenis.scrollTo(0, { immediate: true }); // Force le scroll en haut
+        lenis.scrollTo(0, { immediate: true });
       } else {
-        window.scrollTo(0, 0); // Fallback
+        window.scrollTo(0, 0);
       }
     };
 
-    router.events.on("routeChangeComplete", handleRouteChange);
+    router.events.on("routeChangeComplete", handleRouteChangeComplete);
 
     return () => {
       if (lenisRef.current) {
         lenisRef.current.destroy();
       }
-      router.events.off("routeChangeComplete", handleRouteChange);
+      router.events.off("routeChangeComplete", handleRouteChangeComplete);
     };
   }, [router]);
 
