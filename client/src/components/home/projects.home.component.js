@@ -143,6 +143,8 @@ export default function ProjectsHomeComponent() {
                   onClick={(e) => {
                     if (hasMoved) {
                       e.preventDefault();
+                    } else {
+                      window.scrollTo(0, 0);
                     }
                   }}
                   className="flex flex-col gap-4 p-6"
