@@ -19,7 +19,6 @@ function App({ Component, pageProps }) {
   useEffect(() => {
     if (typeof window === "undefined") return;
 
-    // Initialisation de Lenis
     const lenis = new Lenis({
       duration: 1.1,
       easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -33,6 +32,7 @@ function App({ Component, pageProps }) {
 
     lenisRef.current = lenis;
 
+    // Fonction pour gérer l'animation de défilement
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
@@ -40,20 +40,15 @@ function App({ Component, pageProps }) {
 
     requestAnimationFrame(raf);
 
+    // Gestion du scroll lors des changements de route
     const handleRouteChangeComplete = () => {
-      if (lenisRef.current) {
-        lenis.scrollTo(0, { immediate: true });
-      } else {
-        window.scrollTo(0, 0);
-      }
+      lenis.scrollTo(0, { immediate: true }); // Réinitialise le scroll en haut
     };
 
     router.events.on("routeChangeComplete", handleRouteChangeComplete);
 
     return () => {
-      if (lenisRef.current) {
-        lenisRef.current.destroy();
-      }
+      lenis.destroy();
       router.events.off("routeChangeComplete", handleRouteChangeComplete);
     };
   }, [router]);
