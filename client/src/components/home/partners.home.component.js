@@ -1,9 +1,11 @@
-// I18N
-import { useTranslation } from "next-i18next";
+// SVG
 import { ChevronSvg } from "../_shared/_svgs/chevron.svg";
 
+// I18N
+import { useTranslation } from "next-i18next";
+
 export default function PartnersHomeComponent() {
-  const { t } = useTranslation("index");
+  const { t } = useTranslation("partners");
 
   return (
     <section className="bg-darkGreen">
@@ -40,39 +42,44 @@ export default function PartnersHomeComponent() {
 
         <div className="max-w-[1050px]  text-creamy flex flex-col gap-6 items-center justify-center text-center">
           <h1
-            className="text-[60px] leading-[75px]"
+            className="text-[60px] leading-[75px] flex flex-col gap-3"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
-            <span className="relative  border border-pink">
-              <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-pink border" />
-              <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-pink border" />
-              <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-pink border" />
-              <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-pink border" />
-              Partner
-            </span>{" "}
-            with us to create a comelling narrative for{" "}
-            <span className="relative text-nowrap border border-green">
-              {" "}
-              <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-green border" />
-              <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-green border" />
-              <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-green border" />
-              <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-green border" />
-              your brand !
+            <span className="flex gap-3 justify-center">
+              <span className="relative  border border-pink">
+                <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-pink border" />
+                <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-pink border" />
+                <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-pink border" />
+                <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-pink border" />
+                {t('title.1')}
+              </span>
+              {t('title.2')}
+            </span>
+
+            <span className="flex gap-3 flex-wrap justify-center">
+              {t('title.3')}
+              <span className="relative text-nowrap border border-green">
+                <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-green border" />
+                <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-green border" />
+                <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-green border" />
+                <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-green border" />
+                {t('title.4')}
+              </span>
+              {t('title.5')}
             </span>
           </h1>
 
           <h2 className="max-w-[580px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique
+            {t('subtitle')}
           </h2>
 
           <div className="flex gap-6">
             <button className="bg-orange text-darkGreen rounded-2xl px-4 py-2">
-              Button
+              {t('buttons.estimate')}
             </button>
 
             <button className="w-fit font-extralight text-sm flex items-center gap-3">
-              Button <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
+              {t('buttons.rdv')} <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
             </button>
           </div>
         </div>

@@ -7,7 +7,7 @@ import { useTranslation } from "next-i18next";
 import TechnoHomeComponent from "./techno.home.component";
 
 export default function HeroHomeComponent() {
-  const { t } = useTranslation("index");
+  const { t } = useTranslation("hero-section");
 
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const smileyRef = useRef(null);
@@ -110,56 +110,57 @@ export default function HeroHomeComponent() {
           draggable={false}
           ref={smileyRef}
           style={smileyStyle}
-          className="max-w-[100px] absolute right-[20%] top-[20%]"
+          className="max-w-[100px] absolute right-[15%] top-[20%]"
         />
         <img
           src="/img/smiley-2.png"
           draggable={false}
           ref={smiley2Ref}
           style={smiley2Style}
-          className="max-w-[100px] absolute left-[20%] bottom-[10%]"
+          className="max-w-[100px] absolute left-[15%] bottom-[10%]"
         />
 
-        <div className="max-w-[680px] text-creamy flex flex-col gap-6 items-center justify-center text-center">
-          <h3>Crafting experiences that inspire</h3>
+        <div className="max-w-[780px] text-creamy flex flex-col gap-6 items-center justify-center text-center">
+          <h3>{t("catchPhrase")}</h3>
 
           <h1
             className="text-[80px] leading-[85px] flex items-center gap-3 justify-center flex-wrap text-center"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
-            Elevate{" "}
             <div className="relative text-green border border-green px-3 pb-4 mt-2">
-              your
+              {t("title.1")}
               <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-green border" />
               <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-green border" />
               <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-green border" />
               <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-green border" />
-            </div>{" "}
-            Brand{" "}
-            <img
-              src="/img/smile.png"
-              alt="picto"
-              draggable={false}
-              className="h-[100px] w-[95px]"
-            />{" "}
-            with our{" "}
-            <div className="relative text-turquoise border border-turquoise px-3 mt-2">
-              Creative
-              <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-turquoise border" />
-              <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-turquoise border" />
-              <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-turquoise border" />
-              <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-turquoise border" />
-            </div>{" "}
-            Magic
+            </div>
+            {t("title.2")}
+            <span className="flex gap-3">
+              {t("title.3")}
+              <img
+                src="/img/smile.png"
+                alt="picto"
+                draggable={false}
+                className="h-[100px] w-[95px]"
+              />
+              {t("title.4")}
+            </span>
+            <span className="flex gap-3">
+              {t("title.5")}
+              <div className="relative text-turquoise border border-turquoise px-3 whitespace-nowrap">
+                {t("title.6")}
+                <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-turquoise border" />
+                <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-turquoise border" />
+                <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-turquoise border" />
+                <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-turquoise border" />
+              </div>
+            </span>
           </h1>
 
-          <h2 className="max-w-[580px]">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique
-          </h2>
+          <h2 className="max-w-[580px]">{t("subtitle")}</h2>
 
           <button className="bg-creamy text-darkGreen rounded-2xl px-4 py-2">
-            Button
+            {t("button")}
           </button>
         </div>
       </section>

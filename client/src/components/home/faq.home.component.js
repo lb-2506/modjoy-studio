@@ -1,4 +1,6 @@
 import { useState, useRef, useEffect } from "react";
+
+// I18N
 import { useTranslation } from "next-i18next";
 
 // DATA
@@ -8,7 +10,7 @@ import { faqData } from "@/_assets/data/faq.data";
 import { CrossSvg } from "../_shared/_svgs/cross.svg";
 
 export default function FaqHomeComponent() {
-  const { t } = useTranslation("index");
+  const { t } = useTranslation("faq");
   const [openIndex, setOpenIndex] = useState(0);
 
   const paragraphRefs = useRef([]);
@@ -45,15 +47,15 @@ export default function FaqHomeComponent() {
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-5xl"
           >
-            FAQs
+            {t('title')}
           </h1>
 
           <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
-            Answers to common questions about Modjoy, fees, and security.
+           {t('subtitle')}
           </p>
 
           <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
-            Button
+            {t('button')}
           </button>
         </div>
 
@@ -79,7 +81,7 @@ export default function FaqHomeComponent() {
                     style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
                     className="font-bold text-lg"
                   >
-                    {data.title}
+                    {t(data.title)}
                   </h2>
 
                   <CrossSvg
@@ -100,7 +102,7 @@ export default function FaqHomeComponent() {
                     className="py-4"
                     ref={(el) => (paragraphRefs.current[index] = el)}
                   >
-                    {data.content}
+                    {t(data.content)}
                   </p>
                 </div>
               </div>

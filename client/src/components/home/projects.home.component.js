@@ -1,6 +1,9 @@
 import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 
+// I18N
+import { useTranslation } from "next-i18next";
+
 // DATA
 import { projectsData } from "@/_assets/data/projects.data";
 
@@ -8,6 +11,8 @@ import { projectsData } from "@/_assets/data/projects.data";
 import { ChevronSvg, ArrowSvg } from "../_shared/_svgs/_index";
 
 export default function ProjectsHomeComponent() {
+  const { t } = useTranslation("projects");
+
   const scrollContainerRef = useRef(null);
   const [isGrabbing, setIsGrabbing] = useState(false);
   const [startX, setStartX] = useState(0);
@@ -71,24 +76,25 @@ export default function ProjectsHomeComponent() {
   const arrowRotation = cursorPos.x < halfScreenWidth ? "180deg" : "0deg";
 
   return (
-    <section className="bg-darkGreen relative flex flex-col justify-center pt-24 w-full mx-auto">
+    <section id="projects" className="bg-darkGreen relative flex flex-col justify-center pt-24 w-full mx-auto">
       <div className="flex flex-col gap-4 text-center text-creamy">
-        <h3>Portfolio</h3>
+        <h3>{t("sectionName")}</h3>
         <h1
-          className="text-5xl"
+          className="text-5xl max-w-[650px] mx-auto text-center"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
-          Nos dernières réalisations
+          {t("title")}
         </h1>
         <img
           src="/img/underline-pink.png"
           alt="underline"
           draggable={false}
-          className="max-w-[250px] mx-auto"
+          className="max-w-[250px] mx-auto mt-4"
         />
-        <h2 className="pt-6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-        </h2>
+        <h2
+          className="pt-6"
+          dangerouslySetInnerHTML={{ __html: t("subtitle") }}
+        />
       </div>
 
       {showCursor && (
@@ -151,8 +157,8 @@ export default function ProjectsHomeComponent() {
 
                   <p className="opacity-70 py-2">{data.description}</p>
 
-                  <button className="w-fit font-extralight text-sm flex items-center gap-3">
-                    Button{" "}
+                  <button className="cursor-none w-fit font-extralight text-sm flex items-center gap-3">
+                    {t('button')}
                     <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
                   </button>
                 </div>

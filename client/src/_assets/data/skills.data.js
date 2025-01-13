@@ -1,30 +1,23 @@
 export const skillsData = [
   {
     id: 1,
-    title: "Medium length section heading goes here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
+    title: "list.1.title",
+    content: "list.1.content",
     pictoSrc: "/img/fusee.png",
   },
   {
     id: 2,
-    title: "Medium length section heading goes here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
-    pictoSrc: "/img/fusee.png",
+    title: "list.2.title",
+    content: "list.2.content",    pictoSrc: "/img/fusee.png",
   },
   {
     id: 3,
-    title: "Medium length section heading goes here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
-    pictoSrc: "/img/fusee.png",
+    title: "list.3.title",
+    content: "list.3.content",    pictoSrc: "/img/fusee.png",
   },
   {
     id: 4,
-    title: "Medium length section heading goes here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla.",
-    pictoSrc: "/img/fusee.png",
+    title: "list.4.title",
+    content: "list.4.content",    pictoSrc: "/img/fusee.png",
   },
 ];

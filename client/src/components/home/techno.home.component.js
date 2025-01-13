@@ -1,8 +1,13 @@
+// I18N
+import { useTranslation } from "next-i18next";
+
 export default function TechnoHomeComponent() {
+  const { t } = useTranslation("hero-section");
+
   return (
     <section className="text-center h-[20dvh]">
       <h1 className="py-2 text-creamy">
-        Used by the world's leading companies
+       {t('techno.title')}
       </h1>
 
       <img

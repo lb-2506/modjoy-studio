@@ -1,31 +1,17 @@
 {
   "nav": {
     "list": {
-      "about": "À propos",
-      "programs": "Nos programmes",
-      "contact": "Contact"
+      "1": "Nos Expertises",
+      "2": "Nos Atouts",
+      "3": "Portfolio",
+      "4": "Notre équipe",
+      "5" : "Notre méthode"
     },
     "button": {
-      "inscription": "Inscription"
+      "estimate": "Je veux un devis"
     }
   },
-  "testimony": {
-    "title": "Témoignages",
-    "list": {
-      "1": {
-        "text": "Mon fils attend chaque semaine avec impatience ses cours de français. L’équipe pédagogique est bienveillante et très à l’écoute. Il a fait d'énormes progrès, et je suis ravie de voir à quel point il prend plaisir à apprendre.",
-        "author": "— Marc, papa de Julien"
-      },
-      "2": {
-        "text": "Nous avons inscrit notre fille aux cours du samedi, et elle adore ! En plus de progresser en français, elle a pu rencontrer d’autres enfants francophones. Une belle initiative pour maintenir la langue et la culture française même loin de la France.",
-        "author": "— Sophie, maman de Léa"
-      },
-      "3": {
-        "text": "Nous étions inquiets que nos enfants perdent leur français en étant expatriés, mais grâce à cette association, non seulement ils gardent la langue, mais développent aussi un vrai attachement à la culture française. Les professeurs sont formidables !",
-        "author": "— Claire et Thomas, parents de Camille et Lucas"
-      }
-    }
-  },
+
   "footer": {
     "join": {
       "young": "Jeunes pousses",

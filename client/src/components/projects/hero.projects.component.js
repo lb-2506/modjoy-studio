@@ -43,16 +43,16 @@ export default function HeroProjectsComponent(props) {
 
         <div className="grid grid-cols-2 gap-y-6 gap-x-12 mt-6 ">
           <div>
-            <p className="text-lg font-semibold">Client</p>
-            <p>{props.project.client}</p>
+            <p className="text-lg font-semibold">Secteur</p>
+            <p>{props.project.sector}</p>
           </div>
           <div>
             <p className="text-lg font-semibold">Date</p>
             <p>{props.project.date}</p>
           </div>
           <div>
-            <p className="text-lg font-semibold">Role</p>
-            <p>{props.project.role}</p>
+            <p className="text-lg font-semibold">Durée</p>
+            <p>{props.project.duration}</p>
           </div>
           <div>
             <p className="text-lg font-semibold">Website</p>

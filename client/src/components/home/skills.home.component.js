@@ -4,32 +4,26 @@ import { useTranslation } from "next-i18next";
 // DATA
 import { skillsData } from "@/_assets/data/_index.data";
 
-// COMPONENTS
-import BallBouncingComponent from "../_shared/bouncing/ball.bouncing.component";
-
 export default function SkillsHomeComponent() {
-  const { t } = useTranslation("index");
+  const { t } = useTranslation("skills");
 
   return (
-    <section className="bg-creamy relative">
+    <section id="skills" className="bg-creamy relative">
       <div className="max-w-[80%] py-48 mx-auto flex gap-24">
-        <div className="max-w-[250px] flex flex-col gap-6">
+        <div className="max-w-[320px] flex flex-col gap-6">
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-5xl"
           >
-            Nos atouts
+            {t("title")}
           </h1>
 
           <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique. Duis cursus, mi quis
-            viverra ornare, eros dolor interdum nulla, ut commodo diam libero
-            vitae erat.
+            {t("subtitle")}
           </p>
 
           <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
-            Button
+            {t("button")}
           </button>
         </div>
 
@@ -50,18 +44,17 @@ export default function SkillsHomeComponent() {
                   className="text-2xl text-balance"
                   style={{ fontFamily: "'Satoshi Bold', sans-serif" }}
                 >
-                  {skill.title}
+                  {t(skill.title)}
                 </h2>
-                <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
-                  {skill.content}
-                </p>
+                <p
+                  style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
+                  dangerouslySetInnerHTML={{ __html: t(skill.content) }}
+                />
               </div>
             );
           })}
         </div>
       </div>
-
-      <BallBouncingComponent />
     </section>
   );
 }

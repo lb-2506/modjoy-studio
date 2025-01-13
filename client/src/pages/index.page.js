@@ -52,17 +52,17 @@ export default function HomePage(props) {
       </Head>
 
       <div className="select-none">
-        <NavbarComponent/>
+        <NavbarComponent />
 
-        <HeroHomeComponent/>
-        <ExpertisesHomeComponent/>
-        <SkillsHomeComponent/>
-        <ProjectsHomeComponent/>
-        <TeamHomeComponent/>
-        <WorkHomeComponent/>
-        <FaqHomeComponent/>
-        <PartnersHomeComponent/>
-        <FooterComponent/>
+        <HeroHomeComponent />
+        <ExpertisesHomeComponent />
+        <SkillsHomeComponent />
+        <ProjectsHomeComponent />
+        <TeamHomeComponent />
+        <WorkHomeComponent />
+        <FaqHomeComponent />
+        <PartnersHomeComponent />
+        <FooterComponent />
       </div>
     </>
   );
@@ -71,7 +71,17 @@ export default function HomePage(props) {
 export async function getStaticProps({ locale }) {
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "index"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "expertises",
+        "hero-section",
+        "skills",
+        "projects",
+        "team",
+        "work",
+        "faq",
+        "partners"
+      ])),
     },
   };
 }

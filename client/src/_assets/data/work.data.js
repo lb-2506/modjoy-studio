@@ -1,30 +1,26 @@
 export const workData = [
   {
     id: 1,
-    title: "Short heading here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    title: "list.1.title",
+    content: "list.1.content",
     color: "bg-pink",
   },
   {
     id: 2,
-    title: "Short heading here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    title: "list.2.title",
+    content: "list.2.content",
     color: "bg-turquoise",
   },
   {
     id: 3,
-    title: "Short heading here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    title: "list.3.title",
+    content: "list.3.content",
     color: "bg-green",
   },
   {
     id: 4,
-    title: "Short heading here",
-    content:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare.",
+    title: "list.4.title",
+    content: "list.4.content",
     color: "bg-orange",
   },
 ];

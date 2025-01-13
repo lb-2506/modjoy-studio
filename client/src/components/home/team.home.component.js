@@ -5,28 +5,27 @@ import { useTranslation } from "next-i18next";
 import { teamData } from "@/_assets/data/team.data";
 
 export default function TeamHomeComponent() {
-  const { t } = useTranslation("index");
+  const { t } = useTranslation("team");
 
   return (
-    <section className="bg-darkGreen pt-24">
+    <section id="team" className="bg-darkGreen pt-24">
       <div className="max-w-[90%] mx-auto rounded-[48px] px-12 py-24 bg-green flex gap-24">
-        <div className="max-w-[250px] flex flex-col gap-6">
-          <h3>Tagline</h3>
+        <div className="max-w-[330px] flex flex-col gap-6">
+          <h3>{t("sectionName")}</h3>
 
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-5xl"
           >
-            Notre équipe
+            {t("title")}
           </h1>
 
           <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-            varius enim in eros elementum tristique.
+            {t("subtitle")}
           </p>
 
           <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
-            Button
+            {t("button")}
           </button>
         </div>
 

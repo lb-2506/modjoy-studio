@@ -8,23 +8,23 @@ import { workData } from "@/_assets/data/work.data";
 import BallBouncingComponent from "../_shared/bouncing/ball.bouncing.component";
 
 export default function WorkHomeComponent() {
-  const { t } = useTranslation("index");
+  const { t } = useTranslation("work");
 
   return (
-    <section className="bg-darkGreen relative">
+    <section id="work" className="bg-darkGreen relative">
       <div className="py-24 max-w-[80%] mx-auto flex gap-12">
         <div className="text-creamy flex flex-col gap-6 w-1/2">
-          <h3>Tagline</h3>
+          <h3>{t("sectionName")}</h3>
 
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-5xl max-w-[550px]"
           >
-            Medium length section heading goes here
+            {t('title')}
           </h1>
 
           <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
-            Button
+            {t('button')}
           </button>
         </div>
 
@@ -42,14 +42,14 @@ export default function WorkHomeComponent() {
                     className="text-2xl"
                     style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
                   >
-                    {data.title}
+                    {t(data.title)}
                   </h2>
 
                   <p
                     className="opacity-70 pt-3"
                     style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
                   >
-                    {data.content}
+                    {t(data.content)}
                   </p>
                 </div>
               </div>

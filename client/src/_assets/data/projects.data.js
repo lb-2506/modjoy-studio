@@ -2,19 +2,19 @@ export const projectsData = [
   {
     id: 1,
     imgSrc: "/img/projects/1.jpg",
-    tags: ["Tag one", "Tag two"],
-    title: "Project name here",
+    tags: ["Identité visuelle", "Graphisme", "Site Web"],
+    title: "Les Petits Bilingues de Newham",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    client: "Full name",
-    date: "March 2023",
-    role: "Role name",
-    website: "www.relume.io",
+      "Moderniser leur image et se démarquer dans un secteur où l'impact visuel est souvent négligé.",
+    sector: "École linguistique FLAM",
+    date: "Septembre 2024",
+    duration: "4 semaines",
+    website: "lespetitsbilingues-newham.com",
     slug: "project-1",
     context: {
       heading: "Contexte",
       description:
-        "Dolor enim eu tortor urna sed duis nulla. Aliquam vestibulum, nulla odio nisl vitae. In aliquet pellentesque aenean hac vestibulum turpis mi bibendum diam. Tempor integer aliquam in vitae malesuada fringilla.",
+        "Le défi ? Donner un coup de jeune à l’image de cette école FLAM qui accompagne les enfants expatriés dans l’apprentissage du français. Leur ancien site manquait de dynamisme et ne reflétait ni leur mission ni l’énergie qu’ils investissent au quotidien. L’objectif était clair : une identité qui respire la modernité et une présence digitale marquante.",
       image: {
         src: "/img/projects/1.jpg",
         caption: "Image caption goes here",
@@ -67,9 +67,9 @@ export const projectsData = [
     title: "Another amazing project",
     description:
       "Amet consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
-    client: "Jane Doe",
+    sector: "Jane Doe",
     date: "January 2024",
-    role: "Designer",
+    duration: "Designer",
     website: "www.example.com",
     slug: "project-2",
     context: {
@@ -127,9 +127,9 @@ export const projectsData = [
     tags: ["Tag three"],
     title: "Creative branding design",
     description: "Creating branding materials for a personalized gift store.",
-    client: "John Smith",
+    sector: "John Smith",
     date: "February 2023",
-    role: "Art Director",
+    duration: "Art Director",
     website: "www.brandinghub.com",
     slug: "project-3",
     context: {
@@ -188,9 +188,9 @@ export const projectsData = [
     title: "E-commerce platform redesign",
     description:
       "A redesign project focused on improving user experience and increasing conversion rates.",
-    client: "Online Retailer Inc.",
+    sector: "Online Retailer Inc.",
     date: "December 2022",
-    role: "UI/UX Designer",
+    duration: "UI/UX Designer",
     website: "www.shopbetter.com",
     slug: "project-4",
     context: {
@@ -249,9 +249,9 @@ export const projectsData = [
     title: "Portfolio Website Development",
     description:
       "Building a modern and responsive portfolio website for a creative agency.",
-    client: "Creative Agency",
+    sector: "Creative Agency",
     date: "November 2023",
-    role: "Full-Stack Developer",
+    duration: "Full-Stack Developer",
     website: "www.creativeagency.com",
     slug: "project-5",
     context: {
@@ -308,10 +308,10 @@ export const projectsData = [
     imgSrc: "/img/projects/3.jpg",
     tags: ["Branding", "Identity"],
     title: "Corporate Identity Design",
-    description: "Developing a cohesive brand identity for a corporate client.",
-    client: "Corporate Client",
+    description: "Developing a cohesive brand identity for a corporate sector.",
+    sector: "Corporate sector",
     date: "October 2023",
-    role: "Graphic Designer",
+    duration: "Graphic Designer",
     website: "www.corporateidentity.com",
     slug: "project-6",
     context: {

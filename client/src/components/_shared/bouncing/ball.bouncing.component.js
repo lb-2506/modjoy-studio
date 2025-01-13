@@ -19,8 +19,8 @@ export default function BallBouncingComponent() {
 
       canvas.width = width;
       canvas.height = height;
-      canvas.style.width = width + 'px';
-      canvas.style.height = height + 'px';
+      canvas.style.width = width + "px";
+      canvas.style.height = height + "px";
 
       const ball = {
         x: width * 0.25,
@@ -35,6 +35,7 @@ export default function BallBouncingComponent() {
         bounceFactor: 0.7,
         minBounceHeight: 2,
         minVelocity: 0.1,
+        rotation: 0,
       };
 
       const mouse = {
@@ -49,22 +50,11 @@ export default function BallBouncingComponent() {
       const drawBall = () => {
         context.clearRect(0, 0, width, height);
 
-        // Ombre
-        const shadowY = height - 5;
-        const shadowScale = 1 - (ball.y / height) * 0.5;
-        context.beginPath();
-        context.ellipse(
-          ball.x,
-          shadowY,
-          ball.radius * shadowScale,
-          ball.radius * 0.1 * shadowScale,
-          0,
-          0,
-          Math.PI * 2
-        );
-        context.fillStyle = `rgba(0, 0, 0, 0.4)`;
-        context.fill();
-        context.closePath();
+        // Rotation
+        context.save();
+        context.translate(ball.x, ball.y); // Déplacer le point d'origine au centre de la boule
+        context.rotate(ball.rotation); // Appliquer la rotation
+        context.translate(-ball.x, -ball.y); // Revenir au point d'origine
 
         // Dégradé
         const gradient = context.createRadialGradient(
@@ -77,15 +67,26 @@ export default function BallBouncingComponent() {
         );
         gradient.addColorStop(0.05, ball.color);
         gradient.addColorStop(1, `rgba(255, 144, 84, 1)`);
-        
+
         context.beginPath();
         context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
         context.fillStyle = gradient;
         context.fill();
         context.closePath();
 
+        // Texte "PLAY ME"
+        context.font = `${ball.radius * 0.2}px Arial`;
+        context.fillStyle = "white";
+        context.textAlign = "center";
+        context.textBaseline = "middle";
+        context.fillText("PLAY ME", ball.x, ball.y);
+
+        context.restore(); // Restaurer le contexte sans rotation
+
         // Curseur
-        const distToBall = Math.sqrt((mouse.x - ball.x)**2 + (mouse.y - ball.y)**2);
+        const distToBall = Math.sqrt(
+          (mouse.x - ball.x) ** 2 + (mouse.y - ball.y) ** 2
+        );
         if (ball.isDragging) {
           canvas.style.cursor = "grabbing";
         } else if (distToBall < ball.radius) {
@@ -104,6 +105,10 @@ export default function BallBouncingComponent() {
 
           ball.x += ball.vx;
           ball.y += ball.vy;
+
+          // Rotation en fonction de la distance parcourue horizontalement
+          const distanceTraveled = ball.vx;
+          ball.rotation += distanceTraveled / ball.radius;
 
           // Friction horizontale
           ball.vx *= ball.friction;
@@ -148,7 +153,9 @@ export default function BallBouncingComponent() {
         mouse.x = e.clientX - rect.left;
         mouse.y = e.clientY - rect.top;
 
-        const dist = Math.sqrt((mouse.x - ball.x)**2 + (mouse.y - ball.y)**2);
+        const dist = Math.sqrt(
+          (mouse.x - ball.x) ** 2 + (mouse.y - ball.y) ** 2
+        );
         if (dist < ball.radius) {
           ball.isDragging = true;
           ball.vx = 0;
@@ -211,8 +218,8 @@ export default function BallBouncingComponent() {
         height = parentRect.height;
         canvas.width = width;
         canvas.height = height;
-        canvas.style.width = width + 'px';
-        canvas.style.height = height + 'px';
+        canvas.style.width = width + "px";
+        canvas.style.height = height + "px";
         drawBall();
       };
 
