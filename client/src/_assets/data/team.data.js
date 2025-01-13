@@ -35,7 +35,7 @@ export const teamData = [
   {
     id: 4,
     pictoSrc: "/img/avatar.png",
-    name: "Rockédine",
+    name: "Roknédine",
     job: "Motion Designer",
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
