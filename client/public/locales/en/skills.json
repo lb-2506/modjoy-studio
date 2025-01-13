@@ -1,0 +1,23 @@
+{
+  "title": "Pourquoi nous ? Parce qu'on assure !",
+  "subtitle": "Créatifs, réactifs, et efficaces. On ne te vend pas des promesses, on te livre des résultats. Travailler avec nous, c’est comme jouer en mode cheat code : ça va plus vite, et ça marche mieux.",
+  "button": "Ça m'intéresse !",
+  "list": {
+    "1": {
+      "title": "Des experts surboostés, sans le bla-bla des agences classiques",
+      "content": "Chez nous, chaque mission est confiée à des pros ultra-expérimentés, parce que votre projet mérite ce qu’il y a de mieux.</br><span class='font-bold'>Pas de blagues, que des résultats.</span>"
+    },
+    "2": {
+      "title": "La créativité, c’est pas une option. C’est notre moteur",
+      "content": "On pense différemment, on crée autrement. Chaque projet est une toile blanche où on lâche notre créativité sans limite. Si tu cherches du copier-coller, tu n’es pas au bon endroit. <span class='font-bold'> Ici, on fait unique. Ici, on fait wow.</span>"
+    },
+    "3": {
+      "title": "Un seul point de contact. Zéro perte de temps",
+      "content": "Vous avez un interlocuteur dédié qui connaît votre projet sur le bout des doigts. Moins de bla-bla, plus d’action; <span class='font-bold'>Et ça, ça change tout.</span>"
+    },
+    "4": {
+      "title": "Un budget carré, pas de mauvaises surprises",
+      "content": "On est du genre à tenir nos promesses, surtout quand il s’agit de chiffres. Ton budget est clair dès le départ, et il reste sous contrôle jusqu’à la fin. Pas de dépassement, pas d’excuses. Juste de l’efficacité."
+    }
+  }
+}

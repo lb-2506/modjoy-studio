@@ -1,0 +1,33 @@
+{
+  "nav": {
+    "list": {
+      "1": "Nos Expertises",
+      "2": "Nos Atouts",
+      "3": "Portfolio",
+      "4": "Notre équipe",
+      "5" : "Notre méthode"
+    },
+    "button": {
+      "estimate": "Je veux un devis"
+    }
+  },
+
+  "footer": {
+    "join": {
+      "young": "Jeunes pousses",
+      "title": "Prêt à rejoindre l'aventure ?",
+      "subtitle": "Inscrivez votre enfant dès aujourd'hui pour découvrir le français dans un cadre ludique et bienveillant !",
+      "inscription": "Inscription"
+    },
+    "main": {
+      "about": "À propos",
+      "programs": "Nos programmes",
+      "recruitment": "Recrutement",
+      "inscription": "Inscription",
+      "contact": "Contact",
+      "policy": "Politique de confidentialité",
+      "legal": "Mentions légales",
+      "reserved": "© Les Petits Bilingues de Newham 2024. Tous droits réservés."
+    }
+  }
+}

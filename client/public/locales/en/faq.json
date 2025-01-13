@@ -1,0 +1,23 @@
+{
+  "title": "FAQs",
+  "subtitle": "On répond à tout, sauf à l'heure du café",
+  "button": "Ça m'intéresse !",
+  "list": {
+    "1": {
+      "title": "Que se passe-t-il si mon projet dépasse le budget initial ?t",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+    },
+    "2": {
+      "title": "Quels sont vos délais moyens pour un projet ?",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+    },
+    "3": {
+      "title": "Quels sont vos tarifs et comment fonctionne la facturation ?",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+    },
+    "4": {
+      "title": "Comment assurez-vous la qualité et le suivi des projets ?",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+    }
+  }
+}
