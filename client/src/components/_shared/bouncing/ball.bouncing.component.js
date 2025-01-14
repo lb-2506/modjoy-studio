@@ -1,4 +1,4 @@
-"use client"; // Assurez-vous d'être en mode client si vous utilisez Next.js 13 App Router
+"use client";
 
 import { useEffect, useRef } from "react";
 
@@ -28,7 +28,7 @@ export default function BallBouncingComponent() {
         radius: 80,
         vx: 0,
         vy: 0,
-        color: "orange",
+        color: "#FF9054",
         isDragging: false,
         friction: 0.98,
         gravity: 0.5,
@@ -66,7 +66,7 @@ export default function BallBouncingComponent() {
           ball.radius
         );
         gradient.addColorStop(0.05, ball.color);
-        gradient.addColorStop(1, `rgba(255, 144, 84, 1)`);
+        gradient.addColorStop(1, `rgba(244, 112, 41, 1)`);
 
         context.beginPath();
         context.arc(ball.x, ball.y, ball.radius, 0, Math.PI * 2);
