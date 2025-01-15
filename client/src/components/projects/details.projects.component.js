@@ -53,7 +53,7 @@ export default function DetailsProjectsComponent(props) {
         </h1>
 
         <div className="flex flex-col mt-6 max-w-[350px]">
-          {props.project.context.sections.map((section, i) => (
+          {props.project.details.sections.map((section, i) => (
             <button
               key={i}
               onClick={() => handleScrollToSection(i)} // Scrolle vers la section correspondante
@@ -72,53 +72,8 @@ export default function DetailsProjectsComponent(props) {
 
       {/* Sections à droite */}
       <div className="w-2/3">
-        <h1
-          className="text-4xl mb-4"
-          style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
-        >
-          {props.project.context.heading}
-        </h1>
-
-        <p>{props.project.context.description}</p>
-
-        <div
-          className="mt-12 h-[380px] bg-cover bg-center rounded-xl "
-          style={{
-            backgroundImage: `url(${props.project.context.image.src})`,
-          }}
-          aria-label={props.project.title}
-        />
-
-        <p className="border-l-2 pl-2 mt-4">
-          {props.project.context.image.caption}
-        </p>
-
-        <p className="my-8">{props.project.context.details}</p>
-
-        <div className="flex flex-col">
-          {props.project.context.sections.map((section, i) => (
-            <div
-              key={i}
-              className="flex flex-col gap-4"
-              ref={(el) => (sectionsRef.current[i] = el)}
-            >
-              <p className="text-xl font-bold pt-12">{section.heading}</p>
-              {section.content && <p>{section.content}</p>}
-              {section.quote && (
-                <p className="border-l-2 pl-2 italic">"{section.quote}"</p>
-              )}
-              {section.image && (
-                <div
-                  className="mt-12 h-[380px] bg-cover bg-center rounded-xl "
-                  style={{
-                    backgroundImage: `url(${section.image.src})`,
-                  }}
-                  aria-label={props.project.title}
-                />
-              )}
-            </div>
-          ))}
-        </div>
+       
+       
       </div>
     </section>
   );

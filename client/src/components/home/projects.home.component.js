@@ -76,7 +76,10 @@ export default function ProjectsHomeComponent() {
   const arrowRotation = cursorPos.x < halfScreenWidth ? "180deg" : "0deg";
 
   return (
-    <section id="projects" className="bg-darkGreen relative flex flex-col justify-center pt-24 w-full mx-auto">
+    <section
+      id="projects"
+      className="bg-darkGreen relative flex flex-col justify-center pt-24 w-full mx-auto"
+    >
       <div className="flex flex-col gap-4 text-center text-creamy">
         <h3>{t("sectionName")}</h3>
         <h1
@@ -137,11 +140,17 @@ export default function ProjectsHomeComponent() {
             style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
           >
             <div
-              className="h-[630px] bg-no-repeat bg-center rounded-lg bg-cover flex flex-col justify-end  text-creamy "
+              className="relative h-[630px] bg-no-repeat bg-center rounded-lg bg-cover flex flex-col justify-end text-creamy "
               style={{
-                backgroundImage: `url(${data.imgSrc})`,
+                backgroundImage: `url(${data.imgCouv})`,
               }}
             >
+              <div
+                className="absolute inset-0 rounded-lg z-0"
+                style={{
+                  background: "linear-gradient(to top, rgba(0, 35, 23, 0.95), transparent)",                }}
+              />
+
               <Link href={`${data.slug}`}>
                 <div
                   onMouseEnter={() => setIsDataHovered(true)}
@@ -151,14 +160,14 @@ export default function ProjectsHomeComponent() {
                       e.preventDefault();
                     }
                   }}
-                  className="flex flex-col gap-4 p-6"
+                  className="flex flex-col gap-4 p-6 z-10"
                 >
                   <h2 className="text-xl uppercase">{data.title}</h2>
 
-                  <p className="opacity-70 py-2">{data.description}</p>
+                  <p className="opacity-75 py-2">{data.description}</p>
 
                   <button className="cursor-none w-fit font-extralight text-sm flex items-center gap-3">
-                    {t('button')}
+                    {t("button")}
                     <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
                   </button>
                 </div>

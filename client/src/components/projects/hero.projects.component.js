@@ -70,7 +70,7 @@ export default function HeroProjectsComponent(props) {
 
       <div
         className="mt-12 h-[700px] bg-cover bg-center rounded-xl"
-        style={{ backgroundImage: `url(${props.project.imgSrc})` }}
+        style={{ backgroundImage: `url(${props.project.imgHero})` }}
         aria-label={props.project.title}
       />
     </section>
