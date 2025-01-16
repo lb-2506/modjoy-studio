@@ -57,7 +57,7 @@ export default function ProjectPage(props) {
 
         <HeroProjectsComponent project={props.project} />
         <DetailsProjectsComponent project={props.project} />
-        <ProjectsHomeComponent />
+        <ProjectsHomeComponent projectPage={true}/>
         <PartnersHomeComponent />
         <FooterComponent />
       </div>

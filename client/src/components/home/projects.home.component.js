@@ -10,7 +10,7 @@ import { projectsData } from "@/_assets/data/projects.data";
 // SVG
 import { ChevronSvg, ArrowSvg } from "../_shared/_svgs/_index";
 
-export default function ProjectsHomeComponent() {
+export default function ProjectsHomeComponent(props) {
   const { t } = useTranslation("projects");
 
   const scrollContainerRef = useRef(null);
@@ -78,9 +78,9 @@ export default function ProjectsHomeComponent() {
   return (
     <section
       id="projects"
-      className="bg-darkGreen relative flex flex-col justify-center pt-24 w-full mx-auto"
+      className={`${props.projectPage ? "bg-green max-w-[90%] mt-12 pb-12 rounded-[48px] pt-12" : "bg-darkGreen pt-24"} relative flex flex-col justify-center w-full mx-auto`}
     >
-      <div className="flex flex-col gap-4 text-center text-creamy">
+      <div className={`flex flex-col gap-4 text-center ${props.projectPage ? "text-darkGreen" : "text-creamy" }`}>
         <h3>{t("sectionName")}</h3>
         <h1
           className="text-5xl max-w-[650px] mx-auto text-center"
@@ -126,7 +126,7 @@ export default function ProjectsHomeComponent() {
 
       <div
         ref={scrollContainerRef}
-        className="overflow-x-scroll w-full px-[5%] flex gap-6 z-10 custom-scrollbar mt-24"
+        className="overflow-x-scroll w-full px-[5%] flex gap-6 z-10 custom-scrollbar mt-16"
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
