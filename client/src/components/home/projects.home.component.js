@@ -148,7 +148,9 @@ export default function ProjectsHomeComponent() {
               <div
                 className="absolute inset-0 rounded-lg z-0"
                 style={{
-                  background: "linear-gradient(to top, rgba(0, 35, 23, 0.95), transparent)",                }}
+                  background:
+                    "linear-gradient(to top, rgba(0, 35, 23, 0.95), transparent)",
+                }}
               />
 
               <Link href={`${data.slug}`}>
@@ -164,7 +166,10 @@ export default function ProjectsHomeComponent() {
                 >
                   <h2 className="text-xl uppercase">{data.title}</h2>
 
-                  <p className="opacity-75 py-2">{data.description}</p>
+                  <p
+                    className="opacity-75 py-2"
+                    dangerouslySetInnerHTML={{ __html: data.description }}
+                  />
 
                   <button className="cursor-none w-fit font-extralight text-sm flex items-center gap-3">
                     {t("button")}

@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { useEffect, useState, useRef } from "react";
 
 export default function DetailsProjectsComponent(props) {
@@ -9,7 +8,7 @@ export default function DetailsProjectsComponent(props) {
     const observerOptions = {
       root: null,
       rootMargin: "0px",
-      threshold: 1, // Section considérée visible à 50%
+      threshold: 0.5,
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -35,8 +34,8 @@ export default function DetailsProjectsComponent(props) {
   const handleScrollToSection = (index) => {
     if (sectionsRef.current[index]) {
       sectionsRef.current[index].scrollIntoView({
-        behavior: "smooth", // Défilement fluide
-        block: "start", // Aligne la section au centre de l'écran
+        behavior: "smooth",
+        block: "start",
       });
     }
   };
@@ -56,7 +55,7 @@ export default function DetailsProjectsComponent(props) {
           {props.project.details.sections.map((section, i) => (
             <button
               key={i}
-              onClick={() => handleScrollToSection(i)} // Scrolle vers la section correspondante
+              onClick={() => handleScrollToSection(i)}
               className={`h-[40px] rounded-full flex items-center px-4 ${
                 i === activeIndex ? "bg-pink text-white" : "bg-transparent"
               }`}
@@ -72,8 +71,21 @@ export default function DetailsProjectsComponent(props) {
 
       {/* Sections à droite */}
       <div className="w-2/3">
-       
-       
+        {props.project.details.sections.map((section, i) => (
+          <div
+            key={i}
+            ref={(el) => (sectionsRef.current[i] = el)}
+            className="mb-12"
+          >
+            <h2
+              style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
+              className="text-2xl font-bold mb-4"
+            >
+              {section.heading}
+            </h2>
+            <div dangerouslySetInnerHTML={{ __html: section.content }}></div>
+          </div>
+        ))}
       </div>
     </section>
   );

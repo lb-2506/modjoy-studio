@@ -13,9 +13,8 @@ export default function HeroProjectsComponent(props) {
             <p
               style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
               className="text-lg mt-6"
-            >
-              {props.project.description}
-            </p>
+              dangerouslySetInnerHTML={{ __html: props.project.description }}
+            />
           </div>
 
           <div className="flex gap-4 mt-4">
