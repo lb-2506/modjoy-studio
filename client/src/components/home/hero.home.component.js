@@ -5,6 +5,7 @@ import { useTranslation } from "next-i18next";
 
 // COMPONENTS
 import TechnoHomeComponent from "./techno.home.component";
+import HelixR3fComponent from "../_shared/r3f/helix/helix.r3f.component";
 
 export default function HeroHomeComponent() {
   const { t } = useTranslation("hero-section");
@@ -95,11 +96,14 @@ export default function HeroHomeComponent() {
           draggable={false}
           className="max-w-[200px] absolute left-[5%] top-[25%]"
         />
-        <img
+
+        <HelixR3fComponent/>
+
+        {/* <img
           src="/img/flower-green.png"
           draggable={false}
           className="max-w-[200px] absolute right-0"
-        />
+        /> */}
         <img
           src="/img/cube.png"
           draggable={false}
