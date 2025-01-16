@@ -126,7 +126,7 @@ export default function ProjectsHomeComponent(props) {
 
       <div
         ref={scrollContainerRef}
-        className="overflow-x-scroll w-full px-[5%] flex gap-6 z-10 custom-scrollbar mt-16"
+        className={`overflow-x-scroll w-full ${props.projectPage ? "px-[2%]" : "px-[5%]"} flex gap-6 z-10 custom-scrollbar mt-16`}
         onMouseDown={handleMouseDown}
         onMouseUp={handleMouseUp}
         onMouseLeave={handleMouseLeave}
