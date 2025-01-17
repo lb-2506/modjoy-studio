@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import { useTranslation } from "next-i18next";
 
 // COMPONENTS
-import TechnoHomeComponent from "./techno.home.component";
+import LogosHomeComponent from "./logos.home.component";
 import HelixR3fComponent from "../_shared/r3f/helix/helix.r3f.component";
 
 export default function HeroHomeComponent() {
@@ -169,7 +169,7 @@ export default function HeroHomeComponent() {
         </div>
       </section>
 
-      <TechnoHomeComponent />
+      <LogosHomeComponent />
     </div>
   );
 }

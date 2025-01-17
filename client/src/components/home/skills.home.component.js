@@ -35,10 +35,8 @@ export default function SkillsHomeComponent() {
                   src={skill.pictoSrc}
                   alt="picto"
                   draggable={false}
-                  className="max-w-[50px] rounded-xl p-2"
-                  style={{
-                    border: "1px solid rgba(0, 0, 0, 0.2)",
-                  }}
+                  className="max-w-[70px] rounded-xl p-2"
+                 
                 />
                 <h2
                   className="text-2xl text-balance"

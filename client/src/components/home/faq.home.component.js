@@ -8,6 +8,7 @@ import { faqData } from "@/_assets/data/faq.data";
 
 // SVG
 import { CrossSvg } from "../_shared/_svgs/cross.svg";
+import { AlpazeSvg } from "../_shared/_svgs/logos/alpaze.svg";
 
 export default function FaqHomeComponent() {
   const { t } = useTranslation("faq");
@@ -47,15 +48,15 @@ export default function FaqHomeComponent() {
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-5xl"
           >
-            {t('title')}
+            {t("title")}
           </h1>
 
           <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
-           {t('subtitle')}
+            {t("subtitle")}
           </p>
 
           <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
-            {t('button')}
+            {t("button")}
           </button>
         </div>
 
