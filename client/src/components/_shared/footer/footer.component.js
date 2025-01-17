@@ -4,13 +4,7 @@ import Link from "next/link";
 import { useTranslation } from "next-i18next";
 
 // SVG
-import {
-  FacebookSvg,
-  InstagramSvg,
-  LinkedInSvg,
-  TwitterSvg,
-  YoutubeSvg,
-} from "../_svgs/_index";
+import { InstagramSvg, LinkedInSvg } from "../_svgs/_index";
 
 export default function FooterComponent() {
   const { t } = useTranslation("common");
@@ -79,11 +73,8 @@ export default function FooterComponent() {
           </ul>
 
           <ul className="flex justify-end gap-4 items-center w-1/3">
-            <FacebookSvg />
             <InstagramSvg />
-            <TwitterSvg />
             <LinkedInSvg />
-            <YoutubeSvg />
           </ul>
         </div>
 
@@ -93,7 +84,7 @@ export default function FooterComponent() {
           style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
           className="flex justify-center items-center text-center gap-4 text-creamy"
         >
-          <p>© 2024 Modjoy Studio. All rights reserved.</p>
+          <p>© 2025 Modjoy Studio. All rights reserved.</p>
           <Link href="#">
             <a className="underline">Privacy Policy</a>
           </Link>

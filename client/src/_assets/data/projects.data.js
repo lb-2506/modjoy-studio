@@ -330,8 +330,6 @@ export const projectsData = [
                 </li>
               </ul>
 
-              <hr style="border: none; border-top: 1px solid #ccc; margin: 24px 0;" />
-
               <h3 style="font-family: 'Brockmann Medium', sans-serif; font-size: 1.5rem; margin-bottom: 16px;">Obstacles et défis</h3>
               <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
                 <li style="margin-bottom: 8px;">
