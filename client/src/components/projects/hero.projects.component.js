@@ -55,14 +55,24 @@ export default function HeroProjectsComponent(props) {
           </div>
           <div>
             <p className="text-lg font-semibold">Website</p>
-            <a
-              href={`https://${props.project.website}`}
-              target="_blank"
-              rel="noo pener noreferrer"
-              className="underline"
-            >
-              {props.project.website}
-            </a>
+
+            <div className="flex flex-wrap items-center space-x-2">
+              {props.project.website.map((site, index) => (
+                <span key={index} className="flex items-center">
+                  <a
+                    href={`https://${site}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline"
+                  >
+                    {site}
+                  </a>
+                  {index < props.project.website.length - 1 && (
+                    <span className="mx-2">&bull;</span>
+                  )}
+                </span>
+              ))}
+            </div>
           </div>
         </div>
       </div>

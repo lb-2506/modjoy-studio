@@ -93,9 +93,9 @@ export default function FooterComponent() {
             <a className="underline">Terms of Use</a>
           </Link>
 
-          <Link href="#">
+          {/* <Link href="#">
             <a className="underline">Cookie Settings</a>
-          </Link>
+          </Link> */}
         </div>
       </div>
     </footer>
