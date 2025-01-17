@@ -29,6 +29,7 @@ export default function HomePage(props) {
       title = "Modjoy Studio";
       description = "";
   }
+
   return (
     <>
       <Head>
@@ -80,7 +81,7 @@ export async function getStaticProps({ locale }) {
         "team",
         "work",
         "faq",
-        "partners"
+        "partners",
       ])),
     },
   };

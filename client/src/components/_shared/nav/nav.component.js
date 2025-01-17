@@ -1,19 +1,28 @@
 import Link from "next/link";
-
 import { useRouter } from "next/router";
-
-// I18N
 import { useTranslation } from "next-i18next";
 
 export default function NavbarComponent() {
   const { t } = useTranslation("common");
+  const router = useRouter();
 
-  function handleScrollToSection(id) {
-    const section = document.querySelector(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+  const handleScrollToSection = async (id) => {
+    if (router.pathname !== "/") {
+      await router.push("/");
+
+      setTimeout(() => {
+        const section = document.querySelector(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 200);
+    } else {
+      const section = document.querySelector(id);
+      if (section) {
+        section.scrollIntoView({ behavior: "smooth" });
+      }
     }
-  }
+  };
 
   return (
     <nav className="absolute top-0 left-0 right-0 flex items-center justify-between px-12 py-6 z-20">
@@ -37,7 +46,6 @@ export default function NavbarComponent() {
             {t("nav.list.1")}
           </button>
         </li>
-
         <li>
           <button
             onClick={() => handleScrollToSection("#skills")}
@@ -46,7 +54,6 @@ export default function NavbarComponent() {
             {t("nav.list.2")}
           </button>
         </li>
-
         <li>
           <button
             onClick={() => handleScrollToSection("#projects")}
@@ -55,7 +62,6 @@ export default function NavbarComponent() {
             {t("nav.list.3")}
           </button>
         </li>
-
         <li>
           <button
             onClick={() => handleScrollToSection("#team")}
@@ -64,7 +70,6 @@ export default function NavbarComponent() {
             {t("nav.list.4")}
           </button>
         </li>
-        
         <li>
           <button
             onClick={() => handleScrollToSection("#work")}
