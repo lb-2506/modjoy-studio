@@ -80,7 +80,9 @@ export default function ProjectsHomeComponent(props) {
       id="projects"
       className={`${props.projectPage ? "bg-green max-w-[90%] mt-12 pb-12 rounded-[48px] pt-12" : "bg-darkGreen pt-24"} relative flex flex-col justify-center w-full mx-auto`}
     >
-      <div className={`flex flex-col gap-4 text-center ${props.projectPage ? "text-darkGreen" : "text-creamy" }`}>
+      <div
+        className={`flex flex-col gap-4 text-center ${props.projectPage ? "text-darkGreen" : "text-creamy"}`}
+      >
         <h3>{t("sectionName")}</h3>
         <h1
           className="text-5xl max-w-[650px] mx-auto text-center"
@@ -88,12 +90,16 @@ export default function ProjectsHomeComponent(props) {
         >
           {t("title")}
         </h1>
-        <img
-          src="/img/underline-pink.png"
-          alt="underline"
-          draggable={false}
-          className="max-w-[250px] mx-auto mt-4"
-        />
+        
+        {!props.projectPage && (
+          <img
+            src="/img/underline-pink.png"
+            alt="underline"
+            draggable={false}
+            className="max-w-[250px] mx-auto mt-4"
+          />
+        )}
+
         <h2
           className="pt-6"
           dangerouslySetInnerHTML={{ __html: t("subtitle") }}
