@@ -1,6 +1,23 @@
 // I18N
 import { useTranslation } from "next-i18next";
-import { AlpazeSvg } from "../_shared/_svgs/logos/alpaze.svg";
+
+// MARQUEE
+import Marquee from "react-fast-marquee";
+
+// SVG
+import {
+  AlpazeSvg,
+  CadulisSvg,
+  LesPtitsMotsSvg,
+  LpbnSvg,
+  LvsSvg,
+  MirrorBotSvg,
+  PluxeeSvg,
+  PowerSvg,
+  SodexoSvg,
+  TreefleSvg,
+  TrippnySvg,
+} from "../_shared/_svgs/_index";
 
 export default function LogosHomeComponent() {
   const { t } = useTranslation("hero-section");
@@ -9,8 +26,22 @@ export default function LogosHomeComponent() {
     <section className="text-center h-[20dvh] w-[100vw]">
       <h1 className="py-2 text-creamy">{t("logos.title")}</h1>
 
-      <div className="mt-12 flex items-center">
-        <AlpazeSvg className="max-h-[100px]" />
+      <div className="mt-12">
+        <Marquee>
+          <div className=" flex gap-16 items-center">
+          <AlpazeSvg />
+          <LpbnSvg />
+          <CadulisSvg />
+          <TrippnySvg />
+          <PluxeeSvg />
+          <LvsSvg />
+          <LesPtitsMotsSvg />
+          <MirrorBotSvg />
+          <TreefleSvg />
+          <PowerSvg />
+          <SodexoSvg />
+          </div>
+        </Marquee>
       </div>
     </section>
   );
