@@ -3,9 +3,6 @@ import { useEffect, useRef, useState } from "react";
 // I18N
 import { useTranslation } from "next-i18next";
 
-// CALENDAR
-import { getCalApi } from "@calcom/embed-react";
-
 // COMPONENTS
 import LogosHomeComponent from "./logos.home.component";
 import HelixR3fComponent from "../_shared/r3f/helix/helix.r3f.component";
@@ -69,13 +66,6 @@ export default function HeroHomeComponent() {
     updateSmileyStyle(smileyRef, setSmileyStyle);
     updateSmileyStyle(smiley2Ref, setSmiley2Style);
   }, [mousePos]);
-
-  useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({ namespace: "appel-decouverte-30-min" });
-      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
-    })();
-  }, []);
 
   return (
     <div className="fixed top-0 -z-10 bg-darkGreen">

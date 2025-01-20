@@ -51,35 +51,39 @@ export default function PartnersHomeComponent() {
                 <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-pink border" />
                 <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-pink border" />
                 <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-pink border" />
-                {t('title.1')}
+                {t("title.1")}
               </span>
-              {t('title.2')}
+              {t("title.2")}
             </span>
 
             <span className="flex gap-3 flex-wrap justify-center">
-              {t('title.3')}
+              {t("title.3")}
               <span className="relative text-nowrap border border-green">
                 <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-green border" />
                 <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-green border" />
                 <span className="absolute bottom-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 translate-y-1/2 border-green border" />
                 <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-green border" />
-                {t('title.4')}
+                {t("title.4")}
               </span>
-              {t('title.5')}
+              {t("title.5")}
             </span>
           </h1>
 
-          <h2 className="max-w-[580px]">
-            {t('subtitle')}
-          </h2>
+          <h2 className="max-w-[580px]">{t("subtitle")}</h2>
 
           <div className="flex gap-6">
             <button className="bg-orange text-darkGreen rounded-2xl px-4 py-2">
-              {t('buttons.estimate')}
+              {t("buttons.estimate")}
             </button>
 
-            <button className="w-fit font-extralight text-sm flex items-center gap-3">
-              {t('buttons.rdv')} <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
+            <button
+              className="w-fit font-extralight text-sm flex items-center gap-3"
+              data-cal-namespace="appel-decouverte-30-min"
+              data-cal-link="modjoystudio/appel-decouverte-30-min"
+              data-cal-config='{"layout":"month_view"}'
+            >
+              {t("buttons.rdv")}{" "}
+              <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
             </button>
           </div>
         </div>

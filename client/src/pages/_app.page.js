@@ -9,6 +9,11 @@ import "@/styles/custom/_index.scss";
 // I18N
 import { appWithTranslation } from "next-i18next";
 
+
+// CALENDAR
+import { getCalApi } from "@calcom/embed-react";
+
+
 // SMOOTH SCROLL
 import Lenis from "@studio-freight/lenis";
 
@@ -53,6 +58,13 @@ function App({ Component, pageProps }) {
       window.scrollTo(0, 0);
     }
   }, [router.asPath]);
+  useEffect(()=>{
+	  (async function () {
+		const cal = await getCalApi({"namespace":"appel-decouverte-30-min"});
+		cal("ui", {"cssVarsPerTheme":{"light":{"cal-brand":"#59DC6C"},"dark":{"cal-brand":"#59DC6C"}},"hideEventTypeDetails":false,"layout":"month_view"});
+	  })();
+	}, [])
+  
 
   return <Component {...pageProps} />;
 }

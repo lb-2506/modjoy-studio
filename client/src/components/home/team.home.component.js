@@ -24,7 +24,12 @@ export default function TeamHomeComponent() {
             {t("subtitle")}
           </p>
 
-          <button className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit">
+          <button
+            data-cal-namespace="appel-decouverte-30-min"
+            data-cal-link="modjoystudio/appel-decouverte-30-min"
+            data-cal-config='{"layout":"month_view"}'
+            className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit"
+          >
             {t("button")}
           </button>
         </div>
