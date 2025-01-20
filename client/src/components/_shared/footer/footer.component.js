@@ -17,10 +17,10 @@ export default function FooterComponent() {
   }
 
   return (
-    <footer className="py-24 bg-darkGreen ">
+    <footer className="py-12 tablet:py-24 bg-darkGreen ">
       <div className="max-w-[90%] mx-auto">
-        <div className="flex justify-between">
-          <div className="w-1/3">
+        <div className="flex flex-col gap-12 desktop:gap-0 desktop:flex-row items-center justify-between">
+          <div className="desktop:w-1/3">
             <img
               src="/img/logo.png"
               draggable={false}
@@ -29,7 +29,7 @@ export default function FooterComponent() {
             />
           </div>
 
-          <ul className="flex justify-center items-center gap-12 text-creamy w-1/3">
+          <ul className="flex flex-col mobile:flex-row justify-center items-center gap-12 text-creamy desktop:w-1/3">
             <li>
               <button
                 onClick={() => handleScrollToSection("#expertises")}
@@ -72,7 +72,7 @@ export default function FooterComponent() {
             </li>
           </ul>
 
-          <ul className="flex justify-end gap-4 items-center w-1/3">
+          <ul className="flex justify-end gap-4 items-center desktop:w-1/3">
             <InstagramSvg />
             <LinkedInSvg />
           </ul>
@@ -82,7 +82,7 @@ export default function FooterComponent() {
 
         <div
           style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
-          className="flex justify-center items-center text-center gap-4 text-creamy"
+          className="flex flex-col tablet:flex-row justify-center items-center text-center gap-4 text-creamy"
         >
           <p>© 2025 Modjoy Studio. All rights reserved.</p>
           <Link href="#">

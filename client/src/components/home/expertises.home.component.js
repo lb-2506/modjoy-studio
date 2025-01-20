@@ -9,6 +9,10 @@ export default function ExpertisesHomeComponent() {
   const [parentWidth, setParentWidth] = useState(0);
   const firstParentRef = useRef(null);
 
+  // État pour la sélection d'un item dans l'accordéon vertical (mobile)
+  // Par défaut : index 0 est ouvert
+  const [openIndex, setOpenIndex] = useState(0);
+
   useEffect(() => {
     if (firstParentRef.current) {
       setParentWidth(firstParentRef.current.offsetWidth - 48);
@@ -28,7 +32,10 @@ export default function ExpertisesHomeComponent() {
   }, []);
 
   return (
-    <section id="expertises" className="bg-creamy rounded-t-[48px] pt-24 mt-[100vh] flex flex-col items-center justify-center">
+    <section
+      id="expertises"
+      className="bg-creamy rounded-t-[48px] pt-24 pb-12 mt-[100vh] flex flex-col items-center justify-center"
+    >
       <div className="flex flex-col gap-4 text-center">
         <h3>{t("sectionName")}</h3>
 
@@ -51,8 +58,8 @@ export default function ExpertisesHomeComponent() {
         <h2 className="pt-6">{t("subtitle")}</h2>
       </div>
 
-      {/* L'accordéon horizontal */}
-      <ul className="mt-12 w-[90%] mx-auto h-[650px] rounded-xl overflow-hidden">
+      {/* L'accordéon horizontal (tablettes/desktop) */}
+      <ul className="hidden tablet:block mt-12 w-[90%] mx-auto h-[650px] rounded-xl overflow-hidden">
         {featuresData.map((feature, index) => {
           const tabId = `rad${index + 1}`;
           const contentRef = useRef(null);
@@ -100,6 +107,57 @@ export default function ExpertisesHomeComponent() {
                   <p
                     ref={contentRef}
                     className="text-sm leading-7 whitespace-normal"
+                    dangerouslySetInnerHTML={{ __html: t(feature.content) }}
+                  />
+                </div>
+              </div>
+            </li>
+          );
+        })}
+      </ul>
+
+      {/* L'accordéon vertical (mobile) */}
+      <ul className="mt-12 tablet:hidden w-[90%] mx-auto flex flex-col gap-4">
+        {featuresData.map((feature, index) => {
+          const isOpen = openIndex === index;
+
+          const contentRef = useRef(null);
+          const [contentHeight, setContentHeight] = useState(0);
+
+          useEffect(() => {
+            if (contentRef.current) {
+              setContentHeight(contentRef.current.scrollHeight);
+            }
+          }, []);
+
+          return (
+            <li key={feature.id} className="rounded-lg">
+              <h2
+                className={`
+                  ${isOpen ? "rounded-t-lg" : "rounded-lg"}  text-lg font-bold flex gap-6 p-4 text-pretty 
+                  hover:cursor-pointer
+                  ${feature.bgColor}
+                `}
+                onClick={() => setOpenIndex(index)}
+              >
+                <span>0{index + 1}</span>
+                {t(feature.name)}
+              </h2>
+
+              <div
+                className={`
+                  ${feature.bgTransparentColor} rounded-b-lg 
+                  px-4 flex flex-col gap-4 overflow-hidden
+                `}
+                style={{
+                  maxHeight: isOpen ? contentHeight : 0,
+                  transition: "max-height 0.2s ease-in-out",
+                }}
+              >
+                <div ref={contentRef}>
+                  <h3 className="text-xl font-bold mt-4">{t(feature.title)}</h3>
+                  <p
+                    className="leading-[35px] my-4"
                     dangerouslySetInnerHTML={{ __html: t(feature.content) }}
                   />
                 </div>

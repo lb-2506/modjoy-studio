@@ -18,6 +18,7 @@ export default function Document() {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
         />
+        <script async src="https://tally.so/widgets/embed.js"></script>
       </Head>
       <body>
         <Main />

@@ -14,7 +14,7 @@ module.exports = {
 
       // TRANSPARENT COLORS
       transparentWhite : "#ffffff26",
-      transparentTurquoise: "#B2F7E1",
+      transparentTurquoise: "#D1FBF6",
       transparentPink: "#F0D2F1",
       transparentGreen: "#ACEDA7",
       transparentOrange: "#FFC79B",

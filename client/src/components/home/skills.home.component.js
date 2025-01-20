@@ -9,8 +9,8 @@ export default function SkillsHomeComponent() {
 
   return (
     <section id="skills" className="bg-creamy relative">
-      <div className="max-w-[80%] py-48 mx-auto flex gap-24">
-        <div className="max-w-[320px] flex flex-col gap-6">
+      <div className="max-w-[80%] pt-12 pb-24 tablet:py-24 mx-auto flex flex-col desktop:flex-row gap-24">
+        <div className="desktop:max-w-[320px] flex flex-col gap-6">
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-5xl"
@@ -32,7 +32,7 @@ export default function SkillsHomeComponent() {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-x-12 gap-y-16">
+        <div className="grid tablet:grid-cols-2 gap-x-12 gap-y-16">
           {skillsData.map((skill, i) => {
             return (
               <div key={i} className="flex flex-col gap-6">

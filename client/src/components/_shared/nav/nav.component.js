@@ -78,7 +78,14 @@ export default function NavbarComponent() {
             {t("nav.list.5")}
           </button>
         </li>
-        <button className="bg-orange text-darkGreen rounded-2xl px-4 py-2">
+
+        <button
+          className="bg-orange text-darkGreen rounded-2xl px-4 py-2"
+          data-tally-open="wkKoEe"
+          data-tally-layout="modal"
+          data-tally-width="400"
+          data-tally-emoji-animation="wave"
+        >
           {t("nav.button.estimate")}
         </button>
       </ul>

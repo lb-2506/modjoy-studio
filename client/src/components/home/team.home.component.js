@@ -9,8 +9,8 @@ export default function TeamHomeComponent() {
 
   return (
     <section id="team" className="bg-darkGreen pt-24">
-      <div className="max-w-[90%] mx-auto rounded-[48px] px-12 py-24 bg-green flex gap-24">
-        <div className="max-w-[330px] flex flex-col gap-6">
+      <div className="max-w-[90%] mx-auto rounded-[48px] px-12 py-24 bg-green flex flex-col desktop:flex-row gap-12 tablet:gap-24">
+        <div className="desktop:max-w-[330px] flex flex-col gap-6">
           <h3>{t("sectionName")}</h3>
 
           <h1
@@ -34,7 +34,7 @@ export default function TeamHomeComponent() {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 gap-6">
+        <div className="grid tablet:grid-cols-2 gap-6">
           {teamData.map((data, i) => {
             return (
               <div
@@ -45,7 +45,7 @@ export default function TeamHomeComponent() {
                   src={data.pictoSrc}
                   alt="picto"
                   draggable={false}
-                  className="max-w-[50px] rounded-xl"
+                  className="max-w-[50px] p-1 rounded-xl bg-[#F8EFDE]"
                 />
 
                 <div>

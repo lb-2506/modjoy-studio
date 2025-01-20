@@ -6,9 +6,7 @@ export default function BallBouncingComponent() {
   const canvasRef = useRef(null);
 
   useEffect(() => {
-    let animationFrameId;
-
-    // Fonction d'initialisation qui sera appelée après un délai
+    let animationFrameId
     const init = () => {
       const canvas = canvasRef.current;
       const context = canvas.getContext("2d");
@@ -52,9 +50,9 @@ export default function BallBouncingComponent() {
 
         // Rotation
         context.save();
-        context.translate(ball.x, ball.y); // Déplacer le point d'origine au centre de la boule
-        context.rotate(ball.rotation); // Appliquer la rotation
-        context.translate(-ball.x, -ball.y); // Revenir au point d'origine
+        context.translate(ball.x, ball.y);
+        context.rotate(ball.rotation);
+        context.translate(-ball.x, -ball.y);
 
         // Dégradé
         const gradient = context.createRadialGradient(
@@ -81,7 +79,7 @@ export default function BallBouncingComponent() {
         context.textBaseline = "middle";
         context.fillText("PLAY ME", ball.x, ball.y);
 
-        context.restore(); // Restaurer le contexte sans rotation
+        context.restore();
 
         // Curseur
         const distToBall = Math.sqrt(
@@ -106,14 +104,11 @@ export default function BallBouncingComponent() {
           ball.x += ball.vx;
           ball.y += ball.vy;
 
-          // Rotation en fonction de la distance parcourue horizontalement
           const distanceTraveled = ball.vx;
           ball.rotation += distanceTraveled / ball.radius;
 
-          // Friction horizontale
           ball.vx *= ball.friction;
 
-          // Rebond gauche/droite
           if (ball.x - ball.radius < 0) {
             ball.x = ball.radius;
             ball.vx *= -1;
@@ -122,7 +117,6 @@ export default function BallBouncingComponent() {
             ball.vx *= -1;
           }
 
-          // Rebond bas
           if (ball.y + ball.radius > height) {
             ball.y = height - ball.radius;
             if (Math.abs(ball.vy) > ball.minVelocity) {
@@ -132,13 +126,11 @@ export default function BallBouncingComponent() {
             }
           }
 
-          // Eviter de sortir par le haut
           if (ball.y - ball.radius < 0) {
             ball.y = ball.radius;
             ball.vy *= -1;
           }
 
-          // Arrêt horizontal si négligeable
           if (Math.abs(ball.vx) < ball.minVelocity) {
             ball.vx = 0;
           }
@@ -223,21 +215,172 @@ export default function BallBouncingComponent() {
         drawBall();
       };
 
+      const handleTouchStart = (e) => {
+        e.preventDefault();
+
+        const rect = canvas.getBoundingClientRect();
+
+        mouse.x = e.touches[0].clientX - rect.left;
+        mouse.y = e.touches[0].clientY - rect.top;
+
+        const dist = Math.sqrt(
+          (mouse.x - ball.x) ** 2 + (mouse.y - ball.y) ** 2
+        );
+        if (dist < ball.radius) {
+          ball.isDragging = true;
+          ball.vx = 0;
+          ball.vy = 0;
+          mouse.history = [];
+        }
+      };
+
+      const handleTouchMove = (e) => {
+        e.preventDefault();
+
+        const rect = canvas.getBoundingClientRect();
+        mouse.prevX = mouse.x;
+        mouse.prevY = mouse.y;
+
+        mouse.x = e.touches[0].clientX - rect.left;
+        mouse.y = e.touches[0].clientY - rect.top;
+
+        if (ball.isDragging) {
+          ball.x = mouse.x;
+          ball.y = mouse.y;
+          const now = Date.now();
+          mouse.history.push({ x: mouse.x, y: mouse.y, time: now });
+
+          if (mouse.history.length > mouse.maxHistory) {
+            mouse.history.shift();
+          }
+        }
+      };
+
+      const handleTouchEnd = (e) => {
+        if (ball.isDragging) {
+          let totalVx = 0;
+          let totalVy = 0;
+          let totalWeights = 0;
+
+          for (let i = 1; i < mouse.history.length; i++) {
+            const dx = mouse.history[i].x - mouse.history[i - 1].x;
+            const dy = mouse.history[i].y - mouse.history[i - 1].y;
+            const dt = mouse.history[i].time - mouse.history[i - 1].time;
+
+            if (dt > 0) {
+              const weight = i;
+              totalVx += (dx / dt) * weight;
+              totalVy += (dy / dt) * weight;
+              totalWeights += weight;
+            }
+          }
+
+          if (totalWeights > 0) {
+            ball.vx = (totalVx / totalWeights) * 15;
+            ball.vy = (totalVy / totalWeights) * 15;
+          }
+
+          ball.isDragging = false;
+        }
+      };
+
+      const handlePointerDown = (e) => {
+        e.preventDefault();
+        const rect = canvas.getBoundingClientRect();
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+
+        const dist = Math.sqrt(
+          (mouse.x - ball.x) ** 2 + (mouse.y - ball.y) ** 2
+        );
+        if (dist < ball.radius) {
+          ball.isDragging = true;
+          ball.vx = 0;
+          ball.vy = 0;
+          mouse.history = [];
+        }
+      };
+
+      const handlePointerMove = (e) => {
+        e.preventDefault();
+        const rect = canvas.getBoundingClientRect();
+        mouse.prevX = mouse.x;
+        mouse.prevY = mouse.y;
+        mouse.x = e.clientX - rect.left;
+        mouse.y = e.clientY - rect.top;
+
+        if (ball.isDragging) {
+          ball.x = mouse.x;
+          ball.y = mouse.y;
+          const now = Date.now();
+          mouse.history.push({ x: mouse.x, y: mouse.y, time: now });
+
+          if (mouse.history.length > mouse.maxHistory) {
+            mouse.history.shift();
+          }
+        }
+      };
+
+      const handlePointerUp = (e) => {
+        e.preventDefault();
+        if (ball.isDragging) {
+          let totalVx = 0;
+          let totalVy = 0;
+          let totalWeights = 0;
+
+          for (let i = 1; i < mouse.history.length; i++) {
+            const dx = mouse.history[i].x - mouse.history[i - 1].x;
+            const dy = mouse.history[i].y - mouse.history[i - 1].y;
+            const dt = mouse.history[i].time - mouse.history[i - 1].time;
+
+            if (dt > 0) {
+              const weight = i;
+              totalVx += (dx / dt) * weight;
+              totalVy += (dy / dt) * weight;
+              totalWeights += weight;
+            }
+          }
+
+          if (totalWeights > 0) {
+            ball.vx = (totalVx / totalWeights) * 15;
+            ball.vy = (totalVy / totalWeights) * 15;
+          }
+
+          ball.isDragging = false;
+        }
+      };
+
       window.addEventListener("resize", handleResize);
       canvas.addEventListener("mousedown", handleMouseDown);
       canvas.addEventListener("mousemove", handleMouseMove);
       canvas.addEventListener("mouseup", handleMouseUp);
       canvas.addEventListener("mouseleave", handleMouseUp);
+      canvas.addEventListener("touchstart", handleTouchStart, {
+        passive: false,
+      });
+      canvas.addEventListener("touchmove", handleTouchMove, { passive: false });
+      canvas.addEventListener("touchend", handleTouchEnd, { passive: false });
+      canvas.addEventListener("touchcancel", handleTouchEnd, {
+        passive: false,
+      });
+      canvas.addEventListener("pointerdown", handlePointerDown, {
+        passive: false,
+      });
+      canvas.addEventListener("pointermove", handlePointerMove, {
+        passive: false,
+      });
+      canvas.addEventListener("pointerup", handlePointerUp, { passive: false });
+      canvas.addEventListener("pointercancel", handlePointerUp, {
+        passive: false,
+      });
 
       updateBall();
     };
 
-    // On attend 100ms avant d'initialiser, pour que le layout se stabilise
     const timeoutId = setTimeout(init, 100);
 
     return () => {
       clearTimeout(timeoutId);
-      // Les nettoyages d'eventListeners et cancelAnimationFrame se feront dans init quand vous aurez un ID global
     };
   }, []);
 

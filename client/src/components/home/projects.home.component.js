@@ -85,7 +85,7 @@ export default function ProjectsHomeComponent(props) {
       >
         <h3>{t("sectionName")}</h3>
         <h1
-          className="text-5xl max-w-[650px] mx-auto text-center"
+          className="px-4 text-5xl max-w-[650px] mx-auto text-center"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
           {t("title")}
@@ -101,7 +101,7 @@ export default function ProjectsHomeComponent(props) {
         )}
 
         <h2
-          className="pt-6"
+          className="px-6 pt-6"
           dangerouslySetInnerHTML={{ __html: t("subtitle") }}
         />
       </div>

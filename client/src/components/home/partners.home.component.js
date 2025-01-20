@@ -29,9 +29,9 @@ export default function PartnersHomeComponent() {
         />
 
         <img
-          src="/img/flower-orange.png"
+          src="/img/flower-blue.png"
           draggable={false}
-          className="max-w-[200px] absolute -bottom-[80px] -left-[50px] blur-sm"
+          className="max-w-[200px] absolute bottom-0 left-0"
         />
 
         <img
@@ -42,10 +42,10 @@ export default function PartnersHomeComponent() {
 
         <div className="max-w-[1050px]  text-creamy flex flex-col gap-6 items-center justify-center text-center">
           <h1
-            className="text-[60px] leading-[75px] flex flex-col gap-3"
+            className="text-[28px] mobile:text-[60px] leading-[75px] flex flex-col gap-3"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
-            <span className="flex gap-3 justify-center">
+            <span className="flex gap-3 justify-center whitespace-nowrap flex-wrap">
               <span className="relative  border border-pink">
                 <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-pink border" />
                 <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-pink border" />
@@ -71,8 +71,14 @@ export default function PartnersHomeComponent() {
 
           <h2 className="max-w-[580px]">{t("subtitle")}</h2>
 
-          <div className="flex gap-6">
-            <button className="bg-orange text-darkGreen rounded-2xl px-4 py-2">
+          <div className="flex flex-col mobile:flex-row gap-6 z-10 mb-6 mobile:mb-0">
+            <button
+              className="bg-orange text-darkGreen rounded-2xl px-4 py-2"
+              data-tally-open="wkKoEe"
+              data-tally-layout="modal"
+              data-tally-width="400"
+              data-tally-emoji-animation="wave"
+            >
               {t("buttons.estimate")}
             </button>
 

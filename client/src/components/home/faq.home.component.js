@@ -41,8 +41,8 @@ export default function FaqHomeComponent() {
 
   return (
     <section className="bg-darkGreen">
-      <div className="px-12 py-24 max-w-[90%] mx-auto flex gap-12 bg-creamy rounded-[48px]">
-        <div className="text-darkGreen flex flex-col gap-6 w-1/2">
+      <div className="px-12 py-24 max-w-[90%] mx-auto flex flex-col tablet:flex-row gap-12 bg-creamy rounded-[48px]">
+        <div className="text-darkGreen flex flex-col gap-6 tablet:w-1/2">
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-5xl"
@@ -64,7 +64,7 @@ export default function FaqHomeComponent() {
           </button>
         </div>
 
-        <div className="w-1/2 flex flex-col gap-4">
+        <div className="tablet:w-1/2 flex flex-col gap-4">
           {faqData.map((data, index) => {
             const isOpen = openIndex === index;
             const height =

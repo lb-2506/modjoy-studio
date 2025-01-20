@@ -1,38 +1,38 @@
 export const teamData = [
   {
     id: 1,
-    pictoSrc: "/img/avatar.png",
-    name: "Swan",
+    pictoSrc: "/img/avatars/swan.png",
+    name: "Swan - L'éclaireur stratège",
     job: "Digital Strategist & Growth Hacker",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Toujours en avance d’un coup, il repère les tendances et optimise vos campagnes pour des résultats explosifs.",
     linkedIn: "https://google.com",
   },
   {
     id: 2,
-    pictoSrc: "/img/avatar.png",
-    name: "Axelle",
+    pictoSrc: "/img/avatars/axoue.png",
+    name: "Axelle - Le tank créatif",
     job: "Graphiste",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Elle absorbe toutes les demandes clients (même les plus chaotiques) et les transforme en designs qui déglinguent.",
     linkedIn: "https://google.com",
   },
   {
     id: 3,
-    pictoSrc: "/img/avatar.png",
-    name: "Léo",
+    pictoSrc: "/img/avatars/leo.png",
+    name: "Léo - Le magicien codeur",
     job: "Web & App Developper",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Développeur tout-terrain, il lance des sorts qui donnent vie à vos projets web et mobiles.",
     linkedIn: "https://google.com",
   },
   {
     id: 4,
-    pictoSrc: "/img/avatar.png",
-    name: "Rokneddine",
+    pictoSrc: "/img/avatars/rok.png",
+    name: "Rokneddine - L'artisan des illusions",
     job: "Motion Designer",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique.",
+      "Un vrai illusionniste qui crée des animations et des mondes 3D à couper le souffle.",
     linkedIn: "https://google.com",
   },
 ];

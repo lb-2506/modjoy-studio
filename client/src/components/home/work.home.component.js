@@ -12,8 +12,8 @@ export default function WorkHomeComponent() {
 
   return (
     <section id="work" className="bg-darkGreen relative">
-      <div className="py-24 max-w-[80%] mx-auto flex gap-12">
-        <div className="text-creamy flex flex-col gap-6 w-1/2">
+      <div className="py-24 max-w-[80%] mx-auto flex flex-col tablet:flex-row gap-12 pb-48">
+        <div className="text-creamy flex flex-col gap-6 tablet:w-1/2">
           <h3>{t("sectionName")}</h3>
 
           <h1
@@ -33,7 +33,7 @@ export default function WorkHomeComponent() {
           </button> */}
         </div>
 
-        <div className="relative w-1/2">
+        <div className="relative tablet:w-1/2">
           <div className="mt-6 flex flex-col gap-12">
             {workData.map((data, i) => (
               <div key={i} className="flex gap-12 text-creamy z-10">
