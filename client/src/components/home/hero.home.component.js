@@ -3,6 +3,9 @@ import { useEffect, useRef, useState } from "react";
 // I18N
 import { useTranslation } from "next-i18next";
 
+// CALENDAR
+import { getCalApi } from "@calcom/embed-react";
+
 // COMPONENTS
 import LogosHomeComponent from "./logos.home.component";
 import HelixR3fComponent from "../_shared/r3f/helix/helix.r3f.component";
@@ -67,6 +70,13 @@ export default function HeroHomeComponent() {
     updateSmileyStyle(smiley2Ref, setSmiley2Style);
   }, [mousePos]);
 
+  useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({ namespace: "appel-decouverte-30-min" });
+      cal("ui", { hideEventTypeDetails: false, layout: "month_view" });
+    })();
+  }, []);
+
   return (
     <div className="fixed top-0 -z-10 bg-darkGreen">
       <section
@@ -97,7 +107,7 @@ export default function HeroHomeComponent() {
           className="max-w-[200px] absolute left-[5%] top-[25%]"
         />
 
-        <HelixR3fComponent/>
+        <HelixR3fComponent />
 
         {/* <img
           src="/img/flower-green.png"
@@ -163,7 +173,12 @@ export default function HeroHomeComponent() {
 
           <h2 className="max-w-[580px]">{t("subtitle")}</h2>
 
-          <button className="bg-creamy text-darkGreen rounded-2xl px-4 py-2">
+          <button
+            className="bg-creamy text-darkGreen rounded-2xl px-4 py-2 mt-4"
+            data-cal-namespace="appel-decouverte-30-min"
+            data-cal-link="modjoystudio/appel-decouverte-30-min"
+            data-cal-config='{"layout":"month_view"}'
+          >
             {t("button")}
           </button>
         </div>
