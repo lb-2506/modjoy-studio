@@ -4,20 +4,20 @@
   "button": "Ça m'intéresse !",
   "list": {
     "1": {
-      "title": "Que se passe-t-il si mon projet dépasse le budget initial ?",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      "title": "Quels sont les tarifs de Modjoy ?",
+      "content": "Les tarifs dépendent de la complexité et des fonctionnalités souhaitées. Pour une estimation précise, contactez-nous ! On analyse vos besoins et on vous prépare un devis sur-mesure."
     },
     "2": {
       "title": "Quels sont vos délais moyens pour un projet ?",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      "content": "Nos délais ? Ça dépend du projet ! En moyenne, comptez environ 1 mois, mais ça peut prendre un peu plus de temps si le projet le demande."
     },
     "3": {
-      "title": "Quels sont vos tarifs et comment fonctionne la facturation ?",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      "title": "Et si je ne suis pas satisfait du résultat ?",
+      "content": "Pas de stress, vous avez 3 allers-retours pour qu’on peaufine tout et que le résultat soit pile comme vous voulez, à 100 % !"
     },
     "4": {
       "title": "Comment assurez-vous la qualité et le suivi des projets ?",
-      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique."
+      "content": "Vous avez un interlocuteur dédié du début à la fin et une réunion hebdo pour suivre le projet tranquillou. Pas mal, non ?."
     }
   }
 }

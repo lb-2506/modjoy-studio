@@ -15,9 +15,9 @@ module.exports = {
       // TRANSPARENT COLORS
       transparentWhite : "#ffffff26",
       transparentTurquoise: "#D1FBF6",
-      transparentPink: "#F0D2F1",
-      transparentGreen: "#ACEDA7",
-      transparentOrange: "#FFC79B",
+      transparentPink: "#F7E4FF",
+      transparentGreen: "#CEF5D3",
+      transparentOrange: "#FFDECC",
     },
     screens: {
       mobile: "768px",

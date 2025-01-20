@@ -97,16 +97,18 @@ export default function ExpertisesHomeComponent() {
 
               <div
                 ref={index === 0 ? firstParentRef : null}
-                className={`accslide block h-full w-0 py-9 float-left overflow-x-hidden whitespace-nowrap transition-all duration-300  ${feature.bgTransparentColor} min-h-[650px]`}
+                className={`accslide flex h-full w-0 py-9 float-left overflow-x-hidden whitespace-nowrap transition-all duration-300  ${feature.bgTransparentColor} min-h-[650px]`}
               >
-                <div className="content px-6">
-                  <h1 className="text-3xl font-bold mb-4">
+                <div className="content px-6 flex flex-col gap-6 justify-center">
+                  <img src={feature.img} alt="picto" className="h-16 w-16" />
+
+                  <h1 className="text-wrap text-3xl font-bold w-[600px]">
                     {t(feature.title)}
                   </h1>
 
                   <p
                     ref={contentRef}
-                    className="text-sm leading-7 whitespace-normal"
+                    className="text-sm leading-7 whitespace-normal pr-6"
                     dangerouslySetInnerHTML={{ __html: t(feature.content) }}
                   />
                 </div>
@@ -155,7 +157,10 @@ export default function ExpertisesHomeComponent() {
                 }}
               >
                 <div ref={contentRef}>
+                  <img src={feature.img} alt="picto" className="h-12 w-12" />
+
                   <h3 className="text-xl font-bold mt-4">{t(feature.title)}</h3>
+                 
                   <p
                     className="leading-[35px] my-4"
                     dangerouslySetInnerHTML={{ __html: t(feature.content) }}
