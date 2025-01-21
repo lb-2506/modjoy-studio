@@ -68,28 +68,38 @@ export default function DetailsProjectsComponent(props) {
           ))}
         </div>
 
-        <div className="block tablet:hidden">
-          <select
-            style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
-            className="p-2 rounded-xl border-pink border w-full bg-pink text-darkGreen outline-none text-lg h-[60px]"
-            value={activeIndex + 1}
-            onChange={(e) => {
-              const val = parseInt(e.target.value, 10);
-              if (val > 0) {
-                handleScrollToSection(val - 1);
-              }
-            }}
-          >
-            <option value="0" disabled>
-              Table of content
+        <select
+          style={{
+            fontFamily: "'Brockmann Medium', sans-serif",
+            WebkitTapHighlightColor: "transparent", // Désactive le highlight iOS
+          }}
+          className={`
+    p-2 rounded-xl border-pink border w-full bg-pink text-darkGreen
+    outline-none text-lg h-[60px]
+    appearance-none        
+    focus:bg-pink          
+    active:bg-pink      
+    focus:opacity-100
+    active:opacity-100
+  `}
+          value={activeIndex + 1}
+          onChange={(e) => {
+            const val = parseInt(e.target.value, 10);
+            if (val > 0) {
+              handleScrollToSection(val - 1);
+            }
+          }}
+        >
+          <option value="0" disabled>
+            Table of content
+          </option>
+
+          {props.project.details.sections.map((section, i) => (
+            <option key={i} value={i + 1}>
+              {section.heading}
             </option>
-            {props.project.details.sections.map((section, i) => (
-              <option key={i} value={i + 1}>
-                {section.heading}
-              </option>
-            ))}
-          </select>
-        </div>
+          ))}
+        </select>
       </div>
 
       {/* Bloc de droite (Sections) */}
