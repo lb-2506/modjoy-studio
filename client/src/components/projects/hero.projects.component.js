@@ -1,8 +1,8 @@
 export default function HeroProjectsComponent(props) {
   return (
-    <section className="pt-[186px] pb-24 max-w-[80%] mx-auto text-creamy ">
-      <div className="flex justify-between gap-6">
-        <div className="w-1/2">
+    <section className="pt-[110px] tablet:pt-[186px] pb-24 max-w-[80%] mx-auto text-creamy ">
+      <div className="flex flex-col tablet:flex-row justify-between gap-6">
+        <div className="tablet:w-1/2">
           <div>
             <h1
               style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
@@ -17,7 +17,7 @@ export default function HeroProjectsComponent(props) {
             />
           </div>
 
-          <div className="flex gap-4 mt-4">
+          <div className="flex gap-4 mt-4 flex-wrap">
             {props.project.tags.map((tag, index) => {
               const bgColor =
                 index === 0
@@ -40,7 +40,7 @@ export default function HeroProjectsComponent(props) {
           </div>
         </div>
 
-        <div className="grid grid-cols-2 gap-y-6 gap-x-12 mt-6 ">
+        <div className="grid grid-cols-2 gap-y-6 gap-x-4 tablet:gap-x-12 mt-6 ">
           <div>
             <p className="text-lg font-semibold">Secteur</p>
             <p>{props.project.sector}</p>

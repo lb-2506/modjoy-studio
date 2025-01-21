@@ -41,7 +41,7 @@ export default function FaqHomeComponent() {
 
   return (
     <section className="bg-darkGreen">
-      <div className="px-12 py-24 max-w-[90%] mx-auto flex flex-col tablet:flex-row gap-12 bg-creamy rounded-[48px]">
+      <div className="px-6 tablet:px-12 py-12 tablet:py-24 max-w-[90%] mx-auto flex flex-col tablet:flex-row gap-12 bg-creamy rounded-[48px]">
         <div className="text-darkGreen flex flex-col gap-6 tablet:w-1/2">
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
@@ -77,7 +77,7 @@ export default function FaqHomeComponent() {
               >
                 {/* Header */}
                 <div
-                  className={`flex justify-between h-[60px] items-center px-6 ${!isOpen ? "cursor-pointer" : ""}`}
+                  className={`flex gap-4 justify-between h-[90px] tablet:h-[75px] items-center px-6 ${!isOpen ? "cursor-pointer" : ""}`}
                   onClick={() => {
                     if (!isOpen) toggleFaq(index);
                   }}

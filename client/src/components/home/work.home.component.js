@@ -18,7 +18,7 @@ export default function WorkHomeComponent() {
 
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
-            className="text-5xl max-w-[550px]"
+            className="text-3xl tablet:text-5xl max-w-[550px]"
           >
             {t("title")}
           </h1>

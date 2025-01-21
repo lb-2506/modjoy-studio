@@ -40,7 +40,7 @@ export default function ExpertisesHomeComponent() {
         <h3>{t("sectionName")}</h3>
 
         <h1
-          className="text-5xl max-w-[550px]"
+          className="text-3xl tablet:text-5xl max-w-[550px] px-6"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
           {t("title")}
@@ -55,7 +55,7 @@ export default function ExpertisesHomeComponent() {
           />
         </div>
 
-        <h2 className="pt-6">{t("subtitle")}</h2>
+        <h2 className="pt-6 text-pretty">{t("subtitle")}</h2>
       </div>
 
       {/* L'accordéon horizontal (tablettes/desktop) */}
@@ -157,7 +157,7 @@ export default function ExpertisesHomeComponent() {
                 }}
               >
                 <div ref={contentRef}>
-                  <img src={feature.img} alt="picto" className="h-12 w-12" />
+                  <img src={feature.img} alt="picto" className="h-12 w-12 mt-6" />
 
                   <h3 className="text-xl font-bold mt-4">{t(feature.title)}</h3>
                  

@@ -31,27 +31,28 @@ export default function DetailsProjectsComponent(props) {
     };
   }, []);
 
-  const handleScrollToSection = (index) => {
-    if (sectionsRef.current[index]) {
-      sectionsRef.current[index].scrollIntoView({
+  function handleScrollToSection(index) {
+    const sectionEl = sectionsRef.current[index];
+    if (sectionEl) {
+      sectionEl.scrollIntoView({
         behavior: "smooth",
         block: "start",
       });
     }
-  };
+  }
 
   return (
-    <section className="bg-creamy py-24 rounded-[48px] px-[5%] flex gap-12">
-      {/* Sommaire à gauche */}
-      <div className="w-1/3 sticky top-24 h-fit">
+    <section className="bg-creamy py-12 tablet:py-24 rounded-[48px] px-[5%] flex flex-col tablet:flex-row gap-12">
+   
+      <div className="tablet:w-1/3 sticky top-6 tablet:top-24 h-fit">
         <h1
-          className="text-xl"
+          className="hidden tablet:block text-xl"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
           Table of content
         </h1>
 
-        <div className="flex flex-col mt-6 max-w-[350px]">
+        <div className="hidden tablet:flex flex-col mt-6 max-w-[350px]">
           {props.project.details.sections.map((section, i) => (
             <button
               key={i}
@@ -67,15 +68,39 @@ export default function DetailsProjectsComponent(props) {
             </button>
           ))}
         </div>
+
+        <div className="block tablet:hidden">
+          <select
+            className="p-2 rounded border-pink border w-full bg-pink text-creamy outline-none"
+            value={activeIndex + 1}
+            onChange={(e) => {
+              const val = parseInt(e.target.value, 10);
+              if (val > 0) {
+                handleScrollToSection(val - 1);
+              }
+            }}
+          >
+            <option value="0" disabled>
+              Table of content
+            </option>
+            {props.project.details.sections.map((section, i) => (
+              <option key={i} value={i + 1}>
+                {section.heading}
+              </option>
+            ))}
+          </select>
+        </div>
       </div>
 
-      {/* Sections à droite */}
-      <div className="w-2/3">
+      {/* Bloc de droite (Sections) */}
+      <div className="tablet:w-2/3">
         {props.project.details.sections.map((section, i) => (
           <div
             key={i}
             ref={(el) => (sectionsRef.current[i] = el)}
-            className="mb-12"
+            // Grâce à cette classe Tailwind, la section aura une marge de 100px
+            // au scroll "start".
+            className="mb-12 scroll-mt-[80px]"
           >
             <h2
               style={{ fontFamily: "'Brockmann Medium', sans-serif" }}

@@ -78,14 +78,14 @@ export default function ProjectsHomeComponent(props) {
   return (
     <section
       id="projects"
-      className={`${props.projectPage ? "bg-green max-w-[90%] mt-12 pb-12 rounded-[48px] pt-12" : "bg-darkGreen pt-24"} relative flex flex-col justify-center w-full mx-auto`}
+      className={`${props.projectPage ? "bg-green max-w-[90%] mt-12 pb-12 rounded-[48px] pt-12" : "bg-darkGreen py-24"} relative flex flex-col justify-center w-full mx-auto`}
     >
       <div
         className={`flex flex-col gap-4 text-center ${props.projectPage ? "text-darkGreen" : "text-creamy"}`}
       >
         <h3>{t("sectionName")}</h3>
         <h1
-          className="px-4 text-5xl max-w-[650px] mx-auto text-center"
+          className="px-4 text-3xl text-balance tablet:text-5xl max-w-[650px] mx-auto text-center"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
           {t("title")}

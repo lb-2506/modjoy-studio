@@ -24,11 +24,10 @@ export default function LogosHomeComponent() {
 
   return (
     <section className="text-center h-[20dvh] w-[100vw]">
-      <h1 className="py-2 text-creamy">{t("logos.title")}</h1>
+      <h1 className="h-[40px] py-2 text-creamy">{t("logos.title")}</h1>
 
-      <div className="mt-12">
-        <Marquee>
-          <div className=" flex gap-16 items-center">
+      <Marquee>
+        <div className="h-[calc(20dvh-40px)] flex gap-16 items-center">
           <AlpazeSvg />
           <LpbnSvg />
           <CadulisSvg />
@@ -40,9 +39,8 @@ export default function LogosHomeComponent() {
           <TreefleSvg />
           <PowerSvg />
           <SodexoSvg />
-          </div>
-        </Marquee>
-      </div>
+        </div>
+      </Marquee>
     </section>
   );
 }

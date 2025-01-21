@@ -92,46 +92,31 @@ export default function HeroHomeComponent() {
         />
 
         <img
-          src="/img/flower-orange.png"
-          draggable={false}
-          className="max-w-[200px] absolute left-[5%] top-[25%]"
-        />
-
-        <HelixR3fComponent />
-
-        {/* <img
-          src="/img/flower-green.png"
-          draggable={false}
-          className="max-w-[200px] absolute right-0"
-        /> */}
-        <img
-          src="/img/cube.png"
-          draggable={false}
-          className="max-w-[200px] absolute right-[10%] bottom-[20%]"
-        />
-        <img
           src="/img/smiley-1.png"
           draggable={false}
           ref={smileyRef}
           style={smileyStyle}
-          className="max-w-[100px] absolute right-[15%] top-[20%]"
+          className="hidden tablet:block max-w-[100px] absolute desktop:right-[15%] desktop:top-[20%] right-[10%] top-[15%]"
+
+
         />
+
         <img
           src="/img/smiley-2.png"
           draggable={false}
           ref={smiley2Ref}
           style={smiley2Style}
-          className="max-w-[100px] absolute left-[15%] bottom-[10%]"
+          className="hidden tablet:block max-w-[100px] absolute left-[15%] bottom-[10%]"
         />
 
-        <div className="max-w-[780px] text-creamy flex flex-col gap-6 items-center justify-center text-center">
+        <div className="max-w-[800px] text-creamy flex flex-col mt-12 gap-6 tablet:gap-8 items-center justify-center text-center">
           <h3>{t("catchPhrase")}</h3>
 
           <h1
-            className="text-[80px] leading-[85px] flex items-center gap-3 justify-center flex-wrap text-center"
+            className="text-3xl mobile:text-[60px] mobile:leading-[65px] tablet:text-[80px] tablet:leading-[85px] flex items-center gap-3 justify-center flex-wrap text-center"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
-            <div className="relative text-green border border-green px-3 pb-4 mt-2">
+            <div className="relative text-green border border-green px-3 mobile:pb-2 tablet:pb-4">
               {t("title.1")}
               <span className="absolute top-0 left-0 w-[6px] h-[6px] bg-creamy -translate-x-1/2 -translate-y-1/2 border-green border" />
               <span className="absolute top-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 -translate-y-1/2 border-green border" />
@@ -139,16 +124,17 @@ export default function HeroHomeComponent() {
               <span className="absolute bottom-0 right-0 w-[6px] h-[6px] bg-creamy translate-x-1/2 translate-y-1/2 border-green border" />
             </div>
             {t("title.2")}
-            <span className="flex gap-3">
+            <span className="w-full mx-auto justify-center flex items-center gap-3">
               {t("title.3")}
               <img
                 src="/img/smile.png"
                 alt="picto"
                 draggable={false}
-                className="h-[100px] w-[95px]"
+                className="h-[50px] tablet:h-[100px] tablet:w-[95px]"
               />
               {t("title.4")}
             </span>
+
             <span className="flex gap-3">
               {t("title.5")}
               <div className="relative text-turquoise border border-turquoise px-3 whitespace-nowrap">
@@ -161,7 +147,12 @@ export default function HeroHomeComponent() {
             </span>
           </h1>
 
-          <h2 className="max-w-[580px]">{t("subtitle")}</h2>
+          <div className="hidden tablet:grid gap-2 grid-cols-2 tablet:grid-cols-4  text-xs tablet:text-base ">
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Stratégie digitale</div>
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Direction artistique</div>
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Site web & app mobile</div>
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Motion design</div>
+          </div>
 
           <button
             className="bg-creamy text-darkGreen rounded-2xl px-4 py-2 mt-4"

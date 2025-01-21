@@ -13,7 +13,7 @@ export default function SkillsHomeComponent() {
         <div className="desktop:max-w-[320px] flex flex-col gap-6">
           <h1
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
-            className="text-5xl"
+            className="text-3xl tablet:text-5xl"
           >
             {t("title")}
           </h1>
