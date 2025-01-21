@@ -109,11 +109,11 @@ export default function HeroHomeComponent() {
           className="hidden tablet:block max-w-[100px] absolute left-[15%] bottom-[10%]"
         />
 
-        <div className="max-w-[800px] text-creamy flex flex-col mt-12 gap-16 tablet:gap-8 items-center justify-center text-center">
+        <div className="max-w-[800px] text-creamy flex flex-col mt-12 gap-6 tablet:gap-8 items-center justify-center text-center">
           <h3>{t("catchPhrase")}</h3>
 
           <h1
-            className="text-[9vw]  mobile:leading-[85px] tablet:text-[80px] tablet:leading-[85px] flex items-center gap-3 justify-center flex-wrap text-center"
+            className="text-[9vw] leading-[9.5vw]  mobile:leading-[85px] tablet:text-[80px] flex items-center gap-2 mobile:gap-3 justify-center flex-wrap text-center"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
             <div className="relative text-green border border-green px-3 mobile:pb-2 tablet:pb-4">
