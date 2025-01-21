@@ -109,11 +109,11 @@ export default function DetailsProjectsComponent(props) {
           <div
             key={i}
             ref={(el) => (sectionsRef.current[i] = el)}
-            className="mb-12 scroll-mt-[20px]"
+            className="mb-12 scroll-mt-[45px]"
           >
             <h2
               style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
-              className="text-2xl font-bold mb-4"
+              className="text-xl font-bold mb-4"
             >
               {section.heading}
             </h2>
