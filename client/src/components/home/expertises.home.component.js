@@ -108,8 +108,9 @@ export default function ExpertisesHomeComponent() {
 
                   <p
                     ref={contentRef}
-                    className="text-sm leading-7 whitespace-normal pr-6"
+                    className="leading-7 whitespace-normal pr-6"
                     dangerouslySetInnerHTML={{ __html: t(feature.content) }}
+                    style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
                   />
                 </div>
               </div>
@@ -136,7 +137,7 @@ export default function ExpertisesHomeComponent() {
             <li key={feature.id} className="rounded-lg">
               <h2
                 className={`
-                  ${isOpen ? "rounded-t-lg" : "rounded-lg"}  text-lg font-bold flex gap-6 p-4 text-pretty 
+                  ${isOpen ? "rounded-t-lg" : "rounded-lg"}  text- font-bold flex gap-6 p-4 text-pretty 
                   hover:cursor-pointer
                   ${feature.bgColor}
                 `}
@@ -159,11 +160,12 @@ export default function ExpertisesHomeComponent() {
                 <div ref={contentRef}>
                   <img src={feature.img} alt="picto" className="h-12 w-12 mt-6" />
 
-                  <h3 className="text-xl font-bold mt-4">{t(feature.title)}</h3>
+                  <h3 className="font-bold mt-4">{t(feature.title)}</h3>
                  
                   <p
-                    className="leading-[35px] my-4"
+                    className="my-4"
                     dangerouslySetInnerHTML={{ __html: t(feature.content) }}
+                    style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
                   />
                 </div>
               </div>

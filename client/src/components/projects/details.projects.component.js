@@ -71,7 +71,7 @@ export default function DetailsProjectsComponent(props) {
         <div className="block tablet:hidden">
           <select
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
-            className="p-2 rounded border-pink border w-full bg-pink text-darkGreen outline-none text-lg h-[60px]"
+            className="p-2 rounded-xl border-pink border w-full bg-pink text-darkGreen outline-none text-lg h-[60px]"
             value={activeIndex + 1}
             onChange={(e) => {
               const val = parseInt(e.target.value, 10);
@@ -98,7 +98,7 @@ export default function DetailsProjectsComponent(props) {
           <div
             key={i}
             ref={(el) => (sectionsRef.current[i] = el)}
-            className="mb-12 scroll-mt-[100px]"
+            className="mb-12 scroll-mt-[45px]"
           >
             <h2
               style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
