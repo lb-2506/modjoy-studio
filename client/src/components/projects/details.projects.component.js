@@ -43,7 +43,6 @@ export default function DetailsProjectsComponent(props) {
 
   return (
     <section className="bg-creamy py-12 tablet:py-24 rounded-[48px] px-[5%] flex flex-col tablet:flex-row gap-12">
-   
       <div className="tablet:w-1/3 sticky top-6 tablet:top-24 h-fit">
         <h1
           className="hidden tablet:block text-xl"
@@ -71,7 +70,8 @@ export default function DetailsProjectsComponent(props) {
 
         <div className="block tablet:hidden">
           <select
-            className="p-2 rounded border-pink border w-full bg-pink text-creamy outline-none"
+            style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
+            className="p-2 rounded border-pink border w-full bg-pink text-darkGreen outline-none text-lg h-[60px]"
             value={activeIndex + 1}
             onChange={(e) => {
               const val = parseInt(e.target.value, 10);
@@ -98,9 +98,7 @@ export default function DetailsProjectsComponent(props) {
           <div
             key={i}
             ref={(el) => (sectionsRef.current[i] = el)}
-            // Grâce à cette classe Tailwind, la section aura une marge de 100px
-            // au scroll "start".
-            className="mb-12 scroll-mt-[80px]"
+            className="mb-12 scroll-mt-[100px]"
           >
             <h2
               style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
