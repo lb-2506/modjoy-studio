@@ -111,7 +111,7 @@ export default function HeroHomeComponent() {
           <h3>{t("catchPhrase")}</h3>
 
           <h1
-            className="text-[9vw] leading-[9.5vw]  mobile:leading-[85px] tablet:text-[80px] flex items-center gap-2 mobile:gap-3 justify-center flex-wrap text-center"
+            className="text-[9vw] leading-[12vw] mobile:leading-[85px] tablet:text-[80px] flex items-center gap-2 mobile:gap-3 justify-center flex-wrap text-center"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
             <div className="relative text-green border border-green px-3 mobile:pb-2 tablet:pb-4">
