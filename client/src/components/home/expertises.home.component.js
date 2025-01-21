@@ -9,8 +9,6 @@ export default function ExpertisesHomeComponent() {
   const [parentWidth, setParentWidth] = useState(0);
   const firstParentRef = useRef(null);
 
-  // État pour la sélection d'un item dans l'accordéon vertical (mobile)
-  // Par défaut : index 0 est ouvert
   const [openIndex, setOpenIndex] = useState(0);
 
   useEffect(() => {
@@ -55,7 +53,7 @@ export default function ExpertisesHomeComponent() {
           />
         </div>
 
-        <h2 className="pt-6 text-pretty">{t("subtitle")}</h2>
+        <h2 className="pt-6 text-pretty px-6">{t("subtitle")}</h2>
       </div>
 
       {/* L'accordéon horizontal (tablettes/desktop) */}
@@ -158,10 +156,14 @@ export default function ExpertisesHomeComponent() {
                 }}
               >
                 <div ref={contentRef}>
-                  <img src={feature.img} alt="picto" className="h-12 w-12 mt-6" />
+                  <img
+                    src={feature.img}
+                    alt="picto"
+                    className="h-12 w-12 mt-6"
+                  />
 
                   <h3 className="font-bold mt-4">{t(feature.title)}</h3>
-                 
+
                   <p
                     className="my-4"
                     dangerouslySetInnerHTML={{ __html: t(feature.content) }}

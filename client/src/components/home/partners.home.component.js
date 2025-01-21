@@ -42,7 +42,7 @@ export default function PartnersHomeComponent() {
 
         <div className="max-w-[1050px]  text-creamy flex flex-col gap-6 items-center justify-center text-center">
           <h1
-            className="text-[28px] mobile:text-[60px] leading-[75px] flex flex-col gap-3"
+            className="text-[9vw] leading-[12vw] mobile:leading-[85px] tablet:text-[80px]  flex flex-col gap-3"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
             <span className="flex gap-3 justify-center whitespace-nowrap flex-wrap">
