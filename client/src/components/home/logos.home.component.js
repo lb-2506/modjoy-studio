@@ -23,7 +23,7 @@ export default function LogosHomeComponent() {
   const { t } = useTranslation("hero-section");
 
   return (
-    <section className="text-center h-[20dvh] w-[100vw]">
+    <section className="text-center tablet:h-[20dvh] w-[100vw]">
       <h1 className="h-[40px] py-2 text-creamy">{t("logos.title")}</h1>
 
       <Marquee>

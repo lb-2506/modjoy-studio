@@ -50,7 +50,7 @@ export default function TeamHomeComponent() {
 
                 <div>
                   <h2
-                    className="text-2xl text-balance"
+                    className="text-2xl mb-4 tablet:mb-2"
                     style={{ fontFamily: "'Satoshi Bold', sans-serif" }}
                   >
                     {data.name}

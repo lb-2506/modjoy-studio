@@ -11,6 +11,8 @@ export default function BallBouncingComponent() {
       const canvas = canvasRef.current;
       const context = canvas.getContext("2d");
 
+      canvas.style.touchAction = "pan-y";
+
       const parentRect = canvas.parentElement.getBoundingClientRect();
       let width = parentRect.width;
       let height = parentRect.height;
@@ -216,7 +218,7 @@ export default function BallBouncingComponent() {
       };
 
       const handleTouchStart = (e) => {
-        e.preventDefault();
+   
 
         const rect = canvas.getBoundingClientRect();
 
@@ -227,6 +229,7 @@ export default function BallBouncingComponent() {
           (mouse.x - ball.x) ** 2 + (mouse.y - ball.y) ** 2
         );
         if (dist < ball.radius) {
+          e.preventDefault();
           ball.isDragging = true;
           ball.vx = 0;
           ball.vy = 0;
@@ -235,7 +238,7 @@ export default function BallBouncingComponent() {
       };
 
       const handleTouchMove = (e) => {
-        e.preventDefault();
+    
 
         const rect = canvas.getBoundingClientRect();
         mouse.prevX = mouse.x;
@@ -245,6 +248,7 @@ export default function BallBouncingComponent() {
         mouse.y = e.touches[0].clientY - rect.top;
 
         if (ball.isDragging) {
+          e.preventDefault();
           ball.x = mouse.x;
           ball.y = mouse.y;
           const now = Date.now();
@@ -285,7 +289,7 @@ export default function BallBouncingComponent() {
       };
 
       const handlePointerDown = (e) => {
-        e.preventDefault();
+        
         const rect = canvas.getBoundingClientRect();
         mouse.x = e.clientX - rect.left;
         mouse.y = e.clientY - rect.top;
@@ -294,6 +298,7 @@ export default function BallBouncingComponent() {
           (mouse.x - ball.x) ** 2 + (mouse.y - ball.y) ** 2
         );
         if (dist < ball.radius) {
+          e.preventDefault();
           ball.isDragging = true;
           ball.vx = 0;
           ball.vy = 0;
@@ -302,7 +307,7 @@ export default function BallBouncingComponent() {
       };
 
       const handlePointerMove = (e) => {
-        e.preventDefault();
+     
         const rect = canvas.getBoundingClientRect();
         mouse.prevX = mouse.x;
         mouse.prevY = mouse.y;
@@ -310,6 +315,7 @@ export default function BallBouncingComponent() {
         mouse.y = e.clientY - rect.top;
 
         if (ball.isDragging) {
+          e.preventDefault();
           ball.x = mouse.x;
           ball.y = mouse.y;
           const now = Date.now();
@@ -322,8 +328,9 @@ export default function BallBouncingComponent() {
       };
 
       const handlePointerUp = (e) => {
-        e.preventDefault();
+       
         if (ball.isDragging) {
+          e.preventDefault();
           let totalVx = 0;
           let totalVy = 0;
           let totalWeights = 0;
