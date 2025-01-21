@@ -81,6 +81,7 @@ export default function DetailsProjectsComponent(props) {
     active:bg-pink      
     focus:opacity-100
     active:opacity-100
+    tablet:hidden
   `}
           value={activeIndex + 1}
           onChange={(e) => {
@@ -108,7 +109,7 @@ export default function DetailsProjectsComponent(props) {
           <div
             key={i}
             ref={(el) => (sectionsRef.current[i] = el)}
-            className="mb-12 scroll-mt-[40px]"
+            className="mb-12 scroll-mt-[20px]"
           >
             <h2
               style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
