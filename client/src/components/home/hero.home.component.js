@@ -76,7 +76,7 @@ export default function HeroHomeComponent() {
         <img
           src="/img/pointbg.png"
           draggable={false}
-          className="inset-0 absolute opacity-20 pointer-events-none"
+          className="inset-0 aspect-[2880/1543] h-[80dvh] object-cover absolute opacity-40 tablet:opacity-30 pointer-events-none"
           style={{
             WebkitMaskImage:
               "radial-gradient(ellipse, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%)",
@@ -97,8 +97,6 @@ export default function HeroHomeComponent() {
           ref={smileyRef}
           style={smileyStyle}
           className="hidden tablet:block max-w-[100px] absolute desktop:right-[15%] desktop:top-[20%] right-[10%] top-[15%]"
-
-
         />
 
         <img
@@ -109,7 +107,7 @@ export default function HeroHomeComponent() {
           className="hidden tablet:block max-w-[100px] absolute left-[15%] bottom-[10%]"
         />
 
-        <div className="max-w-[800px] text-creamy flex flex-col mt-12 gap-6 tablet:gap-8 items-center justify-center text-center">
+        <div className="max-w-[800px] text-creamy flex flex-col mt-12 gap-12 tablet:gap-8 items-center justify-center text-center">
           <h3>{t("catchPhrase")}</h3>
 
           <h1
@@ -148,10 +146,18 @@ export default function HeroHomeComponent() {
           </h1>
 
           <div className="hidden tablet:grid gap-2 grid-cols-2 tablet:grid-cols-4  text-xs tablet:text-base ">
-            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Stratégie digitale</div>
-            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Direction artistique</div>
-            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Site web & app mobile</div>
-            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">Motion design</div>
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
+              Stratégie digitale
+            </div>
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
+              Direction artistique
+            </div>
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
+              Site web & app mobile
+            </div>
+            <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
+              Motion design
+            </div>
           </div>
 
           <button
