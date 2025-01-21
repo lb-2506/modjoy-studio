@@ -71,18 +71,18 @@ export default function DetailsProjectsComponent(props) {
         <select
           style={{
             fontFamily: "'Brockmann Medium', sans-serif",
-            WebkitTapHighlightColor: "transparent", // Désactive le highlight iOS
+            WebkitTapHighlightColor: "transparent",
           }}
           className={`
-    p-2 rounded-xl border-pink border w-full bg-pink text-darkGreen
-    outline-none text-lg h-[60px]
-    appearance-none        
-    focus:bg-pink          
-    active:bg-pink      
-    focus:opacity-100
-    active:opacity-100
-    tablet:hidden
-  `}
+            p-2 rounded-xl border-pink border w-full bg-pink text-darkGreen
+            outline-none text-lg h-[60px]
+            appearance-none        
+            focus:bg-pink          
+            active:bg-pink      
+            focus:opacity-100
+            active:opacity-100
+            tablet:hidden
+          `}
           value={activeIndex + 1}
           onChange={(e) => {
             const val = parseInt(e.target.value, 10);
