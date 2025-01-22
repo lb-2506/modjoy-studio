@@ -13,9 +13,13 @@ export default function HeroHomeComponent() {
   const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
   const smileyRef = useRef(null);
   const smiley2Ref = useRef(null);
+  const smiley3Ref = useRef(null);
+  const smiley4Ref = useRef(null);
 
   const [smileyStyle, setSmileyStyle] = useState({});
   const [smiley2Style, setSmiley2Style] = useState({});
+  const [smiley3Style, setSmiley3Style] = useState({});
+  const [smiley4Style, setSmiley4Style] = useState({});
 
   useEffect(() => {
     function handleGlobalMouseMove(e) {
@@ -46,8 +50,8 @@ export default function HeroHomeComponent() {
         distance = 35;
       }
 
-      if (distance < 500) {
-        const factor = (500 - distance) / 500;
+      if (distance < 300) {
+        const factor = (300 - distance) / 300;
         const offsetX = (dx / distance) * maxOffset * factor;
         const offsetY = (dy / distance) * maxOffset * factor;
 
@@ -65,6 +69,8 @@ export default function HeroHomeComponent() {
 
     updateSmileyStyle(smileyRef, setSmileyStyle);
     updateSmileyStyle(smiley2Ref, setSmiley2Style);
+    updateSmileyStyle(smiley3Ref, setSmiley3Style);
+    updateSmileyStyle(smiley4Ref, setSmiley4Style);
   }, [mousePos]);
 
   return (
@@ -91,23 +97,42 @@ export default function HeroHomeComponent() {
           }}
         />
 
+        
+        <div className="relative max-w-[800px] text-creamy flex flex-col mt-12 gap-12 tablet:gap-8 items-center justify-center text-center">
+
         <img
-          src="/img/smiley-1.png"
+          src="/img/avatars/hero-rocki.png"
           draggable={false}
           ref={smileyRef}
           style={smileyStyle}
-          className="hidden tablet:block max-w-[100px] absolute desktop:right-[15%] desktop:top-[20%] right-[10%] top-[15%]"
+          className="hidden tablet:block max-w-[100px] absolute -right-[12%] top-[5%] "
         />
 
         <img
-          src="/img/smiley-2.png"
+          src="/img/avatars/hero-leo.png"
           draggable={false}
           ref={smiley2Ref}
           style={smiley2Style}
-          className="hidden tablet:block max-w-[100px] absolute left-[15%] bottom-[10%]"
+          className="hidden tablet:block max-w-[100px] absolute -left-[20%] bottom-[10%]"
         />
 
-        <div className="max-w-[800px] text-creamy flex flex-col mt-12 gap-12 tablet:gap-8 items-center justify-center text-center">
+        <img
+          src="/img/avatars/hero-axoue.png"
+          draggable={false}
+          ref={smiley3Ref}
+          style={smiley3Style}
+          className="hidden tablet:block max-w-[100px] absolute -left-[15%] top-[20%]"
+        />
+
+        <img
+          src="/img/avatars/hero-swan.png"
+          draggable={false}
+          ref={smiley4Ref}
+          style={smiley4Style}
+          className="hidden tablet:block max-w-[100px] absolute -right-[20%] bottom-[30%]"
+        />
+
+
           <h3>{t("catchPhrase")}</h3>
 
           <h1

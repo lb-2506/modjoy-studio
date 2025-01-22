@@ -57,7 +57,7 @@ export default function ExpertisesHomeComponent() {
       </div>
 
       {/* L'accordéon horizontal (tablettes/desktop) */}
-      <ul className="hidden tablet:block mt-12 w-[90%] mx-auto h-[650px] rounded-xl overflow-hidden">
+      <ul className="hidden tablet:block mt-12 w-[90%] mx-auto h-[530px] rounded-xl overflow-hidden">
         {featuresData.map((feature, index) => {
           const tabId = `rad${index + 1}`;
           const contentRef = useRef(null);
@@ -81,7 +81,7 @@ export default function ExpertisesHomeComponent() {
               <label
                 className={`
                   ${feature.bgColor} 
-                   float-left h-[650px] w-[70px] overflow-hidden text-center text-[14px]
+                   float-left h-[530px] w-[70px] overflow-hidden text-center text-[14px]
                   flex flex-col  justify-between py-4 hover:cursor-pointer  peer-checked:cursor-default
                 `}
                 htmlFor={tabId}
@@ -95,10 +95,10 @@ export default function ExpertisesHomeComponent() {
 
               <div
                 ref={index === 0 ? firstParentRef : null}
-                className={`accslide flex h-full w-0 py-9 float-left overflow-x-hidden whitespace-nowrap transition-all duration-300  ${feature.bgTransparentColor} min-h-[650px]`}
+                className={`accslide flex h-full w-0 py-9 float-left overflow-x-hidden whitespace-nowrap transition-all duration-300  ${feature.bgTransparentColor} min-h-[530px]`}
               >
                 <div className="content px-6 flex flex-col gap-6 justify-center">
-                  <img src={feature.img} alt="picto" className="h-16 w-16" />
+                  <img src={feature.img} alt="picto" className="h-20 w-20" />
 
                   <h1 className="text-wrap text-3xl font-bold w-[600px]">
                     {t(feature.title)}
