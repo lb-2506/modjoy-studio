@@ -28,7 +28,7 @@ export default function TeamHomeComponent() {
             data-cal-namespace="appel-decouverte-30-min"
             data-cal-link="modjoystudio/appel-decouverte-30-min"
             data-cal-config='{"layout":"month_view"}'
-            className="bg-orange text-darkGreen px-4 py-2 rounded-2xl w-fit"
+            className="bg-orange hover:bg-[#f47029] transition-all ease-in-out duration-200 text-darkGreen px-4 py-2 rounded-2xl w-fit"
           >
             {t("button")}
           </button>

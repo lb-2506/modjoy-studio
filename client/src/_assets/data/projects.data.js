@@ -221,8 +221,8 @@ export const projectsData = [
   },
   {
     id: 3,
-    imgCouv: "/img/projects/LPBN/1.webp",
-    imgHero: "/img/projects/LPBN/2.webp",
+    imgCouv: "/img/projects/Tropiques/1.webp",
+    imgHero: "/img/projects/Tropiques/2.webp",
     tags: ["Stratégie digitale", "Paid Media"],
     title: "Tropique Atrium Scène Nationale",
     description:
@@ -365,8 +365,8 @@ export const projectsData = [
   },
   {
     id: 4,
-    imgCouv: "/img/projects/MB/1.webp",
-    imgHero: "/img/projects/MB/2.webp",
+    imgCouv: "/img/projects/Baccha/1.webp",
+    imgHero: "/img/projects/Baccha/2.webp",
     tags: ["Stratégie digitale", "Paid Media", "Social Media"],
     title: "Baccha Festival",
     description: "Comment a-t-on piraté un char pendant le carnaval 2020 ? ",

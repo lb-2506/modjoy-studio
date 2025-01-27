@@ -3,16 +3,37 @@ import Link from "next/link";
 // I18N
 import { useTranslation } from "next-i18next";
 
+// ROUTER
+import { useRouter } from "next/router";
+
 // SVG
 import { InstagramSvg, LinkedInSvg } from "../_svgs/_index";
 
 export default function FooterComponent() {
   const { t } = useTranslation("common");
+  const router = useRouter();
 
-  function handleScrollToSection(id) {
-    const section = document.querySelector(id);
-    if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+  function wait(ms) {
+    return new Promise((resolve) => setTimeout(resolve, ms));
+  }
+
+  async function handleScrollToSection(id) {
+    await wait(300);
+    if (router.pathname !== "/") {
+      await router.push("/");
+      setTimeout(() => {
+        const section = document.querySelector(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 200);
+    } else {
+      requestAnimationFrame(() => {
+        const section = document.querySelector(id);
+        if (section) {
+          section.scrollIntoView({ behavior: "smooth" });
+        }
+      });
     }
   }
 
@@ -20,7 +41,7 @@ export default function FooterComponent() {
     <footer className="py-12 tablet:py-24 bg-darkGreen ">
       <div className="max-w-[90%] mx-auto">
         <div className="flex flex-col gap-12 desktop:gap-0 desktop:flex-row items-center justify-between">
-          <div className="desktop:w-1/3">
+          <div className="desktop:w-[10%]">
             <img
               src="/img/logo.png"
               draggable={false}
@@ -29,7 +50,7 @@ export default function FooterComponent() {
             />
           </div>
 
-          <ul className="flex flex-col mobile:flex-row justify-center items-center gap-12 text-creamy desktop:w-1/3">
+          <ul className="flex flex-col mobile:flex-row justify-center items-center gap-12 text-creamy desktop:w-[80%]">
             <li>
               <button
                 onClick={() => handleScrollToSection("#expertises")}
@@ -72,9 +93,22 @@ export default function FooterComponent() {
             </li>
           </ul>
 
-          <ul className="flex justify-end gap-4 items-center desktop:w-1/3">
-            <InstagramSvg />
-            <LinkedInSvg />
+          <ul className="flex justify-end gap-4 items-center desktop:w-[10%]">
+            <a
+              href="https://www.instagram.com/modjoy_studio/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <InstagramSvg />
+            </a>
+
+            <a
+              href="https://www.linkedin.com/company/modjoy-studio/about/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <LinkedInSvg />
+            </a>
           </ul>
         </div>
 
@@ -85,17 +119,13 @@ export default function FooterComponent() {
           className="flex flex-col tablet:flex-row justify-center items-center text-center gap-4 text-creamy"
         >
           <p>© 2025 Modjoy Studio. All rights reserved.</p>
-          <Link href="#">
+          <Link href="/privacy-policy">
             <a className="underline">Privacy Policy</a>
           </Link>
 
-          <Link href="#">
+          <Link href="/terms">
             <a className="underline">Terms of Use</a>
           </Link>
-
-          {/* <Link href="#">
-            <a className="underline">Cookie Settings</a>
-          </Link> */}
         </div>
       </div>
     </footer>

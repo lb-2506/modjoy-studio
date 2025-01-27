@@ -17,3 +17,7 @@ export { MirrorBotSvg } from "./logos/mirror-bot.svg";
 export { TreefleSvg } from "./logos/treefle.svg";
 export { PowerSvg } from "./logos/power.svg";
 export { SodexoSvg } from "./logos/sodexo.svg";
+export { KfcSvg } from "./logos/kfc.svg";
+export { OrangeSvg } from "./logos/orange.svg";
+export { SfrSvg } from "./logos/sfr.svg";
+export { CorsairSvg } from "./logos/corsair.svg";

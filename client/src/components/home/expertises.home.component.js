@@ -38,7 +38,7 @@ export default function ExpertisesHomeComponent() {
         <h3>{t("sectionName")}</h3>
 
         <h1
-          className="text-3xl tablet:text-5xl max-w-[550px] px-6"
+          className="text-3xl text-pretty tablet:text-5xl max-w-[575px] px-6"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
           {t("title")}

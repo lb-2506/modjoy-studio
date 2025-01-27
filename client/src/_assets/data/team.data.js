@@ -6,7 +6,7 @@ export const teamData = [
     job: "Digital Strategist & Growth Hacker",
     description:
       "Toujours en avance d’un coup, il repère les tendances et optimise vos campagnes pour des résultats explosifs.",
-    linkedIn: "https://google.com",
+    linkedIn: "https://www.linkedin.com/in/swanbadol/",
   },
   {
     id: 2,
@@ -15,7 +15,7 @@ export const teamData = [
     job: "Graphiste",
     description:
       "Elle absorbe toutes les demandes clients (même les plus chaotiques) et les transforme en designs qui déglinguent.",
-    linkedIn: "https://google.com",
+    linkedIn: "https://www.linkedin.com/in/axelle-heurtevent",
   },
   {
     id: 3,
@@ -24,7 +24,7 @@ export const teamData = [
     job: "Web & App Developper",
     description:
       "Développeur tout-terrain, il lance des sorts qui donnent vie à vos projets web et mobiles.",
-    linkedIn: "https://google.com",
+    linkedIn: "https://www.linkedin.com/in/leo-baccialone/",
   },
   {
     id: 4,
@@ -33,6 +33,6 @@ export const teamData = [
     job: "Motion Designer",
     description:
       "Un vrai illusionniste qui crée des animations et des mondes 3D à couper le souffle.",
-    linkedIn: "https://google.com",
+    linkedIn: "https://www.linkedin.com/in/rokneddine-diabi-16887b208/",
   },
 ];

@@ -173,7 +173,7 @@ export default function NavbarComponent() {
           </li>
 
           <button
-            className="bg-orange text-darkGreen rounded-2xl px-4 py-2 mt-6 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
+            className="bg-orange hover:bg-[#f47029] transition-all ease-in-out duration-200 text-darkGreen rounded-2xl px-4 py-2 mt-6 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
             data-tally-open="wkKoEe"
             data-tally-layout="modal"
             data-tally-width="400"

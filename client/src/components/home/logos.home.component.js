@@ -8,12 +8,16 @@ import Marquee from "react-fast-marquee";
 import {
   AlpazeSvg,
   CadulisSvg,
+  CorsairSvg,
+  KfcSvg,
   LesPtitsMotsSvg,
   LpbnSvg,
   LvsSvg,
   MirrorBotSvg,
+  OrangeSvg,
   PluxeeSvg,
   PowerSvg,
+  SfrSvg,
   SodexoSvg,
   TreefleSvg,
   TrippnySvg,
@@ -33,10 +37,14 @@ export default function LogosHomeComponent() {
           <CadulisSvg />
           <TrippnySvg />
           <PluxeeSvg />
+          <SfrSvg/>
           <LvsSvg />
           <LesPtitsMotsSvg />
           <MirrorBotSvg />
+          <KfcSvg/>
           <TreefleSvg />
+          <OrangeSvg/>
+          <CorsairSvg/>
           <PowerSvg />
           <SodexoSvg />
         </div>

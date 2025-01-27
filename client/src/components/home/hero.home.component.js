@@ -186,7 +186,7 @@ export default function HeroHomeComponent() {
           </div>
 
           <button
-            className="bg-creamy text-darkGreen rounded-2xl px-4 py-2 mt-4"
+            className="bg-creamy hover:bg-opacity-75 transition-all ease-in-out duration-200 text-darkGreen rounded-2xl px-4 py-2 mt-4"
             data-cal-namespace="appel-decouverte-30-min"
             data-cal-link="modjoystudio/appel-decouverte-30-min"
             data-cal-config='{"layout":"month_view"}'
