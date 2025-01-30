@@ -98,6 +98,7 @@ export default function FooterComponent() {
               href="https://www.instagram.com/modjoy_studio/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="instagram"
             >
               <InstagramSvg />
             </a>
@@ -106,6 +107,7 @@ export default function FooterComponent() {
               href="https://www.linkedin.com/company/modjoy-studio/about/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="linkedIn"
             >
               <LinkedInSvg />
             </a>
