@@ -139,6 +139,7 @@ export default function NavbarComponent() {
               {t("nav.list.1")}
             </button>
           </li>
+
           <li>
             <button
               onClick={() => handleScrollToSection("#skills")}
@@ -147,6 +148,7 @@ export default function NavbarComponent() {
               {t("nav.list.2")}
             </button>
           </li>
+
           <li>
             <button
               onClick={() => handleScrollToSection("#projects")}
@@ -155,6 +157,7 @@ export default function NavbarComponent() {
               {t("nav.list.3")}
             </button>
           </li>
+
           <li>
             <button
               onClick={() => handleScrollToSection("#team")}
@@ -163,6 +166,7 @@ export default function NavbarComponent() {
               {t("nav.list.4")}
             </button>
           </li>
+
           <li>
             <button
               onClick={() => handleScrollToSection("#work")}
@@ -172,16 +176,18 @@ export default function NavbarComponent() {
             </button>
           </li>
 
-          <button
-            className="bg-orange hover:bg-[#f47029] transition-all ease-in-out duration-200 text-darkGreen rounded-2xl px-4 py-2 mt-6 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
-            data-tally-open="wkKoEe"
-            data-tally-layout="modal"
-            data-tally-width="400"
-            data-tally-emoji-animation="wave"
-            onClick={() => setIsMenuOpen(false)}
-          >
-            {t("nav.button.estimate")}
-          </button>
+          <li>
+            <button
+              className="bg-orange hover:bg-[#f47029] transition-all ease-in-out duration-200 text-darkGreen rounded-2xl px-4 py-2 mt-6 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
+              data-tally-open="wkKoEe"
+              data-tally-layout="modal"
+              data-tally-width="400"
+              data-tally-emoji-animation="wave"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              {t("nav.button.estimate")}
+            </button>
+          </li>
         </ul>
       </div>
     </nav>

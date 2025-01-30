@@ -94,23 +94,27 @@ export default function FooterComponent() {
           </ul>
 
           <ul className="flex justify-end gap-4 items-center desktop:w-[10%]">
-            <a
-              href="https://www.instagram.com/modjoy_studio/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="instagram"
-            >
-              <InstagramSvg />
-            </a>
-
-            <a
-              href="https://www.linkedin.com/company/modjoy-studio/about/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="linkedIn"
-            >
-              <LinkedInSvg />
-            </a>
+            <li>
+              <a
+                href="https://www.instagram.com/modjoy_studio/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="instagram"
+              >
+                <InstagramSvg />
+              </a>
+            </li>
+            
+            <li>
+              <a
+                href="https://www.linkedin.com/company/modjoy-studio/about/"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="linkedIn"
+              >
+                <LinkedInSvg />
+              </a>
+            </li>
           </ul>
         </div>
 
