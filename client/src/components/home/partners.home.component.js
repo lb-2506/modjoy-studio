@@ -37,7 +37,7 @@ export default function PartnersHomeComponent() {
         />
 
         <img
-          src="/img/smile.png"
+          src="/img/smile.webp"
           draggable={false}
           className="max-w-[200px] absolute -top-[90px] left-[55%] blur-sm opacity-60 rotate-[125deg]"
           alt="smile"

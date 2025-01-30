@@ -1,7 +1,7 @@
 export const teamData = [
   {
     id: 1,
-    pictoSrc: "/img/avatars/swan.png",
+    pictoSrc: "/img/avatars/swan.webp",
     name: "Swan - L'éclaireur stratège",
     job: "Digital Strategist & Growth Hacker",
     description:
@@ -10,7 +10,7 @@ export const teamData = [
   },
   {
     id: 2,
-    pictoSrc: "/img/avatars/axoue.png",
+    pictoSrc: "/img/avatars/axoue.webp",
     name: "Axelle - Le tank créatif",
     job: "Graphiste",
     description:
@@ -19,7 +19,7 @@ export const teamData = [
   },
   {
     id: 3,
-    pictoSrc: "/img/avatars/leo.png",
+    pictoSrc: "/img/avatars/leo.webp",
     name: "Léo - Le magicien codeur",
     job: "Web & App Developper",
     description:
@@ -28,7 +28,7 @@ export const teamData = [
   },
   {
     id: 4,
-    pictoSrc: "/img/avatars/rok.png",
+    pictoSrc: "/img/avatars/rok.webp",
     name: "Rokneddine - L'artisan des illusions",
     job: "Motion Designer",
     description:

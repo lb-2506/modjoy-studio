@@ -2,7 +2,7 @@ export const featuresData = [
   {
     id: 1,
     name: "accordion.1.name",
-    img: "/img/expertises/1.png",
+    img: "/img/expertises/1.webp",
     title: "accordion.1.title",
     content: "accordion.1.content",
     bgColor: "bg-turquoise",
@@ -11,7 +11,7 @@ export const featuresData = [
   {
     id: 2,
     name: "accordion.2.name",
-    img: "/img/expertises/2.png",
+    img: "/img/expertises/2.webp",
     title: "accordion.2.title",
     content: "accordion.2.content",
     bgColor: "bg-pink",
@@ -20,7 +20,7 @@ export const featuresData = [
   {
     id: 3,
     name: "accordion.3.name",
-    img: "/img/expertises/3.png",
+    img: "/img/expertises/3.webp",
     title: "accordion.3.title",
     content: "accordion.3.content",
     bgColor: "bg-green",
@@ -29,7 +29,7 @@ export const featuresData = [
   {
     id: 4,
     name: "accordion.4.name",
-    img: "/img/expertises/4.png",
+    img: "/img/expertises/4.webp",
     title: "accordion.4.title",
     content: "accordion.4.content",
     bgColor: "bg-orange",

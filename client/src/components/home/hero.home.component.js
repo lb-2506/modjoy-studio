@@ -100,7 +100,7 @@ export default function HeroHomeComponent() {
 
         <div className="relative max-w-[800px] text-creamy flex flex-col mt-12 gap-12 tablet:gap-8 items-center justify-center text-center">
           <img
-            src="/img/avatars/hero-rocki.png"
+            src="/img/avatars/hero-rocki.webp"
             alt="memoji"
             draggable={false}
             ref={smileyRef}
@@ -109,7 +109,7 @@ export default function HeroHomeComponent() {
           />
 
           <img
-            src="/img/avatars/hero-leo.png"
+            src="/img/avatars/hero-leo.webp"
             alt="memoji"
             draggable={false}
             ref={smiley2Ref}
@@ -118,7 +118,7 @@ export default function HeroHomeComponent() {
           />
 
           <img
-            src="/img/avatars/hero-axoue.png"
+            src="/img/avatars/hero-axoue.webp"
             alt="memoji"
             draggable={false}
             ref={smiley3Ref}
@@ -127,7 +127,7 @@ export default function HeroHomeComponent() {
           />
 
           <img
-            src="/img/avatars/hero-swan.png"
+            src="/img/avatars/hero-swan.webp"
             alt="memoji"
             draggable={false}
             ref={smiley4Ref}
@@ -150,7 +150,7 @@ export default function HeroHomeComponent() {
             <span className="w-full mx-auto justify-center flex items-center gap-3">
               {t("title.3")}
               <img
-                src="/img/smile.png"
+                src="/img/smile.webp"
                 alt="picto"
                 draggable={false}
                 className="h-[50px] tablet:h-[100px] tablet:w-[95px]"
