@@ -83,13 +83,14 @@ export default function ProjectsHomeComponent(props) {
       <div
         className={`flex flex-col gap-4 text-center ${props.projectPage ? "text-darkGreen" : "text-creamy"}`}
       >
-        <h3>{t("sectionName")}</h3>
-        <h1
+        <h1>{t("sectionName")}</h1>
+
+        <h2
           className="px-4 text-3xl text-balance tablet:text-5xl max-w-[650px] mx-auto text-center"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
           {t("title")}
-        </h1>
+        </h2>
 
         {!props.projectPage && (
           <img

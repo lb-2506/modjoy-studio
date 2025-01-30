@@ -14,14 +14,14 @@ export default function WorkHomeComponent() {
     <section id="work" className="bg-darkGreen relative">
       <div className="py-24 max-w-[80%] mx-auto flex flex-col tablet:flex-row gap-12 pb-48">
         <div className="text-creamy flex flex-col gap-6 tablet:w-1/2">
-          <h3>{t("sectionName")}</h3>
+          <h1>{t("sectionName")}</h1>
 
-          <h1
+          <h2
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-3xl tablet:text-5xl max-w-[550px]"
           >
             {t("title")}
-          </h1>
+          </h2>
 
           {/* <button
             data-cal-namespace="appel-decouverte-30-min"

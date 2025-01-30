@@ -11,14 +11,14 @@ export default function TeamHomeComponent() {
     <section id="team" className="bg-darkGreen">
       <div className="max-w-[90%] mx-auto rounded-[48px] px-4 tablet:px-12 py-12 tablet:py-24 bg-green flex flex-col desktop:flex-row gap-12 tablet:gap-24">
         <div className="desktop:max-w-[330px] flex flex-col gap-6">
-          <h3>{t("sectionName")}</h3>
+          <h1>{t("sectionName")}</h1>
 
-          <h1
+          <h2
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
             className="text-3xl tablet:text-5xl"
           >
             {t("title")}
-          </h1>
+          </h2>
 
           <p style={{ fontFamily: "'Satoshi Medium', sans-serif" }}>
             {t("subtitle")}

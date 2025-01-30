@@ -35,14 +35,14 @@ export default function ExpertisesHomeComponent() {
       className="bg-creamy rounded-t-[48px] pt-24 pb-12 mt-[100vh] flex flex-col items-center justify-center"
     >
       <div className="flex flex-col gap-4 text-center">
-        <h3>{t("sectionName")}</h3>
+        <h1>{t("sectionName")}</h1>
 
-        <h1
+        <h2
           className="text-3xl text-pretty tablet:text-5xl max-w-[575px] px-6"
           style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
         >
           {t("title")}
-        </h1>
+        </h2>
 
         <div className="h-[35px] mt-4">
           <img
