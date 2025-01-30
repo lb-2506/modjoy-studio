@@ -83,7 +83,7 @@ export default function HeroHomeComponent() {
           src="/img/pointbg.png"
           alt="background"
           draggable={false}
-          className="inset-0 h-[80dvh] object-cover absolute opacity-40 tablet:opacity-30 pointer-events-none"
+          className="inset-0 h-full object-cover absolute opacity-40 tablet:opacity-30 pointer-events-none"
           style={{
             WebkitMaskImage:
               "radial-gradient(ellipse, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%)",
