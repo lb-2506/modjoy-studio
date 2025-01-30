@@ -1,5 +1,85 @@
 export const projectsData = [
   {
+    id: 7,
+    imgCouv: "/img/projects/KFC/1.webp",
+    imgHero: "/img/projects/KFC/2.webp",
+    tags: ["Graphisme", "Site Web"],
+    title: "KFC Origins",
+    description:
+      "Conception d’une landing page moderne et immersive pour promouvoir la collection de vêtements KFC Origins.",
+    sector: "Marketing et restauration rapide",
+    date: "Octobre 2022",
+    duration: "3 semaines",
+    website: ["kfc.fr/origins"],
+    slug: "kfc-origins",
+    details: {
+      sections: [
+        {
+          heading: "Context",
+          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+              <p style="margin-bottom: 16px;">
+                Le défi ? Concevoir une landing page percutante pour promouvoir la collection de vêtements KFC Origins, une ligne exclusive célébrant l’héritage et l’identité emblématique de la marque. 
+                Lancée fin octobre 2022, cette campagne avait pour objectif de marquer les esprits grâce à une présentation moderne et immersive, mettant en valeur l’univers visuel unique de KFC.
+              </p>
+            </div>`,
+        },
+        {
+          heading: "Notre approche",
+          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+          <p style="margin-bottom: 16px;">
+            Nous avons imaginé une page promotionnelle élégante et engageante, fidèle à l’identité de la marque, tout en mettant en avant chaque pièce de la collection.
+          </p>
+
+          <img src="/img/projects/KFC/3.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto;" />
+
+          <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+            <li style="margin-bottom: 8px;">
+              <u><strong>Moodboards & maquettes :</strong></u> Nous avons exploré plusieurs directions graphiques avant de définir un design qui allie les codes du streetwear et les éléments iconiques de KFC.
+            </li>
+            <li style="margin-bottom: 8px;">
+              <u><strong>Expérience utilisateur :</strong></u> Une navigation intuitive, pensée pour maximiser l’engagement des visiteurs et leur permettre de découvrir la collection de manière fluide et immersive.
+            </li>
+            <li style="margin-bottom: 8px;">
+              <u><strong>Développement :</strong></u>
+              <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+                <li style="margin-bottom: 8px;">
+                  Conception d’un site responsive, optimisé pour une expérience fluide sur tous les écrans (mobile, tablette, desktop).
+                </li>
+                <li style="margin-bottom: 8px;">
+                  Intégration d’animations légères pour enrichir l’expérience visuelle et attirer l’attention sur les détails de la collection.
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <img src="/img/projects/KFC/4.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto;" />
+
+        </div>`,
+        },
+        {
+          heading: "Résultat",
+          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+              <p style="margin-bottom: 16px;">
+                Le client a reçu :
+              </p>
+              <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+                <li style="margin-bottom: 8px;">
+                 Une landing page promotionnelle moderne et immersive, parfaitement alignée avec l’univers de la collection KFC Origins.
+                </li>
+                <li style="margin-bottom: 8px;">
+                Un design unique, pensé pour captiver les visiteurs et valoriser chaque pièce de la collection.
+                </li>
+                <li style="margin-bottom: 8px;">
+                 Un site optimisé et livré dans les délais, garantissant une expérience fluide et impactante.
+                </li>
+              </ul>
+             
+            </div>`,
+        },
+      ],
+    },
+  },
+  {
     id: 1,
     imgCouv: "/img/projects/LPBN/1.webp",
     imgHero: "/img/projects/LPBN/2.webp",
@@ -764,270 +844,190 @@ export const projectsData = [
       ],
     },
   },
-  {
-    id: 7,
-    imgCouv: "/img/projects/KFC/1.webp",
-    imgHero: "/img/projects/KFC/2.webp",
-    tags: ["Graphisme", "Site Web"],
-    title: "KFC Origins",
-    description:
-      "Conception d’une landing page moderne et immersive pour promouvoir la collection de vêtements KFC Origins.",
-    sector: "Marketing et restauration rapide",
-    date: "Octobre 2022",
-    duration: "3 semaines",
-    website: ["kfc.fr/origins"],
-    slug: "kfc-origins",
-    details: {
-      sections: [
-        {
-          heading: "Context",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-              <p style="margin-bottom: 16px;">
-                Le défi ? Concevoir une landing page percutante pour promouvoir la collection de vêtements KFC Origins, une ligne exclusive célébrant l’héritage et l’identité emblématique de la marque. 
-                Lancée fin octobre 2022, cette campagne avait pour objectif de marquer les esprits grâce à une présentation moderne et immersive, mettant en valeur l’univers visuel unique de KFC.
-              </p>
-            </div>`,
-        },
-        {
-          heading: "Notre approche",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-          <p style="margin-bottom: 16px;">
-            Nous avons imaginé une page promotionnelle élégante et engageante, fidèle à l’identité de la marque, tout en mettant en avant chaque pièce de la collection.
-          </p>
+  // {
+  //   id: 8,
+  //   imgCouv: "/img/projects/Saona/1.webp",
+  //   imgHero: "/img/projects/Saona/2.webp",
+  //   tags: ["Identité visuelle", "Graphisme", "Site E-Commerce"],
+  //   title: "Saona Concept",
+  //   description:
+  //     "Création d’un site e-commerce moderne et intuitif pour Saona Concept, intégrant un espace client complet et un outil de gestion avancé pour transformer son activité en ligne",
+  //   sector: "Santé",
+  //   date: "Février 2024",
+  //   duration: "1 semaine",
+  //   website: ["saona-concept.com"],
+  //   slug: "saona-concept",
+  //   details: {
+  //     sections: [
+  //       {
+  //         heading: "Context",
+  //         content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+  //             <p style="margin-bottom: 16px;">
+  //               Accompagner Saona Concept, une marque française de compléments alimentaires, dans sa transition vers une stratégie digitale indépendante. 
+  //               Initialement vendus exclusivement sur Amazon, les produits Saona avaient besoin d’une vitrine propre pour atteindre une nouvelle clientèle, renforcer l’identité de la marque et offrir une expérience d’achat directement depuis leur propre plateforme.
+  //             </p>
 
-          <img src="/img/projects/KFC/3.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto;" />
+  //             <p style="margin-bottom: 16px;">
+  //               Notre mission : créer un site e-commerce moderne, ergonomique et accueillant, qui reflète les valeurs de Saona tout en intégrant des fonctionnalités avancées pour satisfaire les besoins des clients et simplifier la gestion quotidienne de la marque.
+  //             </p>
+  //           </div>`,
+  //       },
+  //       {
+  //         heading: "Conception et design",
+  //         content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+  //               <p style="margin-bottom: 16px;">
+  //                 Nous avons conçu un site à l’image de Saona Concept : naturel, moderne et en parfaite harmonie avec les valeurs de bien-être et de transparence portées par la marque. 
+  //                 L’objectif était de proposer une expérience utilisateur fluide et intuitive, tout en mettant en valeur la large gamme de produits proposés.
+  //               </p>
 
-          <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
-            <li style="margin-bottom: 8px;">
-              <u><strong>Moodboards & maquettes :</strong></u> Nous avons exploré plusieurs directions graphiques avant de définir un design qui allie les codes du streetwear et les éléments iconiques de KFC.
-            </li>
-            <li style="margin-bottom: 8px;">
-              <u><strong>Expérience utilisateur :</strong></u> Une navigation intuitive, pensée pour maximiser l’engagement des visiteurs et leur permettre de découvrir la collection de manière fluide et immersive.
-            </li>
-            <li style="margin-bottom: 8px;">
-              <u><strong>Développement :</strong></u>
-              <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                <li style="margin-bottom: 8px;">
-                  Conception d’un site responsive, optimisé pour une expérience fluide sur tous les écrans (mobile, tablette, desktop).
-                </li>
-                <li style="margin-bottom: 8px;">
-                  Intégration d’animations légères pour enrichir l’expérience visuelle et attirer l’attention sur les détails de la collection.
-                </li>
-              </ul>
-            </li>
-          </ul>
+  //               <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+  //                 <li style="margin-bottom: 8px;">
+  //                   <u><strong>Design sur mesure :</strong></u>
+  //                   <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+  //                     <li style="margin-bottom: 8px;">
+  //                       Un univers visuel soigné et chaleureux, avec une palette de couleurs évoquant la nature et la sérénité.
+  //                     </li>
+  //                     <li style="margin-bottom: 8px;">
+  //                       Des pages produits conçues pour maximiser l’impact visuel et mettre en avant les bienfaits des compléments alimentaires, avec des descriptions détaillées et des visuels attrayants.
+  //                     </li>
+  //                   </ul>
+  //                 </li>
+  //                 <li style="margin-bottom: 8px;">
+  //                   <u><strong>Navigation optimisée :</strong></u>
+  //                   <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+  //                     <li style="margin-bottom: 8px;">
+  //                       Une structure claire et intuitive pour permettre aux visiteurs de trouver facilement les produits adaptés à leurs besoins.
+  //                     </li>
+  //                     <li style="margin-bottom: 8px;">
+  //                       Un moteur de recherche performant et des filtres avancés pour affiner les choix par catégories, objectifs (sommeil, immunité, sport, etc.) ou ingrédients.
+  //                     </li>
+  //                   </ul>
+  //                 </li>
+  //                 <li style="margin-bottom: 8px;">
+  //                   <u><strong>Fonctionnalités e-commerce :</strong></u>
+  //                   <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+  //                     <li style="margin-bottom: 8px;">
+  //                       Système d’abonnement : Les utilisateurs peuvent souscrire à des abonnements pour recevoir leurs produits préférés de façon régulière, avec une gestion simplifiée dans leur espace client.
+  //                     </li>
+  //                     <li style="margin-bottom: 8px;">
+  //                       Paiements sécurisés et fluides : Intégration de solutions de paiement fiables pour garantir une expérience sans friction.
+  //                     </li>
+  //                     <li style="margin-bottom: 8px;">
+  //                       Fonctionnalités personnalisées : Gestion des favoris, recommandations basées sur les habitudes d’achat, et offres spéciales adaptées à chaque utilisateur.
+  //                     </li>
+  //                   </ul>
+  //                 </li>
+  //               </ul>
 
-          <img src="/img/projects/KFC/4.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto;" />
+  //               <img src="/img/projects/Saona/3.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto; width: 50%" />
 
-        </div>`,
-        },
-        {
-          heading: "Résultat",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-              <p style="margin-bottom: 16px;">
-                Le client a reçu :
-              </p>
-              <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;">
-                 Une landing page promotionnelle moderne et immersive, parfaitement alignée avec l’univers de la collection KFC Origins.
-                </li>
-                <li style="margin-bottom: 8px;">
-                Un design unique, pensé pour captiver les visiteurs et valoriser chaque pièce de la collection.
-                </li>
-                <li style="margin-bottom: 8px;">
-                 Un site optimisé et livré dans les délais, garantissant une expérience fluide et impactante.
-                </li>
-              </ul>
-             
-            </div>`,
-        },
-      ],
-    },
-  },
-  {
-    id: 8,
-    imgCouv: "/img/projects/Saona/1.webp",
-    imgHero: "/img/projects/Saona/2.webp",
-    tags: ["Identité visuelle", "Graphisme", "Site E-Commerce"],
-    title: "Saona Concept",
-    description:
-      "Création d’un site e-commerce moderne et intuitif pour Saona Concept, intégrant un espace client complet et un outil de gestion avancé pour transformer son activité en ligne",
-    sector: "Santé",
-    date: "Février 2024",
-    duration: "1 semaine",
-    website: ["saona-concept.com"],
-    slug: "saona-concept",
-    details: {
-      sections: [
-        {
-          heading: "Context",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-              <p style="margin-bottom: 16px;">
-                Accompagner Saona Concept, une marque française de compléments alimentaires, dans sa transition vers une stratégie digitale indépendante. 
-                Initialement vendus exclusivement sur Amazon, les produits Saona avaient besoin d’une vitrine propre pour atteindre une nouvelle clientèle, renforcer l’identité de la marque et offrir une expérience d’achat directement depuis leur propre plateforme.
-              </p>
+  //             </div>`,
+  //       },
+  //       {
+  //         heading: "Espace client",
+  //         content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+  //             <p style="margin-bottom: 16px;">
+  //               Pour renforcer l’engagement et la fidélité, nous avons développé un espace client complet et intuitif :
+  //             </p>
 
-              <p style="margin-bottom: 16px;">
-                Notre mission : créer un site e-commerce moderne, ergonomique et accueillant, qui reflète les valeurs de Saona tout en intégrant des fonctionnalités avancées pour satisfaire les besoins des clients et simplifier la gestion quotidienne de la marque.
-              </p>
-            </div>`,
-        },
-        {
-          heading: "Conception et design",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-                <p style="margin-bottom: 16px;">
-                  Nous avons conçu un site à l’image de Saona Concept : naturel, moderne et en parfaite harmonie avec les valeurs de bien-être et de transparence portées par la marque. 
-                  L’objectif était de proposer une expérience utilisateur fluide et intuitive, tout en mettant en valeur la large gamme de produits proposés.
-                </p>
+  //             <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+  //               <li style="margin-bottom: 8px;">
+  //                 <u><strong>Suivi des commandes :</strong></u> Les clients peuvent consulter l’état de leurs achats en temps réel, depuis la validation jusqu’à la livraison.
+  //               </li>
+  //               <li style="margin-bottom: 8px;">
+  //                 <u><strong>Gestion des abonnements :</strong></u> Modification, suspension ou renouvellement des abonnements en toute autonomie, directement depuis leur compte.
+  //               </li>
+  //               <li style="margin-bottom: 8px;">
+  //                 <u><strong>Historique des achats :</strong></u> Une visibilité complète sur leurs commandes passées pour faciliter leurs futurs achats.
+  //               </li>
+  //               <li style="margin-bottom: 8px;">
+  //                 <u><strong>Liste de favoris :</strong></u> Une fonctionnalité pour sauvegarder les produits préférés et les retrouver en un clic.
+  //               </li>
+  //               <li style="margin-bottom: 8px;">
+  //                 <u><strong>Notifications personnalisées :</strong></u> Alertes pour les renouvellements d’abonnement, offres spéciales ou nouveautés produits.
+  //               </li>
+  //             </ul>
 
-                <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
-                  <li style="margin-bottom: 8px;">
-                    <u><strong>Design sur mesure :</strong></u>
-                    <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                      <li style="margin-bottom: 8px;">
-                        Un univers visuel soigné et chaleureux, avec une palette de couleurs évoquant la nature et la sérénité.
-                      </li>
-                      <li style="margin-bottom: 8px;">
-                        Des pages produits conçues pour maximiser l’impact visuel et mettre en avant les bienfaits des compléments alimentaires, avec des descriptions détaillées et des visuels attrayants.
-                      </li>
-                    </ul>
-                  </li>
-                  <li style="margin-bottom: 8px;">
-                    <u><strong>Navigation optimisée :</strong></u>
-                    <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                      <li style="margin-bottom: 8px;">
-                        Une structure claire et intuitive pour permettre aux visiteurs de trouver facilement les produits adaptés à leurs besoins.
-                      </li>
-                      <li style="margin-bottom: 8px;">
-                        Un moteur de recherche performant et des filtres avancés pour affiner les choix par catégories, objectifs (sommeil, immunité, sport, etc.) ou ingrédients.
-                      </li>
-                    </ul>
-                  </li>
-                  <li style="margin-bottom: 8px;">
-                    <u><strong>Fonctionnalités e-commerce :</strong></u>
-                    <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                      <li style="margin-bottom: 8px;">
-                        Système d’abonnement : Les utilisateurs peuvent souscrire à des abonnements pour recevoir leurs produits préférés de façon régulière, avec une gestion simplifiée dans leur espace client.
-                      </li>
-                      <li style="margin-bottom: 8px;">
-                        Paiements sécurisés et fluides : Intégration de solutions de paiement fiables pour garantir une expérience sans friction.
-                      </li>
-                      <li style="margin-bottom: 8px;">
-                        Fonctionnalités personnalisées : Gestion des favoris, recommandations basées sur les habitudes d’achat, et offres spéciales adaptées à chaque utilisateur.
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+  //             <img src="/img/projects/Saona/4.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto; width: 350px" />
 
-                <img src="/img/projects/Saona/3.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto; width: 50%" />
+  //           </div>`,
+  //       },
+  //       {
+  //         heading: "Espace Administrateur",
+  //         content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+  //             <p style="margin-bottom: 16px;">
+  //               Côté gestion, nous avons conçu un espace administrateur offrant un contrôle total sur tous les aspects de l’activité :
+  //             </p>
 
-              </div>`,
-        },
-        {
-          heading: "Espace client",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-              <p style="margin-bottom: 16px;">
-                Pour renforcer l’engagement et la fidélité, nous avons développé un espace client complet et intuitif :
-              </p>
-
-              <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 8px;">
-                  <u><strong>Suivi des commandes :</strong></u> Les clients peuvent consulter l’état de leurs achats en temps réel, depuis la validation jusqu’à la livraison.
-                </li>
-                <li style="margin-bottom: 8px;">
-                  <u><strong>Gestion des abonnements :</strong></u> Modification, suspension ou renouvellement des abonnements en toute autonomie, directement depuis leur compte.
-                </li>
-                <li style="margin-bottom: 8px;">
-                  <u><strong>Historique des achats :</strong></u> Une visibilité complète sur leurs commandes passées pour faciliter leurs futurs achats.
-                </li>
-                <li style="margin-bottom: 8px;">
-                  <u><strong>Liste de favoris :</strong></u> Une fonctionnalité pour sauvegarder les produits préférés et les retrouver en un clic.
-                </li>
-                <li style="margin-bottom: 8px;">
-                  <u><strong>Notifications personnalisées :</strong></u> Alertes pour les renouvellements d’abonnement, offres spéciales ou nouveautés produits.
-                </li>
-              </ul>
-
-              <img src="/img/projects/Saona/4.webp" alt="Illustrations graphiques" style="display: block; margin: 48px auto; width: 350px" />
-
-            </div>`,
-        },
-        {
-          heading: "Espace Administrateur",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-              <p style="margin-bottom: 16px;">
-                Côté gestion, nous avons conçu un espace administrateur offrant un contrôle total sur tous les aspects de l’activité :
-              </p>
-
-              <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
-                <li style="margin-bottom: 16px;">
-                  <u><strong>Gestion des produits :</strong></u>
-                  <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                    <li style="margin-bottom: 8px;">
-                      Ajout, modification et suppression des fiches produits avec gestion des descriptions, images, prix, catégories et options d’abonnement.
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                      Paramétrage des promotions, offres spéciales ou codes de réduction pour dynamiser les ventes.
-                    </li>
-                  </ul>
-                </li>
-                <li style="margin-bottom: 16px;">
-                  <u><strong>Suivi des stocks :</strong></u>
-                  <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                    <li style="margin-bottom: 8px;">
-                      Visualisation en temps réel des niveaux de stock pour anticiper les ruptures et optimiser l’approvisionnement.
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                      Alertes automatiques pour les produits bientôt en rupture de stock.
-                    </li>
-                  </ul>
-                </li>
-                <li style="margin-bottom: 16px;">
-                  <u><strong>Analyses et reporting :</strong></u>
-                  <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                    <li style="margin-bottom: 8px;">
-                      Tableau de bord complet avec des indicateurs clés : performances des ventes, taux de conversion, produits les plus vendus, etc.
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                      Rapports téléchargeables pour simplifier la prise de décisions stratégiques.
-                    </li>
-                  </ul>
-                </li>
-                <li style="margin-bottom: 16px;">
-                  <u><strong>Gestion des clients :</strong></u>
-                  <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
-                    <li style="margin-bottom: 8px;">
-                      Accès à une base de données centralisée regroupant les informations client, leurs commandes, abonnements et préférences.
-                    </li>
-                    <li style="margin-bottom: 8px;">
-                      Possibilité de contacter directement les clients pour un suivi personnalisé.
-                    </li>
-                  </ul>
-                </li>
-                <li style="margin-bottom: 16px;">
-                  <u><strong>Suivi des commandes et des ventes :</strong></u> Une vue d’ensemble pour gérer efficacement les commandes et suivre les performances en temps réel.
-                </li>
-              </ul>
-            </div>`,
-        },
-        {
-          heading: "Résultat",
-          content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
-          <p style="margin-bottom: 16px;">Le client a reçu :</p>
-          <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
-            <li style="margin-bottom: 16px;">
-              <strong>Un site e-commerce complet :</strong> Moderne, performant et accueillant, conçu pour séduire une nouvelle cible et valoriser l’identité unique de la marque Saona.
-            </li>
-            <li style="margin-bottom: 16px;">
-              <strong>Une expérience client optimisée :</strong> Grâce à un espace personnel intuitif, des fonctionnalités sur-mesure et un parcours d’achat sans friction.
-            </li>
-            <li style="margin-bottom: 16px;">
-              <strong>Un espace administrateur puissant :</strong> Un outil clé en main pour gérer facilement les produits, les stocks, les ventes et les clients en toute autonomie.
-            </li>
-          </ul>
-        </div>`,
-        },
-      ],
-    },
-  },
+  //             <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+  //               <li style="margin-bottom: 16px;">
+  //                 <u><strong>Gestion des produits :</strong></u>
+  //                 <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+  //                   <li style="margin-bottom: 8px;">
+  //                     Ajout, modification et suppression des fiches produits avec gestion des descriptions, images, prix, catégories et options d’abonnement.
+  //                   </li>
+  //                   <li style="margin-bottom: 8px;">
+  //                     Paramétrage des promotions, offres spéciales ou codes de réduction pour dynamiser les ventes.
+  //                   </li>
+  //                 </ul>
+  //               </li>
+  //               <li style="margin-bottom: 16px;">
+  //                 <u><strong>Suivi des stocks :</strong></u>
+  //                 <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+  //                   <li style="margin-bottom: 8px;">
+  //                     Visualisation en temps réel des niveaux de stock pour anticiper les ruptures et optimiser l’approvisionnement.
+  //                   </li>
+  //                   <li style="margin-bottom: 8px;">
+  //                     Alertes automatiques pour les produits bientôt en rupture de stock.
+  //                   </li>
+  //                 </ul>
+  //               </li>
+  //               <li style="margin-bottom: 16px;">
+  //                 <u><strong>Analyses et reporting :</strong></u>
+  //                 <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+  //                   <li style="margin-bottom: 8px;">
+  //                     Tableau de bord complet avec des indicateurs clés : performances des ventes, taux de conversion, produits les plus vendus, etc.
+  //                   </li>
+  //                   <li style="margin-bottom: 8px;">
+  //                     Rapports téléchargeables pour simplifier la prise de décisions stratégiques.
+  //                   </li>
+  //                 </ul>
+  //               </li>
+  //               <li style="margin-bottom: 16px;">
+  //                 <u><strong>Gestion des clients :</strong></u>
+  //                 <ul style="margin: 8px 0; padding-left: 20px; list-style-type: circle;">
+  //                   <li style="margin-bottom: 8px;">
+  //                     Accès à une base de données centralisée regroupant les informations client, leurs commandes, abonnements et préférences.
+  //                   </li>
+  //                   <li style="margin-bottom: 8px;">
+  //                     Possibilité de contacter directement les clients pour un suivi personnalisé.
+  //                   </li>
+  //                 </ul>
+  //               </li>
+  //               <li style="margin-bottom: 16px;">
+  //                 <u><strong>Suivi des commandes et des ventes :</strong></u> Une vue d’ensemble pour gérer efficacement les commandes et suivre les performances en temps réel.
+  //               </li>
+  //             </ul>
+  //           </div>`,
+  //       },
+  //       {
+  //         heading: "Résultat",
+  //         content: `<div style="margin-bottom: 16px; font-family: 'Satoshi Medium', sans-serif;">
+  //         <p style="margin-bottom: 16px;">Le client a reçu :</p>
+  //         <ul style="margin: 16px 0; padding-left: 20px; list-style-type: disc;">
+  //           <li style="margin-bottom: 16px;">
+  //             <strong>Un site e-commerce complet :</strong> Moderne, performant et accueillant, conçu pour séduire une nouvelle cible et valoriser l’identité unique de la marque Saona.
+  //           </li>
+  //           <li style="margin-bottom: 16px;">
+  //             <strong>Une expérience client optimisée :</strong> Grâce à un espace personnel intuitif, des fonctionnalités sur-mesure et un parcours d’achat sans friction.
+  //           </li>
+  //           <li style="margin-bottom: 16px;">
+  //             <strong>Un espace administrateur puissant :</strong> Un outil clé en main pour gérer facilement les produits, les stocks, les ventes et les clients en toute autonomie.
+  //           </li>
+  //         </ul>
+  //       </div>`,
+  //       },
+  //     ],
+  //   },
+  // },
 ];

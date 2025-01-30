@@ -48,7 +48,7 @@ export default function MainTermsPolicyComponent() {
                 contact@modjoy-studio.com
               </a>
             </li>
-            <li>Numéro de téléphone : 064169197</li>
+            <li>Numéro de téléphone : 0664169197</li>
             <li>Adresse postale : 31 Villa Curial, 75019 PARIS</li>
           </ul>
         </div>
@@ -122,12 +122,12 @@ export default function MainTermsPolicyComponent() {
             Les utilisateurs disposent d’un droit d’accès, de rectification et
             de suppression de leurs données personnelles, conformément au
             Règlement Général sur la Protection des Données (RGPD). Pour exercer
-            ces droits, contactez-nous à
+            ces droits, contactez-nous à{" "}
             <a
-              href="mailto:dpo@modjoy-studio.com"
+              href="mailto:contact@modjoy-studio.com"
               className="text-blue-600 hover:underline"
             >
-              dpo@modjoy-studio.com
+              contact@modjoy-studio.com
             </a>
             .
           </p>

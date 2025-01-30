@@ -1,11 +1,11 @@
 {
   "nav": {
     "list": {
-      "1": "Nos Expertises",
-      "2": "Nos Atouts",
-      "3": "Portfolio",
+      "1": "Nos expertises",
+      "2": "Nos atouts",
+      "3": "Nos réalisations",
       "4": "Notre équipe",
-      "5" : "Notre méthode"
+      "5": "Notre méthode"
     },
     "button": {
       "estimate": "Je veux un devis"

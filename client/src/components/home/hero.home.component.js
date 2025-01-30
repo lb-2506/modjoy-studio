@@ -81,6 +81,7 @@ export default function HeroHomeComponent() {
       >
         <img
           src="/img/pointbg.png"
+          alt="background"
           draggable={false}
           className="inset-0 aspect-[2880/1543] h-[80dvh] object-cover absolute opacity-40 tablet:opacity-30 pointer-events-none"
           style={{
@@ -97,46 +98,45 @@ export default function HeroHomeComponent() {
           }}
         />
 
-        
         <div className="relative max-w-[800px] text-creamy flex flex-col mt-12 gap-12 tablet:gap-8 items-center justify-center text-center">
+          <img
+            src="/img/avatars/hero-rocki.png"
+            alt="memoji"
+            draggable={false}
+            ref={smileyRef}
+            style={smileyStyle}
+            className="hidden tablet:block max-w-[100px] absolute -right-[12%] top-[5%] "
+          />
 
-        <img
-          src="/img/avatars/hero-rocki.png"
-          draggable={false}
-          ref={smileyRef}
-          style={smileyStyle}
-          className="hidden tablet:block max-w-[100px] absolute -right-[12%] top-[5%] "
-        />
+          <img
+            src="/img/avatars/hero-leo.png"
+            alt="memoji"
+            draggable={false}
+            ref={smiley2Ref}
+            style={smiley2Style}
+            className="hidden tablet:block max-w-[100px] absolute -left-[20%] bottom-[10%]"
+          />
 
-        <img
-          src="/img/avatars/hero-leo.png"
-          draggable={false}
-          ref={smiley2Ref}
-          style={smiley2Style}
-          className="hidden tablet:block max-w-[100px] absolute -left-[20%] bottom-[10%]"
-        />
+          <img
+            src="/img/avatars/hero-axoue.png"
+            alt="memoji"
+            draggable={false}
+            ref={smiley3Ref}
+            style={smiley3Style}
+            className="hidden tablet:block max-w-[100px] absolute -left-[15%] top-[20%]"
+          />
 
-        <img
-          src="/img/avatars/hero-axoue.png"
-          draggable={false}
-          ref={smiley3Ref}
-          style={smiley3Style}
-          className="hidden tablet:block max-w-[100px] absolute -left-[15%] top-[20%]"
-        />
-
-        <img
-          src="/img/avatars/hero-swan.png"
-          draggable={false}
-          ref={smiley4Ref}
-          style={smiley4Style}
-          className="hidden tablet:block max-w-[100px] absolute -right-[20%] bottom-[30%]"
-        />
-
-
-          <h3>{t("catchPhrase")}</h3>
+          <img
+            src="/img/avatars/hero-swan.png"
+            alt="memoji"
+            draggable={false}
+            ref={smiley4Ref}
+            style={smiley4Style}
+            className="hidden tablet:block max-w-[100px] absolute -right-[20%] bottom-[30%]"
+          />
 
           <h1
-            className="text-[9vw] leading-[12vw] mobile:leading-[85px] tablet:text-[80px] flex items-center gap-2 mobile:gap-3 justify-center flex-wrap text-center"
+            className="text-[9vw] pt-[50px] mobile:pt-0 leading-[12vw] mobile:leading-[85px] tablet:text-[80px] flex items-center gap-2 mobile:gap-3 justify-center flex-wrap text-center"
             style={{ fontFamily: "'Brockmann Medium', sans-serif" }}
           >
             <div className="relative text-green border border-green px-3 mobile:pb-2 tablet:pb-4">
@@ -170,18 +170,18 @@ export default function HeroHomeComponent() {
             </span>
           </h1>
 
-          <div className="hidden tablet:grid gap-2 grid-cols-2 tablet:grid-cols-4  text-xs tablet:text-base ">
+          <div className="grid gap-2 grid-cols-2 tablet:grid-cols-4 text-xs tablet:text-base ">
             <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
-              Stratégie digitale
+              {t("skills.1")}
             </div>
             <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
-              Direction artistique
+              {t("skills.2")}
             </div>
             <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
-              Site web & app mobile
+              {t("skills.3")}
             </div>
             <div className="bg-creamy bg-opacity-10 backdrop-blur-sm rounded-lg px-4 py-2">
-              Motion design
+              {t("skills.4")}
             </div>
           </div>
 

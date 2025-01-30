@@ -90,7 +90,7 @@ export default function ProjectsHomeComponent(props) {
         >
           {t("title")}
         </h1>
-        
+
         {!props.projectPage && (
           <img
             src="/img/underline-pink.png"
@@ -140,34 +140,32 @@ export default function ProjectsHomeComponent(props) {
         onMouseEnter={handleMouseEnter}
       >
         {projectsData.map((data, i) => (
-          <div
-            key={data.id}
-            className="flex-shrink-0 select-none flex flex-col gap-4 w-[calc((100%-64px)/1)] mobile:w-[calc((100%-64px)/2)] tablet:w-[calc((100%-64px)/3)] ultraWide:w-[calc((100%-64px)/4)]"
-            style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
-          >
+          <Link key={data.id} href={`${data.slug}`}>
             <div
-              className="relative h-[630px] bg-no-repeat bg-center rounded-lg bg-cover flex flex-col justify-end text-creamy "
-              style={{
-                backgroundImage: `url(${data.imgCouv})`,
+              onClick={(e) => {
+                if (hasMoved) {
+                  e.preventDefault();
+                }
               }}
+              className="flex-shrink-0 select-none flex flex-col gap-4 w-[calc((100%-64px)/1)] mobile:w-[calc((100%-64px)/2)] tablet:w-[calc((100%-64px)/3)] ultraWide:w-[calc((100%-64px)/4)]"
+              style={{ fontFamily: "'Satoshi Medium', sans-serif" }}
             >
               <div
-                className="absolute inset-0 rounded-lg z-0"
+                className="relative h-[630px] bg-no-repeat bg-center rounded-lg bg-cover flex flex-col justify-end text-creamy "
                 style={{
-                  background:
-                    "linear-gradient(to top, rgba(0, 35, 23, 0.95), transparent)",
+                  backgroundImage: `url(${data.imgCouv})`,
                 }}
-              />
-
-              <Link href={`${data.slug}`}>
+              >
+                <div
+                  className="absolute inset-0 rounded-lg z-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(0, 35, 23, 0.95), transparent)",
+                  }}
+                />
                 <div
                   onMouseEnter={() => setIsDataHovered(true)}
                   onMouseLeave={() => setIsDataHovered(false)}
-                  onClick={(e) => {
-                    if (hasMoved) {
-                      e.preventDefault();
-                    }
-                  }}
                   className="flex flex-col gap-4 p-6 z-10"
                 >
                   <h2 className="text-xl uppercase">{data.title}</h2>
@@ -182,9 +180,9 @@ export default function ProjectsHomeComponent(props) {
                     <ChevronSvg className="-rotate-90" strokeColor="#FFFFE3" />
                   </button>
                 </div>
-              </Link>
+              </div>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </section>

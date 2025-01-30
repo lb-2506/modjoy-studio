@@ -8,9 +8,14 @@
     "5": "Bienvenue",
     "6": "chez nous"
   },
-  "subtitle": "On mixe stratégie digitale, désign sur mesure et sites qui cartonnent avec un style bien à nous",
+  "skills": {
+    "1": "Stratégie digitale",
+    "2": "Identité visuelle",
+    "3": "Site web & app mobile",
+    "4": " Motion design"
+  },
   "button": "Je prends rendez-vous",
-  "techno": {
+  "logos": {
     "title": "Ils ont osé et n'ont pas regretté "
   }
 }

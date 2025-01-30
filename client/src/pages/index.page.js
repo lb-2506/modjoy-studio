@@ -22,12 +22,16 @@ export default function HomePage(props) {
 
   switch (i18n.language) {
     case "en":
-      title = "Modjoy Studio";
-      description = "";
+      title =
+        "Modjoy-Studio - Agence créative en communication & développement web";
+      description =
+        "Modjoy-Studio vous accompagne dans votre stratégie digitale : création de sites web, développement d’applications, branding, gestion des réseaux sociaux et bien plus. Transformez votre vision en succès !";
       break;
     default:
-      title = "Modjoy Studio";
-      description = "";
+      title =
+        "Modjoy-Studio - Agence créative en communication & développement web";
+      description =
+        "Modjoy-Studio vous accompagne dans votre stratégie digitale : création de sites web, développement d’applications, branding, gestion des réseaux sociaux et bien plus. Transformez votre vision en succès !";
   }
 
   return (
@@ -35,7 +39,7 @@ export default function HomePage(props) {
       <Head>
         <title>{title}</title>
 
-        {/* <>
+        <>
           {description && <meta name="description" content={description} />}
           {title && <meta property="og:title" content={title} />}
           {description && (
@@ -43,13 +47,13 @@ export default function HomePage(props) {
           )}
           <meta
             property="og:url"
-            content="https://lespetitsbilingues-newham.com/"
+            content="https://www.modjoy-studio.com"
           />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="/img/open-graph.jpg" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-        </> */}
+          <meta property="og:image:width" content="756" />
+          <meta property="og:image:height" content="756" />
+        </>
       </Head>
 
       <div className="select-none">

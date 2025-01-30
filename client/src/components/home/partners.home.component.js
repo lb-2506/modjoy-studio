@@ -13,6 +13,7 @@ export default function PartnersHomeComponent() {
         <img
           src="/img/pointbg.png"
           draggable={false}
+          alt="background"
           className="inset-0 absolute opacity-20 pointer-events-none"
           style={{
             WebkitMaskImage:
@@ -32,12 +33,14 @@ export default function PartnersHomeComponent() {
           src="/img/flower-blue.png"
           draggable={false}
           className="max-w-[200px] absolute bottom-0 left-0"
+          alt="flower"
         />
 
         <img
           src="/img/smile.png"
           draggable={false}
           className="max-w-[200px] absolute -top-[90px] left-[55%] blur-sm opacity-60 rotate-[125deg]"
+          alt="smile"
         />
 
         <div className="max-w-[1050px]  text-creamy flex flex-col gap-6 items-center justify-center text-center">

@@ -22,12 +22,16 @@ export default function ProjectPage(props) {
 
   switch (i18n.language) {
     case "en":
-      title = "Modjoy Studio";
-      description = "";
+      title =
+        "Modjoy-Studio - Agence créative en communication & développement web";
+      description =
+        "Modjoy-Studio vous accompagne dans votre stratégie digitale : création de sites web, développement d’applications, branding, gestion des réseaux sociaux et bien plus. Transformez votre vision en succès !";
       break;
     default:
-      title = "Modjoy Studio";
-      description = "";
+      title =
+        "Modjoy-Studio - Agence créative en communication & développement web";
+      description =
+        "Modjoy-Studio vous accompagne dans votre stratégie digitale : création de sites web, développement d’applications, branding, gestion des réseaux sociaux et bien plus. Transformez votre vision en succès !";
   }
 
   return (
@@ -35,21 +39,18 @@ export default function ProjectPage(props) {
       <Head>
         <title>{title}</title>
 
-        {/* <>
+        <>
           {description && <meta name="description" content={description} />}
           {title && <meta property="og:title" content={title} />}
           {description && (
             <meta property="og:description" content={description} />
           )}
-          <meta
-            property="og:url"
-            content="https://lespetitsbilingues-newham.com/"
-          />
+          <meta property="og:url" content="https://www.modjoy-studio.com" />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="/img/open-graph.jpg" />
-          <meta property="og:image:width" content="1200" />
-          <meta property="og:image:height" content="630" />
-        </> */}
+          <meta property="og:image:width" content="756" />
+          <meta property="og:image:height" content="756" />
+        </>
       </Head>
 
       <div className="relative bg-darkGreen">
@@ -57,7 +58,7 @@ export default function ProjectPage(props) {
 
         <HeroProjectsComponent project={props.project} />
         <DetailsProjectsComponent project={props.project} />
-        <ProjectsHomeComponent projectPage={true}/>
+        <ProjectsHomeComponent projectPage={true} />
         <PartnersHomeComponent />
         <FooterComponent />
       </div>
@@ -78,7 +79,12 @@ export async function getStaticProps({ locale, params }) {
 
   return {
     props: {
-      ...(await serverSideTranslations(locale, ["common", "index", "projects", "partners"])),
+      ...(await serverSideTranslations(locale, [
+        "common",
+        "index",
+        "projects",
+        "partners",
+      ])),
       project,
     },
   };
