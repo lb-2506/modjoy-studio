@@ -57,7 +57,7 @@ export default function ExpertisesHomeComponent() {
       </div>
 
       {/* L'accordéon horizontal (tablettes/desktop) */}
-      <ul className="hidden tablet:block mt-12 w-[90%] mx-auto h-[530px] rounded-xl overflow-hidden">
+      <ul className="hidden tablet:block mt-12 w-[90%] max-w-[1500px] mx-auto h-[530px] rounded-xl overflow-hidden">
         {featuresData.map((feature, index) => {
           const tabId = `rad${index + 1}`;
           const contentRef = useRef(null);
