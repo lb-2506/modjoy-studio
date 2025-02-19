@@ -10,5 +10,11 @@
   "buttons": {
     "estimate": "Je veux un devis",
     "rdv": "Je prends un rendez-vous"
+  },
+  "food": {
+    "title": "Prêt à digitaliser votre restaurant ?",
+    "subtitle": "Rejoignez les restaurateurs qui font confiance à Gusto Manager pour simplifier leur gestion quotidienne et développer leur activité.",
+    "users": "restaurants utilisent Gusto",
+    "button": "Prendre rendez-vous"
   }
 }

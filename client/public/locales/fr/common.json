@@ -9,6 +9,13 @@
     },
     "button": {
       "estimate": "Je veux un devis"
+    },
+    "food": {
+      "list": {
+        "1": "Nos solutions digitales",
+        "2": "Gusto Manager",
+        "3": "Les cuistos"
+      }
     }
   },
 

@@ -19,5 +19,37 @@
       "title": "Un budget carré, pas de mauvaises surprises",
       "content": "On est du genre à tenir nos promesses, surtout quand il s’agit de chiffres. Ton budget est clair dès le départ, et il reste sous contrôle jusqu’à la fin. Pas de dépassement, pas d’excuses. Juste de l’efficacité."
     }
+  },
+  "food": {
+    "sectionName": "Comment ça marche ?",
+    "title": "Gusto Manager",
+    "subtitle": "Découvrez en quelques étapes comment Gusto Manager transforme la gestion quotidienne de votre restaurant.",
+    "list": {
+      "1": {
+        "title": "Créez votre espace personnalisé",
+        "content": "Commencez par renseigner les informations essentielles de votre restaurant : horaires, contacts, réseaux sociaux. Une configuration unique pour une présence en ligne optimale.",
+        "button": "Commencer maintenant"
+      },
+      "2": {
+        "title": "Importez votre offre",
+        "content": "Ajoutez facilement vos plats, boissons et vins dans l'interface. Organisez votre carte comme vous le souhaitez et créez des menus attractifs en quelques clics.",
+        "button": "Demander une démonstration"
+      },
+      "3": {
+        "title": "Gérez tout depuis un seul endroit",
+        "content": "Activez les fonctionnalités dont vous avez besoin : réservations en ligne, cartes cadeaux, actualités. Un tableau de bord unique pour tout piloter.",
+        "button": "Découvrir les fonctionnalités"
+      },
+      "4": {
+        "title": "Automatisez vos opérations",
+        "content": "Laissez la plateforme gérer automatiquement vos réservations, suivre vos disponibilités et mettre à jour votre carte. Gagnez un temps précieux au quotidien.",
+        "button": "En savoir plus"
+      },
+      "5": {
+        "title": "Développez votre activité",
+        "content": "Analysez vos performances, fidélisez vos clients et optimisez votre organisation grâce aux outils intégrés. Faites grandir votre établissement sereinement.",
+        "button": "Démarrer avec Gusto"
+      }
+    }
   }
 }

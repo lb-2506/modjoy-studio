@@ -1,5 +1,4 @@
 {
-  "catchPhrase": "Crafting experiences that inspire",
   "title": {
     "1": "Stratégie",
     "2": "Efficace",
@@ -17,5 +16,11 @@
   "button": "Je prends rendez-vous",
   "logos": {
     "title": "Ils ont osé et n'ont pas regretté "
+  },
+  "food": {
+    "catchPhrase": "Création de marque + outils de gestion",
+    "title": "On mijote votre succès aux petits oignons",
+    "subtitle": "Agence créative spécialisée dans l'univers de la restauration, on cuisine des solutions digitales qui ont du goût.",
+    "button": "Parlons de votre projet autour d'un café"
   }
 }
