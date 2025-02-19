@@ -1,23 +1,55 @@
 {
-  "title": "Pourquoi nous ? Parce qu'on assure !",
-  "subtitle": "Créatifs, réactifs, et efficaces. On ne te vend pas des promesses, on te livre des résultats. Travailler avec nous, c’est comme jouer en mode cheat code : ça va plus vite, et ça marche mieux.",
-  "button": "Ça m'intéresse !",
+  "title": "Why Us? Because We Deliver!",
+  "subtitle": "Creative, responsive, and efficient. We don’t sell promises, we deliver results. Working with us is like playing in cheat mode: faster and better.",
+  "button": "I'm Interested!",
   "list": {
     "1": {
-      "title": "Des experts surboostés, sans le bla-bla des agences classiques",
-      "content": "Chez nous, chaque mission est confiée à des pros ultra-expérimentés, parce que votre projet mérite ce qu’il y a de mieux.</br><span class='font-bold'>Pas de blagues, que des résultats.</span>"
+      "title": "Boosted Experts, Without the Classic Agency Talk",
+      "content": "With us, every project is handled by highly experienced pros because your project deserves the best.</br><span class='font-bold'>No jokes, just results.</span>"
     },
     "2": {
-      "title": "La créativité, c’est pas une option. C’est notre moteur",
-      "content": "On pense différemment, on crée autrement. Chaque projet est une toile blanche où on lâche notre créativité sans limite. Si tu cherches du copier-coller, tu n’es pas au bon endroit. <span class='font-bold'> Ici, on fait unique. Ici, on fait wow.</span>"
+      "title": "Creativity Isn’t Optional. It’s Our Engine",
+      "content": "We think differently, we create uniquely. Every project is a blank canvas where we unleash our limitless creativity. If you’re looking for copy-paste solutions, you’re in the wrong place. <span class='font-bold'>Here, we make it unique. Here, we make it wow.</span>"
     },
     "3": {
-      "title": "Un seul point de contact. Zéro perte de temps",
-      "content": "Vous avez un interlocuteur dédié qui connaît votre projet sur le bout des doigts. Moins de bla-bla, plus d’action; <span class='font-bold'>Et ça, ça change tout.</span>"
+      "title": "One Point of Contact. Zero Time Wasted",
+      "content": "You’ll have a dedicated contact who knows your project inside out. Less talk, more action; <span class='font-bold'>And that changes everything.</span>"
     },
     "4": {
-      "title": "Un budget carré, pas de mauvaises surprises",
-      "content": "On est du genre à tenir nos promesses, surtout quand il s’agit de chiffres. Ton budget est clair dès le départ, et il reste sous contrôle jusqu’à la fin. Pas de dépassement, pas d’excuses. Juste de l’efficacité."
+      "title": "A Clear Budget, No Surprises",
+      "content": "We’re the kind to keep our promises, especially when it comes to numbers. Your budget is clear from the start and stays under control until the end. No overruns, no excuses. Just efficiency."
+    }
+  },
+  "food": {
+    "sectionName": "How Does It Work?",
+    "title": "Gusto Manager",
+    "subtitle": "Discover in a few steps how Gusto Manager transforms your restaurant's daily management.",
+    "list": {
+      "1": {
+        "title": "Create Your Personalized Space",
+        "content": "Start by entering the essential information about your restaurant: opening hours, contacts, social media. A unique setup for optimal online presence.",
+        "button": "Get Started Now"
+      },
+      "2": {
+        "title": "Import Your Menu",
+        "content": "Easily add your dishes, drinks, and wines to the interface. Organize your menu as you wish and create attractive offerings in just a few clicks.",
+        "button": "Request a Demo"
+      },
+      "3": {
+        "title": "Manage Everything from One Place",
+        "content": "Activate the features you need: online reservations, gift cards, news updates. A single dashboard to control it all.",
+        "button": "Explore the Features"
+      },
+      "4": {
+        "title": "Automate Your Operations",
+        "content": "Let the platform automatically manage your reservations, track availability, and update your menu. Save valuable time daily.",
+        "button": "Learn More"
+      },
+      "5": {
+        "title": "Grow Your Business",
+        "content": "Analyze your performance, retain customers, and optimize your organization with integrated tools. Grow your establishment with ease.",
+        "button": "Get Started with Gusto"
+      }
     }
   }
 }

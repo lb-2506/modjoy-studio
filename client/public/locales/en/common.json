@@ -1,33 +1,21 @@
 {
   "nav": {
     "list": {
-      "1": "Nos expertises",
-      "2": "Nos atouts",
-      "3": "Nos réalisations",
-      "4": "Notre équipe",
-      "5": "Notre méthode"
+      "1": "Our Expertise",
+      "2": "Our Strengths",
+      "3": "Our Achievements",
+      "4": "Our Team",
+      "5": "Our Method"
     },
     "button": {
-      "estimate": "Je veux un devis"
-    }
-  },
-
-  "footer": {
-    "join": {
-      "young": "Jeunes pousses",
-      "title": "Prêt à rejoindre l'aventure ?",
-      "subtitle": "Inscrivez votre enfant dès aujourd'hui pour découvrir le français dans un cadre ludique et bienveillant !",
-      "inscription": "Inscription"
+      "estimate": "I Want a Quote"
     },
-    "main": {
-      "about": "À propos",
-      "programs": "Nos programmes",
-      "recruitment": "Recrutement",
-      "inscription": "Inscription",
-      "contact": "Contact",
-      "policy": "Politique de confidentialité",
-      "legal": "Mentions légales",
-      "reserved": "© Les Petits Bilingues de Newham 2024. Tous droits réservés."
+    "food": {
+      "list": {
+        "1": "Our Digital Solutions",
+        "2": "Gusto Manager",
+        "3": "The Chefs"
+      }
     }
   }
 }
