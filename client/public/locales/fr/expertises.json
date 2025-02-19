@@ -32,6 +32,17 @@
       "2": "Direction artistique",
       "3": "Site web & app mobile",
       "4": "Motion design"
+    },
+    "discover": "Découvrir",
+    "cards": {
+      "1": {
+        "title": "Web Agency",
+        "description": "Du design sur-mesure à la technique, on concocte des sites qui donnent faim. Notre équipe mitonne chaque pixel pour que votre restaurant brille sur le web."
+      },
+      "2": {
+        "title": "Food Marketing",
+        "description": "Stratégie digitale, réseaux sociaux, contenu... On assaisonne votre présence en ligne pour attirer et fidéliser vos clients."
+      }
     }
   }
 }

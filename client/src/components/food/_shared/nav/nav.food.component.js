@@ -85,19 +85,19 @@ export default function NavbarFoodComponent() {
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           <div
-            className={`h-0.5 bg-creamy transform transition-all duration-500 ease-in-out w-8 ${
+            className={`h-0.5 bg-white transform transition-all duration-500 ease-in-out w-8 ${
               isMenuOpen ? "rotate-45 translate-y-2.5" : ""
             }`}
           />
           <div className="my-2">
             <div
-              className={`h-0.5 bg-creamy transition-all duration-500 ease-in-out ${
+              className={`h-0.5 bg-white transition-all duration-500 ease-in-out ${
                 isMenuOpen ? "opacity-0 w-8" : "opacity-100 w-6"
               }`}
             />
           </div>
           <div
-            className={`h-0.5 bg-creamy transform transition-all duration-500 ease-in-out ${
+            className={`h-0.5 bg-white transform transition-all duration-500 ease-in-out ${
               isMenuOpen ? "-rotate-45 -translate-y-2.5 w-8" : "w-4"
             }`}
           />
@@ -107,8 +107,10 @@ export default function NavbarFoodComponent() {
       {/* MENU */}
       <div
         className={`${
-          isMenuOpen ? "translate-y-0" : "-translate-y-full"
-        } transition-all duration-300 ease-in-out desktop:translate-y-0 rounded-b-2xl desktop:rounded-b-none absolute top-0 left-0 right-0 flex flex-col gap-20 desktop:gap-0 desktop:flex-row desktop:items-center justify-between px-6 desktop:px-12 py-6 z-30`}
+          isMenuOpen
+            ? "translate-y-0 bg-darkBlue text-white"
+            : "-translate-y-full"
+        } transition-all text-darkBlue duration-300 ease-in-out desktop:translate-y-0 rounded-b-2xl desktop:rounded-b-none absolute top-0 left-0 right-0 flex flex-col gap-20 desktop:gap-0 desktop:flex-row desktop:items-center justify-between px-6 desktop:px-12 py-6 z-30`}
       >
         <Link href="/">
           <a>
@@ -121,7 +123,7 @@ export default function NavbarFoodComponent() {
           </a>
         </Link>
 
-        <ul className="flex flex-col desktop:flex-row desktop:items-center desktop:gap-12 text-darkBlue">
+        <ul className="flex flex-col desktop:flex-row desktop:items-center desktop:gap-12 ">
           <li>
             <button
               onClick={() => handleScrollToSection("#expertises")}
@@ -151,7 +153,7 @@ export default function NavbarFoodComponent() {
         </ul>
 
         <button
-          className="bg-lightBlue hover:bg-opacity-70 transition-all ease-in-out duration-200 text-white rounded-full px-4 py-2 mt-6 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
+          className="bg-lightBlue hover:bg-opacity-70 transition-all ease-in-out duration-200 text-white rounded-full px-4 py-2 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
           data-tally-open="wkKoEe"
           data-tally-layout="modal"
           data-tally-width="400"

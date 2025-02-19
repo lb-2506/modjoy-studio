@@ -55,13 +55,17 @@ export default function HomePage(props) {
         <NavbarFoodComponent />
 
         <HeroHomeFoodComponent />
+
         <ExpertisesHomeFoodComponent />
+
         <LogosHomeFoodComponent />
 
         <SkillsHomeFoodComponent />
 
         <TeamHomeFoodComponent />
+
         <PartnersHomeFoodComponent />
+
         <FooterFoodComponent />
       </div>
     </>

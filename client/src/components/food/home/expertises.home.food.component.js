@@ -14,13 +14,13 @@ export default function ExpertisesHomeFoodComponent() {
       <img
         src="/img/food/line.png"
         alt="line"
-        className="absolute max-h-[60%] top-[60%] -translate-y-1/2 left-[7%]"
+        className="absolute max-h-[30%] tablet:max-h-[60%] top-[60%] -translate-y-1/2 left-[7%]"
       />
 
       <img
         src="/img/food/line.png"
         alt="line"
-        className="absolute max-h-[60%] top-[60%] -translate-y-1/2 right-[7%] transform scale-x-[-1]"
+        className="absolute max-h-[30%] tablet:max-h-[60%] top-[60%] -translate-y-1/2 right-[7%] transform scale-x-[-1]"
       />
 
       <div className="flex justify-center items-center flex-col gap-6 text-center z-10">
@@ -35,37 +35,37 @@ export default function ExpertisesHomeFoodComponent() {
           {t("food.title")}
         </h1>
 
-        <h3 className="text-pretty text-lg px-6 font-light">{t("food.subtitle")}</h3>
+        <h3 className="text-pretty text-lg px-6 font-light">
+          {t("food.subtitle")}
+        </h3>
 
-        <div className="flex gap-4 justify-center mt-4">
-          <p className="text-sm bg-white bg-opacity-10 px-4 py-2 w-fit rounded-xl">
+        <div className="grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-4 gap-4 justify-center mt-4 w-2/3 mobile:w-1/2 tablet:w-fit">
+          <p className="text-sm w-full bg-white bg-opacity-10 px-4 py-2 rounded-xl flex justify-center items-center">
             {t("food.tags.1")}
           </p>
 
-          <p className="text-sm bg-white bg-opacity-10 px-4 py-2 w-fit rounded-xl">
+          <p className="text-sm w-full bg-white bg-opacity-10 px-4 py-2 rounded-xl flex justify-center items-center">
             {t("food.tags.2")}
           </p>
 
-          <p className="text-sm bg-white bg-opacity-10 px-4 py-2 w-fit rounded-xl">
+          <p className="text-sm w-full bg-white bg-opacity-10 px-4 py-2 rounded-xl flex justify-center items-center">
             {t("food.tags.3")}
           </p>
 
-          <p className="text-sm bg-white bg-opacity-10 px-4 py-2 w-fit rounded-xl">
+          <p className="text-sm w-full bg-white bg-opacity-10 px-4 py-2 rounded-xl flex justify-center items-center">
             {t("food.tags.4")}
           </p>
         </div>
 
-        <div className="flex justify-center gap-6 max-w-[70%] min-w-[1000px] mt-12">
+        <div className="flex flex-col tablet:flex-row justify-center gap-6 max-w-[80%] mobile:max-w-[70%] tablet:max-w-[70%] desktop:min-w-[1000px] mt-12">
           <div className="bg-white p-2 rounded-[20px] flex flex-col items-start">
             <img src="/img/food/expertise-1.png" alt="expertise-1" />
 
             <div className="text-darkBlue flex flex-col gap-4 text-start px-4 pt-6 pb-4">
-              <h4 className="font-medium">Web Agency</h4>
+              <h4 className="font-medium">{t("food.cards.1.title")}</h4>
 
               <p className="opacity-75 font-light">
-                Du design sur-mesure à la technique, on concocte des sites qui
-                donnent faim. Notre équipe mitonne chaque pixel pour que votre
-                restaurant brille sur le web.
+                {t("food.cards.1.description")}
               </p>
 
               <button className="flex items-center gap-4 w-fit">
@@ -73,7 +73,7 @@ export default function ExpertisesHomeFoodComponent() {
                   <ArrowSvg fillColor="#001D25" width={12} />
                 </div>
 
-                <p className="font-medium">Découvrir</p>
+                <p className="font-medium">{t("food.discover")}</p>
               </button>
             </div>
           </div>
@@ -82,11 +82,10 @@ export default function ExpertisesHomeFoodComponent() {
             <img src="/img/food/expertise-2.png" alt="expertise-2" />
 
             <div className="text-darkBlue flex flex-col gap-4 text-start px-4 pt-6 pb-4">
-              <h4 className="font-medium text-xl">Food Marketing</h4>
+              <h4 className="font-medium text-xl">{t("food.cards.2.title")}</h4>
 
               <p className="opacity-75 font-light text-lg">
-                Stratégie digitale, réseaux sociaux, contenu... On assaisonne
-                votre présence en ligne pour attirer et fidéliser vos clients.
+                {t("food.cards.2.description")}
               </p>
 
               <button className="flex items-center gap-4 w-fit">
@@ -94,7 +93,7 @@ export default function ExpertisesHomeFoodComponent() {
                   <ArrowSvg fillColor="#001D25" width={12} />
                 </div>
 
-                <p className="font-medium text-lg">Découvrir</p>
+                <p className="font-medium text-lg">{t("food.discover")}</p>
               </button>
             </div>
           </div>

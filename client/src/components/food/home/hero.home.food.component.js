@@ -23,14 +23,46 @@ export default function HeroHomeFoodComponent() {
 
       <section
         style={{ pointerEvents: "all" }}
-        className="h-[65dvh] pt-[104px] flex justify-center items-center relative overflow-hidden"
+        className="h-[100dvh] mobile:h-[75dvh] tablet:h-[65dvh] pt-[104px] flex justify-center items-center relative overflow-hidden"
       >
+        <img
+          src="/img/food/cherry.png"
+          alt="cherry"
+          className="mobile:hidden -z-[1] absolute left-[5%] top-[10%] max-w-[3%] min-w-[50px]"
+        />
+
+        <img
+          src="/img/food/pepper.png"
+          alt="pepper"
+          className="mobile:hidden -z-[1] absolute right-[5%] top-[13%] max-w-[3%] min-w-[50px]"
+        />
+
+        <img
+          src="/img/food/lemon.png"
+          alt="lemon"
+          className="mobile:hidden -z-[1] absolute right-[5%] top-1/2 max-w-[3%] min-w-[50px]"
+        />
+
+        <img
+          src="/img/food/broccoli.png"
+          alt="broccoli"
+          className="mobile:hidden -z-[1] absolute left-[8%] top-3/4 max-w-[4%] min-w-[50px]"
+        />
+
+        <img
+          src="/img/food/watermelon.png"
+          alt="watermelon"
+          className="mobile:hidden -z-[1] absolute right-[3%] -bottom-2 max-w-[4%] min-w-[60px]"
+        />
+
         <div className="max-w-[1000px] text-darkBlue flex flex-col gap-12 tablet:gap-8 items-center justify-center text-center">
           <h3 className="font-medium flex gap-3 border items-center border-lightBlue border-opacity-30 p-2 pr-3 rounded-full">
-            <span className="text-lightBlue bg-lightBlue bg-opacity-20 px-2 rounded-full text-sm flex items-center justify-center border border-lightBlue border-opacity-30">
+            <span className="text-lightBlue bg-lightBlue bg-opacity-20 px-2 rounded-full text-xs mobile:text-sm flex items-center justify-center border border-lightBlue border-opacity-30">
               NEW
             </span>
-            {t("food.catchPhrase")}
+            <span className="text-xs mobile:text-sm">
+              {t("food.catchPhrase")}
+            </span>
           </h3>
 
           <h1
@@ -40,7 +72,7 @@ export default function HeroHomeFoodComponent() {
             {t("food.title")}
           </h1>
 
-          <h2 className="">{t("food.subtitle")}</h2>
+          <h2 className="mx-12">{t("food.subtitle")}</h2>
 
           <button
             className="bg-darkBlue hover:bg-opacity-75 transition-all ease-in-out duration-200 text-white rounded-full px-5 py-2 mt-4"
@@ -53,29 +85,29 @@ export default function HeroHomeFoodComponent() {
         </div>
       </section>
 
-      <section className="h-[35dvh] relative">
+      <section className="hidden mobile:block mobile:h-[25dvh] tablet:h-[35dvh] relative">
         <img
           src="/img/food/stats-1.png"
           alt="stats-1"
-          className="absolute left-[5%] top-1/2 -translate-y-1/2 max-w-[25%] min-w-[300px] z-10 rounded-b-xl"
+          className="hidden tablet:block absolute left-[5%] top-1/2 -translate-y-1/2 max-w-[25%] min-w-[300px] z-10 rounded-b-xl"
         />
 
         <img
           src="/img/food/stats-2.png"
           alt="stats-2"
-          className="absolute left-[10%] top-3/4 -translate-y-1/2 max-w-[25%] min-w-[300px] scale-[80%] shadow-md rounded-b-xl"
+          className="hidden tablet:block absolute left-[10%] top-3/4 -translate-y-1/2 max-w-[25%] min-w-[300px] scale-[80%] shadow-md rounded-b-xl"
         />
 
         <img
           src="/img/food/stats-3.png"
           alt="stats-3"
-          className="absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 max-w-[25%] min-w-[300px] shadow-md rounded-b-xl"
+          className="hidden tablet:block absolute left-1/2 -translate-x-1/2 top-1/2 -translate-y-1/2 max-w-[25%] min-w-[300px] shadow-md rounded-b-xl"
         />
 
         <img
           src="/img/food/stats-4.png"
           alt="stats-4"
-          className="absolute right-[10%] bottom-0  max-w-[20%] min-w-[300px]"
+          className="hidden tablet:block absolute right-[10%] bottom-0  max-w-[20%] min-w-[300px]"
         />
 
         <img
