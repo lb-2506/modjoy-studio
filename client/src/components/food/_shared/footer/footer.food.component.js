@@ -50,6 +50,7 @@ export default function FooterFoodComponent() {
                 {t("nav.food.list.1")}
               </button>
             </li>
+
             <li>
               <button
                 onClick={() => handleScrollToSection("#gusto-manager")}
@@ -58,6 +59,7 @@ export default function FooterFoodComponent() {
                 {t("nav.food.list.2")}
               </button>
             </li>
+            
             <li>
               <button
                 onClick={() => handleScrollToSection("#team")}

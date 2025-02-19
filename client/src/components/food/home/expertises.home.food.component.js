@@ -1,10 +1,15 @@
+// I18N
 import { useTranslation } from "next-i18next";
 
 // SVG
 import { ArrowSvg } from "../_shared/_svgs/arrow.svg";
 
+// ROUTER
+import { useRouter } from "next/router";
+
 export default function ExpertisesHomeFoodComponent() {
   const { t } = useTranslation("expertises");
+  const router = useRouter();
 
   return (
     <section
@@ -62,13 +67,16 @@ export default function ExpertisesHomeFoodComponent() {
             <img src="/img/food/expertise-1.png" alt="expertise-1" />
 
             <div className="text-darkBlue flex flex-col gap-4 text-start px-4 pt-6 pb-4">
-              <h4 className="font-medium">{t("food.cards.1.title")}</h4>
+              <h4 className="font-medium text-xl">{t("food.cards.1.title")}</h4>
 
-              <p className="opacity-75 font-light">
+              <p className="opacity-75 font-light text-lg">
                 {t("food.cards.1.description")}
               </p>
 
-              <button className="flex items-center gap-4 w-fit">
+              <button
+                onClick={() => router.push("https://modjoy-studio.com")}
+                className="flex items-center gap-4 w-fit"
+              >
                 <div className="border border-darkBlue border-opacity-20 w-10 h-10 rounded-full flex items-center justify-center">
                   <ArrowSvg fillColor="#001D25" width={12} />
                 </div>
@@ -88,7 +96,12 @@ export default function ExpertisesHomeFoodComponent() {
                 {t("food.cards.2.description")}
               </p>
 
-              <button className="flex items-center gap-4 w-fit">
+              <button
+                onClick={() =>
+                  router.push(`https://modjoy-studio.com/${router.locale}/food`)
+                }
+                className="flex items-center gap-4 w-fit"
+              >
                 <div className="border border-darkBlue border-opacity-20 w-10 h-10 rounded-full flex items-center justify-center">
                   <ArrowSvg fillColor="#001D25" width={12} />
                 </div>
