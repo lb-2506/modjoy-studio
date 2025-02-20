@@ -43,11 +43,11 @@ export default function HomePage(props) {
           {description && (
             <meta property="og:description" content={description} />
           )}
-          <meta property="og:url" content="https://www.modjoy-studio.com" />
+          <meta property="og:url" content="https://www.modjoy-studio.com/food" />
           <meta property="og:type" content="website" />
-          <meta property="og:image" content="/img/open-graph.jpg" />
-          <meta property="og:image:width" content="756" />
-          <meta property="og:image:height" content="756" />
+          <meta property="og:image" content="/img/food/open-graph.jpg" />
+          <meta property="og:image:width" content="1200" />
+          <meta property="og:image:height" content="630" />
         </>
       </Head>
 
