@@ -23,36 +23,36 @@ export default function HeroHomeFoodComponent() {
 
       <section
         style={{ pointerEvents: "all" }}
-        className="h-[100dvh] mobile:h-[75dvh] tablet:h-[65dvh] pt-[104px] flex justify-center items-center relative overflow-hidden"
+        className="h-[100dvh] tablet:h-[75dvh] pt-[104px] flex justify-center items-center relative overflow-hidden"
       >
         <img
           src="/img/food/cherry.png"
           alt="cherry"
-          className="mobile:hidden -z-[1] absolute left-[5%] top-[10%] max-w-[3%] min-w-[50px]"
+          className="tablet:hidden -z-[1] absolute left-[5%] top-[10%] max-w-[3%] min-w-[50px]"
         />
 
         <img
           src="/img/food/pepper.png"
           alt="pepper"
-          className="mobile:hidden -z-[1] absolute right-[5%] top-[13%] max-w-[3%] min-w-[50px]"
+          className="tablet:hidden -z-[1] absolute right-[5%] top-[13%] max-w-[3%] min-w-[50px]"
         />
 
         <img
           src="/img/food/lemon.png"
           alt="lemon"
-          className="mobile:hidden -z-[1] absolute right-[5%] top-1/2 max-w-[3%] min-w-[50px]"
+          className="tablet:hidden -z-[1] absolute right-[5%] top-1/2 max-w-[3%] min-w-[50px]"
         />
 
         <img
           src="/img/food/broccoli.png"
           alt="broccoli"
-          className="mobile:hidden -z-[1] absolute left-[8%] top-3/4 max-w-[4%] min-w-[50px]"
+          className="tablet:hidden -z-[1] absolute left-[8%] top-3/4 max-w-[4%] min-w-[50px]"
         />
 
         <img
           src="/img/food/watermelon.png"
           alt="watermelon"
-          className="mobile:hidden -z-[1] absolute right-[3%] -bottom-2 max-w-[4%] min-w-[60px]"
+          className="tablet:hidden -z-[1] absolute right-[3%] -bottom-2 max-w-[4%] min-w-[60px]"
         />
 
         <div className="max-w-[1000px] text-darkBlue flex flex-col gap-12 tablet:gap-8 items-center justify-center text-center">
@@ -85,7 +85,7 @@ export default function HeroHomeFoodComponent() {
         </div>
       </section>
 
-      <section className="hidden mobile:block mobile:h-[25dvh] tablet:h-[35dvh] relative">
+      <section className="hidden tablet:block mobile:h-[25dvh] tablet:h-[25dvh] relative">
         <img
           src="/img/food/stats-1.png"
           alt="stats-1"

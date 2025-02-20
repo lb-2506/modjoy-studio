@@ -29,19 +29,19 @@
     "subtitle": "From designing your identity to managing your business daily.",
     "tags": {
       "1": "Digital Strategy",
-      "2": "Art Direction",
+      "2": "Visual Identity",
       "3": "Website & Mobile App",
-      "4": "Motion Design"
+      "4": "Communication"
     },
     "discover": "Discover",
     "cards": {
       "1": {
-        "title": "Web Agency",
-        "description": "From custom design to technical implementation, we craft websites that make people hungry. Our team perfects every pixel to make your restaurant shine online."
+        "title": "Gusto Manager: The All-in-One Digital Solution for Restaurateurs.",
+        "description": "Easily manage and automate your reservations: online confirmation, smart table management, real-time tracking. Optimize your occupancy and provide a seamless experience while centralizing menus, gift cards, and payments on an intuitive dashboard."
       },
       "2": {
-        "title": "Food Marketing",
-        "description": "Digital strategy, social media, content... We season your online presence to attract and retain your customers."
+        "title": "Food Marketing: The Digital Agency for Restaurateurs.",
+        "description": "Attract more customers with eye-catching visuals, engaging videos, and impactful communication. Boost your visibility with tailored content, effective paid media campaigns, and a fully optimized website designed to drive reservations."
       }
     }
   }

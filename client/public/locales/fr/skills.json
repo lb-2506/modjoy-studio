@@ -23,31 +23,31 @@
   "food": {
     "sectionName": "Comment ça marche ?",
     "title": "Gusto Manager",
-    "subtitle": "Découvrez en quelques étapes comment Gusto Manager transforme la gestion quotidienne de votre restaurant.",
+    "subtitle": "L’outil indispensable pour simplifier, automatiser et optimiser la gestion de votre restaurant",
     "list": {
       "1": {
-        "title": "Créez votre espace personnalisé",
-        "content": "Commencez par renseigner les informations essentielles de votre restaurant : horaires, contacts, réseaux sociaux. Une configuration unique pour une présence en ligne optimale.",
+        "title": "Réservations intelligentes",
+        "content": "Gérez vos réservations en toute simplicité avec un système automatisé. Confirmation, suivi des statuts, gestion des tables et envoi de rappels pour optimiser votre taux de remplissage et éviter les no-shows.",
         "button": "Commencer maintenant"
       },
       "2": {
-        "title": "Importez votre offre",
-        "content": "Ajoutez facilement vos plats, boissons et vins dans l'interface. Organisez votre carte comme vous le souhaitez et créez des menus attractifs en quelques clics.",
+        "title": "Gestion dynamique des menus",
+        "content": "Créez, modifiez et organisez vos menus et cartes facilement. Activez ou désactivez les plats selon les stocks, mettez en avant vos spécialités et optimisez l’affichage pour séduire et fidéliser vos clients.",
         "button": "Demander une démonstration"
       },
       "3": {
-        "title": "Gérez tout depuis un seul endroit",
-        "content": "Activez les fonctionnalités dont vous avez besoin : réservations en ligne, cartes cadeaux, actualités. Un tableau de bord unique pour tout piloter.",
+        "title": "Vente de cartes cadeaux",
+        "content": "Boostez vos revenus avec des cartes cadeaux personnalisées. Achat en ligne, paiement sécurisé, code unique et envoi automatique par mail pour une expérience fluide et une gestion simplifiée des offres promotionnelles.",
         "button": "Découvrir les fonctionnalités"
       },
       "4": {
-        "title": "Automatisez vos opérations",
-        "content": "Laissez la plateforme gérer automatiquement vos réservations, suivre vos disponibilités et mettre à jour votre carte. Gagnez un temps précieux au quotidien.",
+        "title": "Suivi et pilotage des ventes",
+        "content": "Analysez votre activité en temps réel grâce à des statistiques détaillées. Suivez vos réservations, paiements et performances pour ajuster votre stratégie et maximiser la rentabilité de votre restaurant.",
         "button": "En savoir plus"
       },
       "5": {
-        "title": "Développez votre activité",
-        "content": "Analysez vos performances, fidélisez vos clients et optimisez votre organisation grâce aux outils intégrés. Faites grandir votre établissement sereinement.",
+        "title": "Communication et actualités",
+        "content": "Dynamisez votre restaurant avec un espace dédié aux actualités. Publiez des événements, offres spéciales et nouveautés pour attirer plus de clients et renforcer votre présence en ligne.",
         "button": "Démarrer avec Gusto"
       }
     }

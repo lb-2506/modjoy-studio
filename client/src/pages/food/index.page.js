@@ -62,7 +62,7 @@ export default function HomePage(props) {
 
         <SkillsHomeFoodComponent />
 
-        <TeamHomeFoodComponent />
+        {/* <TeamHomeFoodComponent /> */}
 
         <PartnersHomeFoodComponent />
 

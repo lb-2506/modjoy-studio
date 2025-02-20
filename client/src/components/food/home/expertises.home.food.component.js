@@ -44,7 +44,7 @@ export default function ExpertisesHomeFoodComponent() {
           {t("food.subtitle")}
         </h3>
 
-        <div className="grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-4 gap-4 justify-center mt-4 w-2/3 mobile:w-1/2 tablet:w-fit">
+        <div className="hidden mobile:grid grid-cols-1 mobile:grid-cols-2 tablet:grid-cols-4 gap-4 justify-center mt-4 w-2/3 mobile:w-1/2 tablet:w-fit">
           <p className="text-sm w-full bg-white bg-opacity-10 px-4 py-2 rounded-xl flex justify-center items-center">
             {t("food.tags.1")}
           </p>
@@ -63,7 +63,7 @@ export default function ExpertisesHomeFoodComponent() {
         </div>
 
         <div className="flex flex-col tablet:flex-row justify-center gap-6 max-w-[80%] mobile:max-w-[70%] tablet:max-w-[70%] desktop:min-w-[1000px] mt-12">
-          <div className="bg-white p-2 rounded-[20px] flex flex-col items-start">
+          <div className="bg-white p-2 rounded-[20px] flex flex-col items-start w-full">
             <img src="/img/food/expertise-1.png" alt="expertise-1" />
 
             <div className="text-darkBlue flex flex-col gap-4 text-start px-4 pt-6 pb-4">
@@ -72,7 +72,7 @@ export default function ExpertisesHomeFoodComponent() {
               <p className="opacity-75 font-light text-lg">
                 {t("food.cards.1.description")}
               </p>
-
+{/* 
               <button
                 onClick={() => router.push("https://modjoy-studio.com")}
                 className="flex items-center gap-4 w-fit"
@@ -82,11 +82,11 @@ export default function ExpertisesHomeFoodComponent() {
                 </div>
 
                 <p className="font-medium">{t("food.discover")}</p>
-              </button>
+              </button> */}
             </div>
           </div>
 
-          <div className="bg-white p-2 rounded-[20px] flex flex-col items-start">
+          <div className="bg-white p-2 rounded-[20px] flex flex-col items-start w-full">
             <img src="/img/food/expertise-2.png" alt="expertise-2" />
 
             <div className="text-darkBlue flex flex-col gap-4 text-start px-4 pt-6 pb-4">
@@ -96,7 +96,7 @@ export default function ExpertisesHomeFoodComponent() {
                 {t("food.cards.2.description")}
               </p>
 
-              <button
+              {/* <button
                 onClick={() =>
                   router.push(`https://modjoy-studio.com/${router.locale}/food`)
                 }
@@ -107,7 +107,7 @@ export default function ExpertisesHomeFoodComponent() {
                 </div>
 
                 <p className="font-medium text-lg">{t("food.discover")}</p>
-              </button>
+              </button> */}
             </div>
           </div>
         </div>
