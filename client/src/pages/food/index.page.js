@@ -21,15 +21,15 @@ export default function HomePage(props) {
   switch (i18n.language) {
     case "en":
       title =
-        "Modjoy-Studio - Agence créative en communication & développement web";
+        "Gusto Manager by Modjoy Studio Food - Gestion, communication et identité digitale pour les restaurants";
       description =
-        "Modjoy-Studio vous accompagne dans votre stratégie digitale : création de sites web, développement d’applications, branding, gestion des réseaux sociaux et bien plus. Transformez votre vision en succès !";
+        "La solution complète pour les restaurateurs : gestion des réservations, cartes et menus, ventes en ligne, communication et identité visuelle pour booster votre restaurant.";
       break;
     default:
       title =
-        "Modjoy-Studio - Agence créative en communication & développement web";
+        "Gusto Manager by Modjoy Studio Food - Gestion, communication et identité digitale pour les restaurants";
       description =
-        "Modjoy-Studio vous accompagne dans votre stratégie digitale : création de sites web, développement d’applications, branding, gestion des réseaux sociaux et bien plus. Transformez votre vision en succès !";
+        "La solution complète pour les restaurateurs : gestion des réservations, cartes et menus, ventes en ligne, communication et identité visuelle pour booster votre restaurant.";
   }
 
   return (
@@ -43,7 +43,10 @@ export default function HomePage(props) {
           {description && (
             <meta property="og:description" content={description} />
           )}
-          <meta property="og:url" content="https://www.modjoy-studio.com/food" />
+          <meta
+            property="og:url"
+            content="https://www.modjoy-studio.com/food"
+          />
           <meta property="og:type" content="website" />
           <meta property="og:image" content="/img/food/open-graph.jpg" />
           <meta property="og:image:width" content="1200" />
