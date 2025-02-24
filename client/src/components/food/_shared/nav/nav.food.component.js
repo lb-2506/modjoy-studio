@@ -112,7 +112,7 @@ export default function NavbarFoodComponent() {
             : "-translate-y-full"
         } transition-all text-darkBlue duration-300 ease-in-out desktop:translate-y-0 rounded-b-2xl desktop:rounded-b-none absolute top-0 left-0 right-0 flex flex-col gap-20 desktop:gap-0 desktop:flex-row desktop:items-center justify-between px-6 desktop:px-12 py-6 z-30`}
       >
-        <Link href="/">
+        <Link href="/food">
           <a>
             <img
               src="/img/food/logo.png"
