@@ -123,45 +123,38 @@ export default function NavbarFoodComponent() {
           </a>
         </Link>
 
-        <ul className="flex flex-col desktop:flex-row desktop:items-center desktop:gap-12 ">
-          <li>
-            <button
-              onClick={() => handleScrollToSection("#expertises")}
-              className="py-4 cursor-pointer"
-            >
-              {t("nav.food.list.1")}
-            </button>
-          </li>
+        <div className="flex flex-col desktop:flex-row gap-6 items-center justify-center text-center">
+          <ul className="flex flex-col desktop:flex-row desktop:items-center desktop:gap-12 ">
+            <li>
+              <button
+                onClick={() => handleScrollToSection("#expertises")}
+                className="py-4 cursor-pointer"
+              >
+                {t("nav.food.list.1")}
+              </button>
+            </li>
 
-          <li>
-            <button
-              onClick={() => handleScrollToSection("#skills")}
-              className="py-4 cursor-pointer"
-            >
-              {t("nav.food.list.2")}
-            </button>
-          </li>
+            <li>
+              <button
+                onClick={() => handleScrollToSection("#skills")}
+                className="py-4 cursor-pointer"
+              >
+                {t("nav.food.list.2")}
+              </button>
+            </li>
+          </ul>
 
-          <li>
-            <button
-              onClick={() => handleScrollToSection("#projects")}
-              className="py-4 cursor-pointer"
-            >
-              {t("nav.food.list.3")}
-            </button>
-          </li>
-        </ul>
-
-        <button
-          className="bg-lightBlue hover:bg-opacity-70 transition-all ease-in-out duration-200 text-white rounded-full px-4 py-2 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
-          data-tally-open="wkKoEe"
-          data-tally-layout="modal"
-          data-tally-width="400"
-          data-tally-emoji-animation="wave"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          {t("nav.button.estimate")}
-        </button>
+          <button
+            className="bg-lightBlue hover:bg-opacity-70 transition-all ease-in-out duration-200 text-white rounded-full px-4 py-2 w-[300px] desktop:w-auto mx-auto desktop:mx-0 desktop:mt-0"
+            data-tally-open="wkKoEe"
+            data-tally-layout="modal"
+            data-tally-width="400"
+            data-tally-emoji-animation="wave"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            {t("nav.button.estimate")}
+          </button>
+        </div>
       </div>
     </nav>
   );
